@@ -1,4 +1,11 @@
-module PhoneNumbers exposing (Metadata)
+module PhoneNumbers exposing
+    ( DescriptionType(..)
+    , NumberDescription
+    , NumberFormat
+    , Territory
+    )
+
+import Regex exposing (Regex)
 
 
 type alias Territory =
@@ -35,12 +42,12 @@ type alias NumberDescription =
     { descriptionType : DescriptionType
     , exampleNumber : String
     , possibleLengths : List String
-    , pattern : String -- REGEX
+    , pattern : Regex
     }
 
 
 type alias NumberFormat =
-    { pattern : String -- REGEX
+    { pattern : Regex
     , format : String
     , leadingDigits : List String
     }
