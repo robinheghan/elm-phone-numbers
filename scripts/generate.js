@@ -40,7 +40,10 @@ function filterTerritory(territory) {
 
 function territoryToJSON(territory) {
   return {
-    id: territory.$.id
+    id: territory.$.id,
+    countryCode: territory.$.countryCode,
+    internationalPrefix: territory.$.internationalPrefix,
+    nationalPrefix: territory.$.nationalPrefix
   };
 }
 
@@ -50,6 +53,21 @@ function elmify(territory) {
 country${territory.id} : PhoneNumbers.Territory
 country${territory.id} =
     { id = "${territory.id}"
+    , countryCode = ${elmMaybe(territory.countryCode, false)}
+    , internationalPrefix = ${elmMaybe(territory.internationalPrefix, true)}
+    , nationalPrefix = ${elmMaybe(territory.nationalPrefix, true)}
     }
 `;
+}
+
+function elmMaybe(maybeVal, isString) {
+  if (maybeVal) {
+    if (isString) {
+      return `Just "${maybeVal.replace(/\\/g, '\\\\')}"`;
+    }
+
+    return `Just ${maybeVal}`;
+  }
+
+  return 'Nothing';
 }

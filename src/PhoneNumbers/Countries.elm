@@ -10,6 +10,9 @@ import PhoneNumbers
 countryAC : PhoneNumbers.Territory
 countryAC =
     { id = "AC"
+    , countryCode = Just 247
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -17,6 +20,9 @@ countryAC =
 countryAD : PhoneNumbers.Territory
 countryAD =
     { id = "AD"
+    , countryCode = Just 376
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -24,6 +30,9 @@ countryAD =
 countryAE : PhoneNumbers.Territory
 countryAE =
     { id = "AE"
+    , countryCode = Just 971
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -31,6 +40,9 @@ countryAE =
 countryAF : PhoneNumbers.Territory
 countryAF =
     { id = "AF"
+    , countryCode = Just 93
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -38,6 +50,9 @@ countryAF =
 countryAG : PhoneNumbers.Territory
 countryAG =
     { id = "AG"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -45,6 +60,9 @@ countryAG =
 countryAI : PhoneNumbers.Territory
 countryAI =
     { id = "AI"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -52,6 +70,9 @@ countryAI =
 countryAL : PhoneNumbers.Territory
 countryAL =
     { id = "AL"
+    , countryCode = Just 355
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -59,6 +80,9 @@ countryAL =
 countryAM : PhoneNumbers.Territory
 countryAM =
     { id = "AM"
+    , countryCode = Just 374
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -66,6 +90,9 @@ countryAM =
 countryAO : PhoneNumbers.Territory
 countryAO =
     { id = "AO"
+    , countryCode = Just 244
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -73,6 +100,9 @@ countryAO =
 countryAR : PhoneNumbers.Territory
 countryAR =
     { id = "AR"
+    , countryCode = Just 54
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -80,6 +110,9 @@ countryAR =
 countryAS : PhoneNumbers.Territory
 countryAS =
     { id = "AS"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -87,6 +120,9 @@ countryAS =
 countryAT : PhoneNumbers.Territory
 countryAT =
     { id = "AT"
+    , countryCode = Just 43
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -94,6 +130,9 @@ countryAT =
 countryAU : PhoneNumbers.Territory
 countryAU =
     { id = "AU"
+    , countryCode = Just 61
+    , internationalPrefix = Just "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -101,6 +140,9 @@ countryAU =
 countryAW : PhoneNumbers.Territory
 countryAW =
     { id = "AW"
+    , countryCode = Just 297
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -108,6 +150,9 @@ countryAW =
 countryAX : PhoneNumbers.Territory
 countryAX =
     { id = "AX"
+    , countryCode = Just 358
+    , internationalPrefix = Just "00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -115,6 +160,9 @@ countryAX =
 countryAZ : PhoneNumbers.Territory
 countryAZ =
     { id = "AZ"
+    , countryCode = Just 994
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -122,6 +170,9 @@ countryAZ =
 countryBA : PhoneNumbers.Territory
 countryBA =
     { id = "BA"
+    , countryCode = Just 387
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -129,6 +180,9 @@ countryBA =
 countryBB : PhoneNumbers.Territory
 countryBB =
     { id = "BB"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -136,6 +190,9 @@ countryBB =
 countryBD : PhoneNumbers.Territory
 countryBD =
     { id = "BD"
+    , countryCode = Just 880
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -143,6 +200,9 @@ countryBD =
 countryBE : PhoneNumbers.Territory
 countryBE =
     { id = "BE"
+    , countryCode = Just 32
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -150,6 +210,9 @@ countryBE =
 countryBF : PhoneNumbers.Territory
 countryBF =
     { id = "BF"
+    , countryCode = Just 226
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -157,6 +220,9 @@ countryBF =
 countryBG : PhoneNumbers.Territory
 countryBG =
     { id = "BG"
+    , countryCode = Just 359
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -164,6 +230,9 @@ countryBG =
 countryBH : PhoneNumbers.Territory
 countryBH =
     { id = "BH"
+    , countryCode = Just 973
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -171,6 +240,9 @@ countryBH =
 countryBI : PhoneNumbers.Territory
 countryBI =
     { id = "BI"
+    , countryCode = Just 257
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -178,6 +250,9 @@ countryBI =
 countryBJ : PhoneNumbers.Territory
 countryBJ =
     { id = "BJ"
+    , countryCode = Just 229
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -185,6 +260,9 @@ countryBJ =
 countryBL : PhoneNumbers.Territory
 countryBL =
     { id = "BL"
+    , countryCode = Just 590
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -192,6 +270,9 @@ countryBL =
 countryBM : PhoneNumbers.Territory
 countryBM =
     { id = "BM"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -199,6 +280,9 @@ countryBM =
 countryBN : PhoneNumbers.Territory
 countryBN =
     { id = "BN"
+    , countryCode = Just 673
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -206,6 +290,9 @@ countryBN =
 countryBO : PhoneNumbers.Territory
 countryBO =
     { id = "BO"
+    , countryCode = Just 591
+    , internationalPrefix = Just "00(?:1\\d)?"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -213,6 +300,9 @@ countryBO =
 countryBQ : PhoneNumbers.Territory
 countryBQ =
     { id = "BQ"
+    , countryCode = Just 599
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -220,6 +310,9 @@ countryBQ =
 countryBR : PhoneNumbers.Territory
 countryBR =
     { id = "BR"
+    , countryCode = Just 55
+    , internationalPrefix = Just "00(?:1[245]|2[1-35]|31|4[13]|[56]5|99)"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -227,6 +320,9 @@ countryBR =
 countryBS : PhoneNumbers.Territory
 countryBS =
     { id = "BS"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -234,6 +330,9 @@ countryBS =
 countryBT : PhoneNumbers.Territory
 countryBT =
     { id = "BT"
+    , countryCode = Just 975
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -241,6 +340,9 @@ countryBT =
 countryBW : PhoneNumbers.Territory
 countryBW =
     { id = "BW"
+    , countryCode = Just 267
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -248,6 +350,9 @@ countryBW =
 countryBY : PhoneNumbers.Territory
 countryBY =
     { id = "BY"
+    , countryCode = Just 375
+    , internationalPrefix = Just "810"
+    , nationalPrefix = Just "8"
     }
 
 
@@ -255,6 +360,9 @@ countryBY =
 countryBZ : PhoneNumbers.Territory
 countryBZ =
     { id = "BZ"
+    , countryCode = Just 501
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -262,6 +370,9 @@ countryBZ =
 countryCA : PhoneNumbers.Territory
 countryCA =
     { id = "CA"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -269,6 +380,9 @@ countryCA =
 countryCC : PhoneNumbers.Territory
 countryCC =
     { id = "CC"
+    , countryCode = Just 61
+    , internationalPrefix = Just "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -276,6 +390,9 @@ countryCC =
 countryCD : PhoneNumbers.Territory
 countryCD =
     { id = "CD"
+    , countryCode = Just 243
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -283,6 +400,9 @@ countryCD =
 countryCF : PhoneNumbers.Territory
 countryCF =
     { id = "CF"
+    , countryCode = Just 236
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -290,6 +410,9 @@ countryCF =
 countryCG : PhoneNumbers.Territory
 countryCG =
     { id = "CG"
+    , countryCode = Just 242
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -297,6 +420,9 @@ countryCG =
 countryCH : PhoneNumbers.Territory
 countryCH =
     { id = "CH"
+    , countryCode = Just 41
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -304,6 +430,9 @@ countryCH =
 countryCI : PhoneNumbers.Territory
 countryCI =
     { id = "CI"
+    , countryCode = Just 225
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -311,6 +440,9 @@ countryCI =
 countryCK : PhoneNumbers.Territory
 countryCK =
     { id = "CK"
+    , countryCode = Just 682
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -318,6 +450,9 @@ countryCK =
 countryCL : PhoneNumbers.Territory
 countryCL =
     { id = "CL"
+    , countryCode = Just 56
+    , internationalPrefix = Just "(?:0|1(?:1[0-69]|2[0-57]|5[13-58]|69|7[0167]|8[018]))0"
+    , nationalPrefix = Nothing
     }
 
 
@@ -325,6 +460,9 @@ countryCL =
 countryCM : PhoneNumbers.Territory
 countryCM =
     { id = "CM"
+    , countryCode = Just 237
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -332,6 +470,9 @@ countryCM =
 countryCN : PhoneNumbers.Territory
 countryCN =
     { id = "CN"
+    , countryCode = Just 86
+    , internationalPrefix = Just "(?:1(?:[12]\\d{3}|79\\d{2}|9[0-7]\\d{2}))?00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -339,6 +480,9 @@ countryCN =
 countryCO : PhoneNumbers.Territory
 countryCO =
     { id = "CO"
+    , countryCode = Just 57
+    , internationalPrefix = Just "00(?:4(?:[14]4|56)|[579])"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -346,6 +490,9 @@ countryCO =
 countryCR : PhoneNumbers.Territory
 countryCR =
     { id = "CR"
+    , countryCode = Just 506
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -353,6 +500,9 @@ countryCR =
 countryCU : PhoneNumbers.Territory
 countryCU =
     { id = "CU"
+    , countryCode = Just 53
+    , internationalPrefix = Just "119"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -360,6 +510,9 @@ countryCU =
 countryCV : PhoneNumbers.Territory
 countryCV =
     { id = "CV"
+    , countryCode = Just 238
+    , internationalPrefix = Just "0"
+    , nationalPrefix = Nothing
     }
 
 
@@ -367,6 +520,9 @@ countryCV =
 countryCW : PhoneNumbers.Territory
 countryCW =
     { id = "CW"
+    , countryCode = Just 599
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -374,6 +530,9 @@ countryCW =
 countryCX : PhoneNumbers.Territory
 countryCX =
     { id = "CX"
+    , countryCode = Just 61
+    , internationalPrefix = Just "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -381,6 +540,9 @@ countryCX =
 countryCY : PhoneNumbers.Territory
 countryCY =
     { id = "CY"
+    , countryCode = Just 357
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -388,6 +550,9 @@ countryCY =
 countryCZ : PhoneNumbers.Territory
 countryCZ =
     { id = "CZ"
+    , countryCode = Just 420
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -395,6 +560,9 @@ countryCZ =
 countryDE : PhoneNumbers.Territory
 countryDE =
     { id = "DE"
+    , countryCode = Just 49
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -402,6 +570,9 @@ countryDE =
 countryDJ : PhoneNumbers.Territory
 countryDJ =
     { id = "DJ"
+    , countryCode = Just 253
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -409,6 +580,9 @@ countryDJ =
 countryDK : PhoneNumbers.Territory
 countryDK =
     { id = "DK"
+    , countryCode = Just 45
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -416,6 +590,9 @@ countryDK =
 countryDM : PhoneNumbers.Territory
 countryDM =
     { id = "DM"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -423,6 +600,9 @@ countryDM =
 countryDO : PhoneNumbers.Territory
 countryDO =
     { id = "DO"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -430,6 +610,9 @@ countryDO =
 countryDZ : PhoneNumbers.Territory
 countryDZ =
     { id = "DZ"
+    , countryCode = Just 213
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -437,6 +620,9 @@ countryDZ =
 countryEC : PhoneNumbers.Territory
 countryEC =
     { id = "EC"
+    , countryCode = Just 593
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -444,6 +630,9 @@ countryEC =
 countryEE : PhoneNumbers.Territory
 countryEE =
     { id = "EE"
+    , countryCode = Just 372
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -451,6 +640,9 @@ countryEE =
 countryEG : PhoneNumbers.Territory
 countryEG =
     { id = "EG"
+    , countryCode = Just 20
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -458,6 +650,9 @@ countryEG =
 countryEH : PhoneNumbers.Territory
 countryEH =
     { id = "EH"
+    , countryCode = Just 212
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -465,6 +660,9 @@ countryEH =
 countryER : PhoneNumbers.Territory
 countryER =
     { id = "ER"
+    , countryCode = Just 291
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -472,6 +670,9 @@ countryER =
 countryES : PhoneNumbers.Territory
 countryES =
     { id = "ES"
+    , countryCode = Just 34
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -479,6 +680,9 @@ countryES =
 countryET : PhoneNumbers.Territory
 countryET =
     { id = "ET"
+    , countryCode = Just 251
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -486,6 +690,9 @@ countryET =
 countryFI : PhoneNumbers.Territory
 countryFI =
     { id = "FI"
+    , countryCode = Just 358
+    , internationalPrefix = Just "00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -493,6 +700,9 @@ countryFI =
 countryFJ : PhoneNumbers.Territory
 countryFJ =
     { id = "FJ"
+    , countryCode = Just 679
+    , internationalPrefix = Just "0(?:0|52)"
+    , nationalPrefix = Nothing
     }
 
 
@@ -500,6 +710,9 @@ countryFJ =
 countryFK : PhoneNumbers.Territory
 countryFK =
     { id = "FK"
+    , countryCode = Just 500
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -507,6 +720,9 @@ countryFK =
 countryFM : PhoneNumbers.Territory
 countryFM =
     { id = "FM"
+    , countryCode = Just 691
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -514,6 +730,9 @@ countryFM =
 countryFO : PhoneNumbers.Territory
 countryFO =
     { id = "FO"
+    , countryCode = Just 298
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -521,6 +740,9 @@ countryFO =
 countryFR : PhoneNumbers.Territory
 countryFR =
     { id = "FR"
+    , countryCode = Just 33
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -528,6 +750,9 @@ countryFR =
 countryGA : PhoneNumbers.Territory
 countryGA =
     { id = "GA"
+    , countryCode = Just 241
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -535,6 +760,9 @@ countryGA =
 countryGB : PhoneNumbers.Territory
 countryGB =
     { id = "GB"
+    , countryCode = Just 44
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -542,6 +770,9 @@ countryGB =
 countryGD : PhoneNumbers.Territory
 countryGD =
     { id = "GD"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -549,6 +780,9 @@ countryGD =
 countryGE : PhoneNumbers.Territory
 countryGE =
     { id = "GE"
+    , countryCode = Just 995
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -556,6 +790,9 @@ countryGE =
 countryGF : PhoneNumbers.Territory
 countryGF =
     { id = "GF"
+    , countryCode = Just 594
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -563,6 +800,9 @@ countryGF =
 countryGG : PhoneNumbers.Territory
 countryGG =
     { id = "GG"
+    , countryCode = Just 44
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -570,6 +810,9 @@ countryGG =
 countryGH : PhoneNumbers.Territory
 countryGH =
     { id = "GH"
+    , countryCode = Just 233
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -577,6 +820,9 @@ countryGH =
 countryGI : PhoneNumbers.Territory
 countryGI =
     { id = "GI"
+    , countryCode = Just 350
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -584,6 +830,9 @@ countryGI =
 countryGL : PhoneNumbers.Territory
 countryGL =
     { id = "GL"
+    , countryCode = Just 299
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -591,6 +840,9 @@ countryGL =
 countryGM : PhoneNumbers.Territory
 countryGM =
     { id = "GM"
+    , countryCode = Just 220
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -598,6 +850,9 @@ countryGM =
 countryGN : PhoneNumbers.Territory
 countryGN =
     { id = "GN"
+    , countryCode = Just 224
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -605,6 +860,9 @@ countryGN =
 countryGP : PhoneNumbers.Territory
 countryGP =
     { id = "GP"
+    , countryCode = Just 590
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -612,6 +870,9 @@ countryGP =
 countryGQ : PhoneNumbers.Territory
 countryGQ =
     { id = "GQ"
+    , countryCode = Just 240
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -619,6 +880,9 @@ countryGQ =
 countryGR : PhoneNumbers.Territory
 countryGR =
     { id = "GR"
+    , countryCode = Just 30
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -626,6 +890,9 @@ countryGR =
 countryGT : PhoneNumbers.Territory
 countryGT =
     { id = "GT"
+    , countryCode = Just 502
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -633,6 +900,9 @@ countryGT =
 countryGU : PhoneNumbers.Territory
 countryGU =
     { id = "GU"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -640,6 +910,9 @@ countryGU =
 countryGW : PhoneNumbers.Territory
 countryGW =
     { id = "GW"
+    , countryCode = Just 245
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -647,6 +920,9 @@ countryGW =
 countryGY : PhoneNumbers.Territory
 countryGY =
     { id = "GY"
+    , countryCode = Just 592
+    , internationalPrefix = Just "001"
+    , nationalPrefix = Nothing
     }
 
 
@@ -654,6 +930,9 @@ countryGY =
 countryHK : PhoneNumbers.Territory
 countryHK =
     { id = "HK"
+    , countryCode = Just 852
+    , internationalPrefix = Just "00(?:30|5[09]|[126-9]?)"
+    , nationalPrefix = Nothing
     }
 
 
@@ -661,6 +940,9 @@ countryHK =
 countryHN : PhoneNumbers.Territory
 countryHN =
     { id = "HN"
+    , countryCode = Just 504
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -668,6 +950,9 @@ countryHN =
 countryHR : PhoneNumbers.Territory
 countryHR =
     { id = "HR"
+    , countryCode = Just 385
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -675,6 +960,9 @@ countryHR =
 countryHT : PhoneNumbers.Territory
 countryHT =
     { id = "HT"
+    , countryCode = Just 509
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -682,6 +970,9 @@ countryHT =
 countryHU : PhoneNumbers.Territory
 countryHU =
     { id = "HU"
+    , countryCode = Just 36
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "06"
     }
 
 
@@ -689,6 +980,9 @@ countryHU =
 countryID : PhoneNumbers.Territory
 countryID =
     { id = "ID"
+    , countryCode = Just 62
+    , internationalPrefix = Just "0(?:0[17-9]|10(?:00|1[67]))"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -696,6 +990,9 @@ countryID =
 countryIE : PhoneNumbers.Territory
 countryIE =
     { id = "IE"
+    , countryCode = Just 353
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -703,6 +1000,9 @@ countryIE =
 countryIL : PhoneNumbers.Territory
 countryIL =
     { id = "IL"
+    , countryCode = Just 972
+    , internationalPrefix = Just "0(?:0|1[2-9])"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -710,6 +1010,9 @@ countryIL =
 countryIM : PhoneNumbers.Territory
 countryIM =
     { id = "IM"
+    , countryCode = Just 44
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -717,6 +1020,9 @@ countryIM =
 countryIN : PhoneNumbers.Territory
 countryIN =
     { id = "IN"
+    , countryCode = Just 91
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -724,6 +1030,9 @@ countryIN =
 countryIO : PhoneNumbers.Territory
 countryIO =
     { id = "IO"
+    , countryCode = Just 246
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -731,6 +1040,9 @@ countryIO =
 countryIQ : PhoneNumbers.Territory
 countryIQ =
     { id = "IQ"
+    , countryCode = Just 964
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -738,6 +1050,9 @@ countryIQ =
 countryIR : PhoneNumbers.Territory
 countryIR =
     { id = "IR"
+    , countryCode = Just 98
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -745,6 +1060,9 @@ countryIR =
 countryIS : PhoneNumbers.Territory
 countryIS =
     { id = "IS"
+    , countryCode = Just 354
+    , internationalPrefix = Just "00|1(?:0(?:01|[12]0)|100)"
+    , nationalPrefix = Nothing
     }
 
 
@@ -752,6 +1070,9 @@ countryIS =
 countryIT : PhoneNumbers.Territory
 countryIT =
     { id = "IT"
+    , countryCode = Just 39
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -759,6 +1080,9 @@ countryIT =
 countryJE : PhoneNumbers.Territory
 countryJE =
     { id = "JE"
+    , countryCode = Just 44
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -766,6 +1090,9 @@ countryJE =
 countryJM : PhoneNumbers.Territory
 countryJM =
     { id = "JM"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -773,6 +1100,9 @@ countryJM =
 countryJO : PhoneNumbers.Territory
 countryJO =
     { id = "JO"
+    , countryCode = Just 962
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -780,6 +1110,9 @@ countryJO =
 countryJP : PhoneNumbers.Territory
 countryJP =
     { id = "JP"
+    , countryCode = Just 81
+    , internationalPrefix = Just "010"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -787,6 +1120,9 @@ countryJP =
 countryKE : PhoneNumbers.Territory
 countryKE =
     { id = "KE"
+    , countryCode = Just 254
+    , internationalPrefix = Just "000"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -794,6 +1130,9 @@ countryKE =
 countryKG : PhoneNumbers.Territory
 countryKG =
     { id = "KG"
+    , countryCode = Just 996
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -801,6 +1140,9 @@ countryKG =
 countryKH : PhoneNumbers.Territory
 countryKH =
     { id = "KH"
+    , countryCode = Just 855
+    , internationalPrefix = Just "00[14-9]"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -808,6 +1150,9 @@ countryKH =
 countryKI : PhoneNumbers.Territory
 countryKI =
     { id = "KI"
+    , countryCode = Just 686
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -815,6 +1160,9 @@ countryKI =
 countryKM : PhoneNumbers.Territory
 countryKM =
     { id = "KM"
+    , countryCode = Just 269
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -822,6 +1170,9 @@ countryKM =
 countryKN : PhoneNumbers.Territory
 countryKN =
     { id = "KN"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -829,6 +1180,9 @@ countryKN =
 countryKP : PhoneNumbers.Territory
 countryKP =
     { id = "KP"
+    , countryCode = Just 850
+    , internationalPrefix = Just "00|99"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -836,6 +1190,9 @@ countryKP =
 countryKR : PhoneNumbers.Territory
 countryKR =
     { id = "KR"
+    , countryCode = Just 82
+    , internationalPrefix = Just "00(?:[125689]|3(?:[46]5|91)|7(?:00|27|3|55|6[126]))"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -843,6 +1200,9 @@ countryKR =
 countryKW : PhoneNumbers.Territory
 countryKW =
     { id = "KW"
+    , countryCode = Just 965
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -850,6 +1210,9 @@ countryKW =
 countryKY : PhoneNumbers.Territory
 countryKY =
     { id = "KY"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -857,6 +1220,9 @@ countryKY =
 countryKZ : PhoneNumbers.Territory
 countryKZ =
     { id = "KZ"
+    , countryCode = Just 7
+    , internationalPrefix = Just "810"
+    , nationalPrefix = Just "8"
     }
 
 
@@ -864,6 +1230,9 @@ countryKZ =
 countryLA : PhoneNumbers.Territory
 countryLA =
     { id = "LA"
+    , countryCode = Just 856
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -871,6 +1240,9 @@ countryLA =
 countryLB : PhoneNumbers.Territory
 countryLB =
     { id = "LB"
+    , countryCode = Just 961
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -878,6 +1250,9 @@ countryLB =
 countryLC : PhoneNumbers.Territory
 countryLC =
     { id = "LC"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -885,6 +1260,9 @@ countryLC =
 countryLI : PhoneNumbers.Territory
 countryLI =
     { id = "LI"
+    , countryCode = Just 423
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -892,6 +1270,9 @@ countryLI =
 countryLK : PhoneNumbers.Territory
 countryLK =
     { id = "LK"
+    , countryCode = Just 94
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -899,6 +1280,9 @@ countryLK =
 countryLR : PhoneNumbers.Territory
 countryLR =
     { id = "LR"
+    , countryCode = Just 231
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -906,6 +1290,9 @@ countryLR =
 countryLS : PhoneNumbers.Territory
 countryLS =
     { id = "LS"
+    , countryCode = Just 266
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -913,6 +1300,9 @@ countryLS =
 countryLT : PhoneNumbers.Territory
 countryLT =
     { id = "LT"
+    , countryCode = Just 370
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "8"
     }
 
 
@@ -920,6 +1310,9 @@ countryLT =
 countryLU : PhoneNumbers.Territory
 countryLU =
     { id = "LU"
+    , countryCode = Just 352
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -927,6 +1320,9 @@ countryLU =
 countryLV : PhoneNumbers.Territory
 countryLV =
     { id = "LV"
+    , countryCode = Just 371
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -934,6 +1330,9 @@ countryLV =
 countryLY : PhoneNumbers.Territory
 countryLY =
     { id = "LY"
+    , countryCode = Just 218
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -941,6 +1340,9 @@ countryLY =
 countryMA : PhoneNumbers.Territory
 countryMA =
     { id = "MA"
+    , countryCode = Just 212
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -948,6 +1350,9 @@ countryMA =
 countryMC : PhoneNumbers.Territory
 countryMC =
     { id = "MC"
+    , countryCode = Just 377
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -955,6 +1360,9 @@ countryMC =
 countryMD : PhoneNumbers.Territory
 countryMD =
     { id = "MD"
+    , countryCode = Just 373
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -962,6 +1370,9 @@ countryMD =
 countryME : PhoneNumbers.Territory
 countryME =
     { id = "ME"
+    , countryCode = Just 382
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -969,6 +1380,9 @@ countryME =
 countryMF : PhoneNumbers.Territory
 countryMF =
     { id = "MF"
+    , countryCode = Just 590
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -976,6 +1390,9 @@ countryMF =
 countryMG : PhoneNumbers.Territory
 countryMG =
     { id = "MG"
+    , countryCode = Just 261
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -983,6 +1400,9 @@ countryMG =
 countryMH : PhoneNumbers.Territory
 countryMH =
     { id = "MH"
+    , countryCode = Just 692
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -990,6 +1410,9 @@ countryMH =
 countryMK : PhoneNumbers.Territory
 countryMK =
     { id = "MK"
+    , countryCode = Just 389
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -997,6 +1420,9 @@ countryMK =
 countryML : PhoneNumbers.Territory
 countryML =
     { id = "ML"
+    , countryCode = Just 223
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1004,6 +1430,9 @@ countryML =
 countryMM : PhoneNumbers.Territory
 countryMM =
     { id = "MM"
+    , countryCode = Just 95
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1011,6 +1440,9 @@ countryMM =
 countryMN : PhoneNumbers.Territory
 countryMN =
     { id = "MN"
+    , countryCode = Just 976
+    , internationalPrefix = Just "001"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1018,6 +1450,9 @@ countryMN =
 countryMO : PhoneNumbers.Territory
 countryMO =
     { id = "MO"
+    , countryCode = Just 853
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1025,6 +1460,9 @@ countryMO =
 countryMP : PhoneNumbers.Territory
 countryMP =
     { id = "MP"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -1032,6 +1470,9 @@ countryMP =
 countryMQ : PhoneNumbers.Territory
 countryMQ =
     { id = "MQ"
+    , countryCode = Just 596
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1039,6 +1480,9 @@ countryMQ =
 countryMR : PhoneNumbers.Territory
 countryMR =
     { id = "MR"
+    , countryCode = Just 222
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1046,6 +1490,9 @@ countryMR =
 countryMS : PhoneNumbers.Territory
 countryMS =
     { id = "MS"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -1053,6 +1500,9 @@ countryMS =
 countryMT : PhoneNumbers.Territory
 countryMT =
     { id = "MT"
+    , countryCode = Just 356
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1060,6 +1510,9 @@ countryMT =
 countryMU : PhoneNumbers.Territory
 countryMU =
     { id = "MU"
+    , countryCode = Just 230
+    , internationalPrefix = Just "0(?:0|[24-7]0|3[03])"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1067,6 +1520,9 @@ countryMU =
 countryMV : PhoneNumbers.Territory
 countryMV =
     { id = "MV"
+    , countryCode = Just 960
+    , internationalPrefix = Just "0(?:0|19)"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1074,6 +1530,9 @@ countryMV =
 countryMW : PhoneNumbers.Territory
 countryMW =
     { id = "MW"
+    , countryCode = Just 265
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1081,6 +1540,9 @@ countryMW =
 countryMX : PhoneNumbers.Territory
 countryMX =
     { id = "MX"
+    , countryCode = Just 52
+    , internationalPrefix = Just "0[09]"
+    , nationalPrefix = Just "01"
     }
 
 
@@ -1088,6 +1550,9 @@ countryMX =
 countryMY : PhoneNumbers.Territory
 countryMY =
     { id = "MY"
+    , countryCode = Just 60
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1095,6 +1560,9 @@ countryMY =
 countryMZ : PhoneNumbers.Territory
 countryMZ =
     { id = "MZ"
+    , countryCode = Just 258
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1102,6 +1570,9 @@ countryMZ =
 countryNA : PhoneNumbers.Territory
 countryNA =
     { id = "NA"
+    , countryCode = Just 264
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1109,6 +1580,9 @@ countryNA =
 countryNC : PhoneNumbers.Territory
 countryNC =
     { id = "NC"
+    , countryCode = Just 687
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1116,6 +1590,9 @@ countryNC =
 countryNE : PhoneNumbers.Territory
 countryNE =
     { id = "NE"
+    , countryCode = Just 227
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1123,6 +1600,9 @@ countryNE =
 countryNF : PhoneNumbers.Territory
 countryNF =
     { id = "NF"
+    , countryCode = Just 672
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1130,6 +1610,9 @@ countryNF =
 countryNG : PhoneNumbers.Territory
 countryNG =
     { id = "NG"
+    , countryCode = Just 234
+    , internationalPrefix = Just "009"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1137,6 +1620,9 @@ countryNG =
 countryNI : PhoneNumbers.Territory
 countryNI =
     { id = "NI"
+    , countryCode = Just 505
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1144,6 +1630,9 @@ countryNI =
 countryNL : PhoneNumbers.Territory
 countryNL =
     { id = "NL"
+    , countryCode = Just 31
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1151,6 +1640,9 @@ countryNL =
 countryNO : PhoneNumbers.Territory
 countryNO =
     { id = "NO"
+    , countryCode = Just 47
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1158,6 +1650,9 @@ countryNO =
 countryNP : PhoneNumbers.Territory
 countryNP =
     { id = "NP"
+    , countryCode = Just 977
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1165,6 +1660,9 @@ countryNP =
 countryNR : PhoneNumbers.Territory
 countryNR =
     { id = "NR"
+    , countryCode = Just 674
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1172,6 +1670,9 @@ countryNR =
 countryNU : PhoneNumbers.Territory
 countryNU =
     { id = "NU"
+    , countryCode = Just 683
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1179,6 +1680,9 @@ countryNU =
 countryNZ : PhoneNumbers.Territory
 countryNZ =
     { id = "NZ"
+    , countryCode = Just 64
+    , internationalPrefix = Just "0(?:0|161)"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1186,6 +1690,9 @@ countryNZ =
 countryOM : PhoneNumbers.Territory
 countryOM =
     { id = "OM"
+    , countryCode = Just 968
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1193,6 +1700,9 @@ countryOM =
 countryPA : PhoneNumbers.Territory
 countryPA =
     { id = "PA"
+    , countryCode = Just 507
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1200,6 +1710,9 @@ countryPA =
 countryPE : PhoneNumbers.Territory
 countryPE =
     { id = "PE"
+    , countryCode = Just 51
+    , internationalPrefix = Just "19(?:1[124]|77|90)00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1207,6 +1720,9 @@ countryPE =
 countryPF : PhoneNumbers.Territory
 countryPF =
     { id = "PF"
+    , countryCode = Just 689
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1214,6 +1730,9 @@ countryPF =
 countryPG : PhoneNumbers.Territory
 countryPG =
     { id = "PG"
+    , countryCode = Just 675
+    , internationalPrefix = Just "00|140[1-3]"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1221,6 +1740,9 @@ countryPG =
 countryPH : PhoneNumbers.Territory
 countryPH =
     { id = "PH"
+    , countryCode = Just 63
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1228,6 +1750,9 @@ countryPH =
 countryPK : PhoneNumbers.Territory
 countryPK =
     { id = "PK"
+    , countryCode = Just 92
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1235,6 +1760,9 @@ countryPK =
 countryPL : PhoneNumbers.Territory
 countryPL =
     { id = "PL"
+    , countryCode = Just 48
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1242,6 +1770,9 @@ countryPL =
 countryPM : PhoneNumbers.Territory
 countryPM =
     { id = "PM"
+    , countryCode = Just 508
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1249,6 +1780,9 @@ countryPM =
 countryPR : PhoneNumbers.Territory
 countryPR =
     { id = "PR"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -1256,6 +1790,9 @@ countryPR =
 countryPS : PhoneNumbers.Territory
 countryPS =
     { id = "PS"
+    , countryCode = Just 970
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1263,6 +1800,9 @@ countryPS =
 countryPT : PhoneNumbers.Territory
 countryPT =
     { id = "PT"
+    , countryCode = Just 351
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1270,6 +1810,9 @@ countryPT =
 countryPW : PhoneNumbers.Territory
 countryPW =
     { id = "PW"
+    , countryCode = Just 680
+    , internationalPrefix = Just "01[12]"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1277,6 +1820,9 @@ countryPW =
 countryPY : PhoneNumbers.Territory
 countryPY =
     { id = "PY"
+    , countryCode = Just 595
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1284,6 +1830,9 @@ countryPY =
 countryQA : PhoneNumbers.Territory
 countryQA =
     { id = "QA"
+    , countryCode = Just 974
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1291,6 +1840,9 @@ countryQA =
 countryRE : PhoneNumbers.Territory
 countryRE =
     { id = "RE"
+    , countryCode = Just 262
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1298,6 +1850,9 @@ countryRE =
 countryRO : PhoneNumbers.Territory
 countryRO =
     { id = "RO"
+    , countryCode = Just 40
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1305,6 +1860,9 @@ countryRO =
 countryRS : PhoneNumbers.Territory
 countryRS =
     { id = "RS"
+    , countryCode = Just 381
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1312,6 +1870,9 @@ countryRS =
 countryRU : PhoneNumbers.Territory
 countryRU =
     { id = "RU"
+    , countryCode = Just 7
+    , internationalPrefix = Just "810"
+    , nationalPrefix = Just "8"
     }
 
 
@@ -1319,6 +1880,9 @@ countryRU =
 countryRW : PhoneNumbers.Territory
 countryRW =
     { id = "RW"
+    , countryCode = Just 250
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1326,6 +1890,9 @@ countryRW =
 countrySA : PhoneNumbers.Territory
 countrySA =
     { id = "SA"
+    , countryCode = Just 966
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1333,6 +1900,9 @@ countrySA =
 countrySB : PhoneNumbers.Territory
 countrySB =
     { id = "SB"
+    , countryCode = Just 677
+    , internationalPrefix = Just "0[01]"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1340,6 +1910,9 @@ countrySB =
 countrySC : PhoneNumbers.Territory
 countrySC =
     { id = "SC"
+    , countryCode = Just 248
+    , internationalPrefix = Just "0(?:[02]|10?)"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1347,6 +1920,9 @@ countrySC =
 countrySD : PhoneNumbers.Territory
 countrySD =
     { id = "SD"
+    , countryCode = Just 249
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1354,6 +1930,9 @@ countrySD =
 countrySE : PhoneNumbers.Territory
 countrySE =
     { id = "SE"
+    , countryCode = Just 46
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1361,6 +1940,9 @@ countrySE =
 countrySG : PhoneNumbers.Territory
 countrySG =
     { id = "SG"
+    , countryCode = Just 65
+    , internationalPrefix = Just "0[0-3]\\d"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1368,6 +1950,9 @@ countrySG =
 countrySH : PhoneNumbers.Territory
 countrySH =
     { id = "SH"
+    , countryCode = Just 290
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1375,6 +1960,9 @@ countrySH =
 countrySI : PhoneNumbers.Territory
 countrySI =
     { id = "SI"
+    , countryCode = Just 386
+    , internationalPrefix = Just "00|10(?:22|66|88|99)"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1382,6 +1970,9 @@ countrySI =
 countrySJ : PhoneNumbers.Territory
 countrySJ =
     { id = "SJ"
+    , countryCode = Just 47
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1389,6 +1980,9 @@ countrySJ =
 countrySK : PhoneNumbers.Territory
 countrySK =
     { id = "SK"
+    , countryCode = Just 421
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1396,6 +1990,9 @@ countrySK =
 countrySL : PhoneNumbers.Territory
 countrySL =
     { id = "SL"
+    , countryCode = Just 232
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1403,6 +2000,9 @@ countrySL =
 countrySM : PhoneNumbers.Territory
 countrySM =
     { id = "SM"
+    , countryCode = Just 378
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1410,6 +2010,9 @@ countrySM =
 countrySN : PhoneNumbers.Territory
 countrySN =
     { id = "SN"
+    , countryCode = Just 221
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1417,6 +2020,9 @@ countrySN =
 countrySO : PhoneNumbers.Territory
 countrySO =
     { id = "SO"
+    , countryCode = Just 252
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1424,6 +2030,9 @@ countrySO =
 countrySR : PhoneNumbers.Territory
 countrySR =
     { id = "SR"
+    , countryCode = Just 597
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1431,6 +2040,9 @@ countrySR =
 countrySS : PhoneNumbers.Territory
 countrySS =
     { id = "SS"
+    , countryCode = Just 211
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1438,6 +2050,9 @@ countrySS =
 countryST : PhoneNumbers.Territory
 countryST =
     { id = "ST"
+    , countryCode = Just 239
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1445,6 +2060,9 @@ countryST =
 countrySV : PhoneNumbers.Territory
 countrySV =
     { id = "SV"
+    , countryCode = Just 503
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1452,6 +2070,9 @@ countrySV =
 countrySX : PhoneNumbers.Territory
 countrySX =
     { id = "SX"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -1459,6 +2080,9 @@ countrySX =
 countrySY : PhoneNumbers.Territory
 countrySY =
     { id = "SY"
+    , countryCode = Just 963
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1466,6 +2090,9 @@ countrySY =
 countrySZ : PhoneNumbers.Territory
 countrySZ =
     { id = "SZ"
+    , countryCode = Just 268
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1473,6 +2100,9 @@ countrySZ =
 countryTA : PhoneNumbers.Territory
 countryTA =
     { id = "TA"
+    , countryCode = Just 290
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1480,6 +2110,9 @@ countryTA =
 countryTC : PhoneNumbers.Territory
 countryTC =
     { id = "TC"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -1487,6 +2120,9 @@ countryTC =
 countryTD : PhoneNumbers.Territory
 countryTD =
     { id = "TD"
+    , countryCode = Just 235
+    , internationalPrefix = Just "00|16"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1494,6 +2130,9 @@ countryTD =
 countryTG : PhoneNumbers.Territory
 countryTG =
     { id = "TG"
+    , countryCode = Just 228
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1501,6 +2140,9 @@ countryTG =
 countryTH : PhoneNumbers.Territory
 countryTH =
     { id = "TH"
+    , countryCode = Just 66
+    , internationalPrefix = Just "00[1-9]"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1508,6 +2150,9 @@ countryTH =
 countryTJ : PhoneNumbers.Territory
 countryTJ =
     { id = "TJ"
+    , countryCode = Just 992
+    , internationalPrefix = Just "810"
+    , nationalPrefix = Just "8"
     }
 
 
@@ -1515,6 +2160,9 @@ countryTJ =
 countryTK : PhoneNumbers.Territory
 countryTK =
     { id = "TK"
+    , countryCode = Just 690
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1522,6 +2170,9 @@ countryTK =
 countryTL : PhoneNumbers.Territory
 countryTL =
     { id = "TL"
+    , countryCode = Just 670
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1529,6 +2180,9 @@ countryTL =
 countryTM : PhoneNumbers.Territory
 countryTM =
     { id = "TM"
+    , countryCode = Just 993
+    , internationalPrefix = Just "810"
+    , nationalPrefix = Just "8"
     }
 
 
@@ -1536,6 +2190,9 @@ countryTM =
 countryTN : PhoneNumbers.Territory
 countryTN =
     { id = "TN"
+    , countryCode = Just 216
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1543,6 +2200,9 @@ countryTN =
 countryTO : PhoneNumbers.Territory
 countryTO =
     { id = "TO"
+    , countryCode = Just 676
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1550,6 +2210,9 @@ countryTO =
 countryTR : PhoneNumbers.Territory
 countryTR =
     { id = "TR"
+    , countryCode = Just 90
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1557,6 +2220,9 @@ countryTR =
 countryTT : PhoneNumbers.Territory
 countryTT =
     { id = "TT"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -1564,6 +2230,9 @@ countryTT =
 countryTV : PhoneNumbers.Territory
 countryTV =
     { id = "TV"
+    , countryCode = Just 688
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1571,6 +2240,9 @@ countryTV =
 countryTW : PhoneNumbers.Territory
 countryTW =
     { id = "TW"
+    , countryCode = Just 886
+    , internationalPrefix = Just "0(?:0[25-79]|19)"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1578,6 +2250,9 @@ countryTW =
 countryTZ : PhoneNumbers.Territory
 countryTZ =
     { id = "TZ"
+    , countryCode = Just 255
+    , internationalPrefix = Just "00[056]"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1585,6 +2260,9 @@ countryTZ =
 countryUA : PhoneNumbers.Territory
 countryUA =
     { id = "UA"
+    , countryCode = Just 380
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1592,6 +2270,9 @@ countryUA =
 countryUG : PhoneNumbers.Territory
 countryUG =
     { id = "UG"
+    , countryCode = Just 256
+    , internationalPrefix = Just "00[057]"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1599,6 +2280,9 @@ countryUG =
 countryUS : PhoneNumbers.Territory
 countryUS =
     { id = "US"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -1606,6 +2290,9 @@ countryUS =
 countryUY : PhoneNumbers.Territory
 countryUY =
     { id = "UY"
+    , countryCode = Just 598
+    , internationalPrefix = Just "0(?:0|1[3-9]\\d)"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1613,6 +2300,9 @@ countryUY =
 countryUZ : PhoneNumbers.Territory
 countryUZ =
     { id = "UZ"
+    , countryCode = Just 998
+    , internationalPrefix = Just "810"
+    , nationalPrefix = Just "8"
     }
 
 
@@ -1620,6 +2310,9 @@ countryUZ =
 countryVA : PhoneNumbers.Territory
 countryVA =
     { id = "VA"
+    , countryCode = Just 39
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1627,6 +2320,9 @@ countryVA =
 countryVC : PhoneNumbers.Territory
 countryVC =
     { id = "VC"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -1634,6 +2330,9 @@ countryVC =
 countryVE : PhoneNumbers.Territory
 countryVE =
     { id = "VE"
+    , countryCode = Just 58
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1641,6 +2340,9 @@ countryVE =
 countryVG : PhoneNumbers.Territory
 countryVG =
     { id = "VG"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -1648,6 +2350,9 @@ countryVG =
 countryVI : PhoneNumbers.Territory
 countryVI =
     { id = "VI"
+    , countryCode = Just 1
+    , internationalPrefix = Just "011"
+    , nationalPrefix = Just "1"
     }
 
 
@@ -1655,6 +2360,9 @@ countryVI =
 countryVN : PhoneNumbers.Territory
 countryVN =
     { id = "VN"
+    , countryCode = Just 84
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1662,6 +2370,9 @@ countryVN =
 countryVU : PhoneNumbers.Territory
 countryVU =
     { id = "VU"
+    , countryCode = Just 678
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1669,6 +2380,9 @@ countryVU =
 countryWF : PhoneNumbers.Territory
 countryWF =
     { id = "WF"
+    , countryCode = Just 681
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1676,6 +2390,9 @@ countryWF =
 countryWS : PhoneNumbers.Territory
 countryWS =
     { id = "WS"
+    , countryCode = Just 685
+    , internationalPrefix = Just "0"
+    , nationalPrefix = Nothing
     }
 
 
@@ -1683,6 +2400,9 @@ countryWS =
 countryXK : PhoneNumbers.Territory
 countryXK =
     { id = "XK"
+    , countryCode = Just 383
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1690,6 +2410,9 @@ countryXK =
 countryYE : PhoneNumbers.Territory
 countryYE =
     { id = "YE"
+    , countryCode = Just 967
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1697,6 +2420,9 @@ countryYE =
 countryYT : PhoneNumbers.Territory
 countryYT =
     { id = "YT"
+    , countryCode = Just 262
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1704,6 +2430,9 @@ countryYT =
 countryZA : PhoneNumbers.Territory
 countryZA =
     { id = "ZA"
+    , countryCode = Just 27
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1711,6 +2440,9 @@ countryZA =
 countryZM : PhoneNumbers.Territory
 countryZM =
     { id = "ZM"
+    , countryCode = Just 260
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
 
 
@@ -1718,4 +2450,7 @@ countryZM =
 countryZW : PhoneNumbers.Territory
 countryZW =
     { id = "ZW"
+    , countryCode = Just 263
+    , internationalPrefix = Just "00"
+    , nationalPrefix = Just "0"
     }
