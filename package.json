@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "download:phone-db": "node scripts/download_db.js",
-    "generate:phone-db": "node scripts/generate.js && elm-format --yes src/PhoneNumbers/Countries.elm"
+    "phonedb:download": "node scripts/download_db.js",
+    "phonedb:generate": "node scripts/generate.js && elm-format --yes src/PhoneNumbers/Countries.elm"
   },
   "devDependencies": {
     "elm": "^0.19.0-bugfix2",
