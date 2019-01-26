@@ -39,15 +39,73 @@ function filterTerritory(territory) {
 }
 
 function territoryToJSON(territory) {
+  const numberDescriptions = [];
+
+  for (const key in territory) {
+    const keyType = numberDescriptionKeyType(key);
+    if (keyType) {
+      const numberDescription = numberDescriptionToJSON(keyType, territory[key][0]);
+      numberDescriptions.push(numberDescription);
+    }
+  }
+
   return {
     id: territory.$.id,
     countryCode: territory.$.countryCode,
     internationalPrefix: territory.$.internationalPrefix,
-    nationalPrefix: territory.$.nationalPrefix
+    nationalPrefix: territory.$.nationalPrefix,
+    numberDescriptions: numberDescriptions
   };
 }
 
+function numberDescriptionToJSON(keyType, data) {
+  return {
+    descriptionType: keyType,
+    exampleNumber: extractXmlSingleValue(data.exampleNumber),
+    possibleLengths: data.possibleLengths,
+    pattern: extractXmlSingleValue(data.nationalNumberPattern)
+  };
+}
+
+function extractXmlSingleValue(xml) {
+  if (!xml) {
+    return undefined;
+  }
+
+  if (xml.length !== 1) {
+    throw `Xml value does not match spec: ${xml}`;
+  }
+
+  return xml[0];
+}
+
+function numberDescriptionKeyType(key) {
+  const numberDescriptions = {
+    generalDesc: 'GeneralDesc',
+    fixedLine: 'FixedLine',
+    mobile: 'Mobile',
+    tollFree: 'TollFree',
+    premiumRate: 'PremiumRate',
+    sharedCost: 'SharedCost',
+    personalNumber: 'PersonalNumber',
+    voip: 'Voip',
+    pager: 'Pager',
+    uan: 'Uan',
+    emergency: 'Emergency',
+    voicemail: 'Voicemail',
+    shortCode: 'ShortCode',
+    standardRate: 'StandardRate',
+    carrierSpecific: 'CarrierSpecific',
+    smsService: 'SmsService',
+    noInternationalDialling: 'NoInternationalDialling',
+  };
+
+  return numberDescriptions[key];
+}
+
 function elmify(territory) {
+  const numberDescriptions = territory.numberDescriptions.map(elmifyNumberDescription);
+
   return `
 {-|-}
 country${territory.id} : PhoneNumbers.Territory
@@ -56,18 +114,35 @@ country${territory.id} =
     , countryCode = ${elmMaybe(territory.countryCode, false)}
     , internationalPrefix = ${elmMaybe(territory.internationalPrefix, true)}
     , nationalPrefix = ${elmMaybe(territory.nationalPrefix, true)}
+    , numberDescriptions = ${elmList(numberDescriptions)}
     }
 `;
+}
+
+function elmifyNumberDescription(data) {
+  return `{
+    descriptionType = ${data.descriptionType}
+    , exampleNumber = "${data.exampleNumber || ''}"
+    , pattern = "${elmCleanString(data.pattern)}"
+}`;
 }
 
 function elmMaybe(maybeVal, isString) {
   if (maybeVal) {
     if (isString) {
-      return `Just "${maybeVal.replace(/\\/g, '\\\\')}"`;
+      return `Just "${elmCleanString(maybeVal)}"`;
     }
 
     return `Just ${maybeVal}`;
   }
 
   return 'Nothing';
+}
+
+function elmCleanString(str) {
+  return str.replace(/\\/g, '\\\\').replace(/\s/g, '');
+}
+
+function elmList(arr) {
+  return `[${arr.join(', ')}]`;
 }

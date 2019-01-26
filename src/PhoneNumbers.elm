@@ -41,8 +41,14 @@ type DescriptionType
 type alias NumberDescription =
     { descriptionType : DescriptionType
     , exampleNumber : String
-    , possibleLengths : List String
+    , possibleLengths : Maybe PossibleLengths
     , pattern : Regex
+    }
+
+
+type alias PossibleLengths =
+    { national : String
+    , localOnly : Maybe String
     }
 
 
