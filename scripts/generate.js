@@ -50,12 +50,27 @@ function territoryToJSON(territory) {
     }
   }
 
+  let availableFormats = [];
+  if (territory.availableFormats) {
+    const data = extractXmlSingleValue(territory.availableFormats);
+    availableFormats = data.numberFormat.map(availableFormatToJSON);
+  }
+
   return {
     id: territory.$.id,
     countryCode: territory.$.countryCode,
     internationalPrefix: territory.$.internationalPrefix,
     nationalPrefix: territory.$.nationalPrefix,
+    availableFormats: availableFormats,
     numberDescriptions: numberDescriptions
+  };
+}
+
+function availableFormatToJSON(data) {
+  return {
+    pattern: data.$.pattern,
+    format: extractXmlSingleValue(data.format),
+    leadingDigits: data.leadingDigits
   };
 }
 
@@ -63,7 +78,7 @@ function numberDescriptionToJSON(keyType, data) {
   return {
     descriptionType: keyType,
     exampleNumber: extractXmlSingleValue(data.exampleNumber),
-    possibleLengths: data.possibleLengths,
+    possibleLengths: extractXmlSingleValue(data.possibleLengths),
     pattern: extractXmlSingleValue(data.nationalNumberPattern)
   };
 }
@@ -105,6 +120,7 @@ function numberDescriptionKeyType(key) {
 }
 
 function elmify(territory) {
+  const availableFormats = territory.availableFormats.map(elmifyAvailableFormats);
   const numberDescriptions = territory.numberDescriptions.map(elmifyNumberDescription);
 
   return `
@@ -115,9 +131,18 @@ country${territory.id} =
     , countryCode = ${elmMaybe(territory.countryCode, false)}
     , internationalPrefix = ${elmMaybe(territory.internationalPrefix, true)}
     , nationalPrefix = ${elmMaybe(territory.nationalPrefix, true)}
+    , availableFormats = ${elmList(availableFormats)}
     , numberDescriptions = ${elmList(numberDescriptions)}
     }
 `;
+}
+
+function elmifyAvailableFormats(data) {
+  return `{
+   pattern = ${elmRegex(data.pattern)}
+   , format = "${data.format}"
+   , leadingDigits = ${elmList((data.leadingDigits || []).map(elmRegex))}
+}`;
 }
 
 function elmifyNumberDescription(data) {
@@ -131,8 +156,8 @@ function elmifyNumberDescription(data) {
 
 function elmifyPossibleLengths(maybeData) {
   return elmMaybe2(maybeData, (data) => `{
-national = ${elmRegex(data[0].$.national)}
-, localOnly = ${elmMaybe2(data[0].$.localOnly, (l) => elmRegex(l))}
+national = ${elmRegex(data.$.national)}
+, localOnly = ${elmMaybe2(data.$.localOnly, (l) => elmRegex(l))}
 }
 `);
 }

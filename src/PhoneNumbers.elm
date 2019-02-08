@@ -32,7 +32,7 @@ type DescriptionType
     | Emergency
     | Voicemail
     | ShortCode
-    | StanardRate
+    | StandardRate
     | CarrierSpecific
     | SmsServices
     | NoInternationalDialling
@@ -55,5 +55,5 @@ type alias PossibleLengths =
 type alias NumberFormat =
     { pattern : Regex
     , format : String
-    , leadingDigits : List String
+    , leadingDigits : List Regex
     }

@@ -14,6 +14,7 @@ countryAC =
     , countryCode = Just 247
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -79,6 +80,41 @@ countryAD =
     , countryCode = Just 376
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[136-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "6"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -174,6 +210,52 @@ countryAE =
     , countryCode = Just 971
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2,9})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "60|8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[236]|[479][2-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "5"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d)(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[479]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -289,6 +371,30 @@ countryAF =
     , countryCode = Just 93
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -344,6 +450,7 @@ countryAG =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -489,6 +596,7 @@ countryAI =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -594,6 +702,63 @@ countryAL =
     , countryCode = Just 355
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "80|9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "4[2-6]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2358][2-5]|4"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[23578]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "6"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -709,6 +874,52 @@ countryAM =
     , countryCode = Just 374
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1|47"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[23]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[4-7]|88|9[13-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -824,6 +1035,19 @@ countryAO =
     , countryCode = Just 244
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[29]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -874,6 +1098,150 @@ countryAR =
     , countryCode = Just 54
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "[019]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[2-7]|8[0-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[2-7]|8[013-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[2-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "[68]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2-$3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2-$3"
+          , leadingDigits =
+                [ "2(?:2[013]|3[067]|49|6[01346]|8|9[147-9])|3(?:36|4[1-358]|5[138]|6|7[069]|8[013578])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "2(?:2(?:0[45]|[13])|3(?:04|[67])|49|6(?:[0136]|4[4-6])|8|9(?:[19]|[48][45]|7[4-6]))|3(?:36|4(?:[12]|[35][4-6]|84)|5(?:1|[38][4-6])|6|7[069]|8(?:[01]|3[45]|[58][3-6]|7[24-6]))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "2(?:2(?:0[45]|[13])|3(?:04|[67])|49|6(?:[0136]|4(?:[45]|6[0-36-9]))|8|9(?:[19]|4(?:4|5[039])|7[4-6]|8[45]))|3(?:36|4(?:[12]|3(?:4|5[0-47]|6[1-39])|5(?:4[0-379]|[56][02])|84)|5(?:1|3[4-6]|8(?:4[0-36-9]|5[013467]|6))|6|7[069]|8(?:[01]|3(?:4|5[12])|5(?:3|4[0-35-9]|5[0-37-9]|6[0-27-9])|7(?:[245]|6[0-37-9])|8(?:[34]|5[0-37-9]|6[0-28])))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "2(?:2(?:0[45]|[13])|3(?:04|[67])|49|6(?:[0136]|4(?:[45]|6[0-36-9]))|8|9(?:[19]|4(?:4|5(?:[09]|3[016-9]))|7[4-6]|8[45]))|3(?:36|4(?:[12]|3(?:4|5(?:[0-37]|4[347])|6[1-39])|5(?:4[0-379]|[56][02])|84)|5(?:1|3[4-6]|8(?:4(?:[0-37-9]|6[1-9])|5(?:[0137]|4[4-8]|6[0-35-9])|6))|6|7[069]|8(?:[01]|3(?:4|5[12])|5(?:3|4(?:[0-37-9]|5[0289]|6[0-7])|5[0-37-9]|6[0-27-9])|7(?:[245]|6[0-37-9])|8(?:[34]|5[0-37-9]|6[0-28])))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2-$3"
+          , leadingDigits =
+                [ "[23]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$2 15-$3-$4"
+          , leadingDigits =
+                [ "91"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$2 15-$3-$4"
+          , leadingDigits =
+                [ "9(?:2[2-4689]|3[3-8])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "9(?:2(?:2[013]|3[067]|49|6[01346]|8|9[147-9])|3(?:36|4[1-358]|5[138]|6|7[069]|8[013578]))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "9(?:2(?:2(?:0[45]|[13])|3(?:04|[67])|49|6(?:[0136]|4[4-6])|8|9(?:[19]|[48][45]|7[4-6]))|3(?:36|4(?:[12]|[35][4-6]|84)|5(?:1|[38][4-6])|6|7[069]|8(?:[01]|3[45]|[58][3-6]|7[24-6])))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "9(?:2(?:2(?:0[45]|[13])|3(?:04|[67])|49|6(?:[0136]|4(?:[45]|6[0-36-9]))|8|9(?:[19]|4(?:4|5[039])|7[4-6]|8[45]))|3(?:36|4(?:[12]|3(?:4|5[0-47]|6[1-39])|5(?:4[0-379]|[56][02])|84)|5(?:1|3[4-6]|8(?:4[0-36-9]|5[013467]|6))|6|7[069]|8(?:[01]|3(?:4|5[12])|5(?:3|4[0-35-9]|5[0-37-9]|6[0-27-9])|7(?:[245]|6[0-37-9])|8(?:[34]|5[0-37-9]|6[0-28]))))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "9(?:2(?:2(?:0[45]|[13])|3(?:04|[67])|49|6(?:[0136]|4(?:[45]|6[0-36-9]))|8|9(?:[19]|4(?:4|5(?:[09]|3[016-9]))|7[4-6]|8[45]))|3(?:36|4(?:[12]|3(?:4|5(?:[0-37]|4[347])|6[1-39])|5(?:4[0-379]|[56][02])|84)|5(?:1|3[4-6]|8(?:4(?:[0-37-9]|6[1-9])|5(?:[0137]|4[4-8]|6[0-35-9])|6))|6|7[069]|8(?:[01]|3(?:4|5[12])|5(?:3|4(?:[0-37-9]|5[0289]|6[0-7])|5[0-37-9]|6[0-27-9])|7(?:[245]|6[0-37-9])|8(?:[34]|5[0-37-9]|6[0-28]))))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{4})(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$2 15-$3-$4"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -994,6 +1362,7 @@ countryAS =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -1099,6 +1468,96 @@ countryAT =
     , countryCode = Just 43
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "11"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3,12})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1(?:11|[2-9])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "517"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "5[079]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3,10})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "(?:31|4)6|51|6(?:5[0-3579]|[6-9])|7(?:20|32|8)|[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3,9})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-467]|5[2-6]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "5"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4,7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "5"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -1214,6 +1673,110 @@ countryAU =
     , countryCode = Just 61
     , internationalPrefix = Just "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "19"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "19"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "16"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "13"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "180"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1802"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{2,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "16"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2378]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "14|[45]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1(?:30|[89])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -1359,6 +1922,19 @@ countryAW =
     , countryCode = Just 297
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[25-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -1454,6 +2030,7 @@ countryAX =
     , countryCode = Just 358
     , internationalPrefix = Just "00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))"
     , nationalPrefix = Just "0"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -1549,6 +2126,54 @@ countryAZ =
     , countryCode = Just 994
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits = []
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[12]|365"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "[12]|365"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "[12]|365(?:[0-46-9]|5[0-35-9])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[3-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -1634,6 +2259,52 @@ countryBA =
     , countryCode = Just 387
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2-$3"
+          , leadingDigits =
+                [ "[3-5]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "6[1-356]|[7-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "6"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -1749,6 +2420,7 @@ countryBB =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -1899,6 +2571,52 @@ countryBD =
     , countryCode = Just 880
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{4,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "31[5-7]|[459]1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3,7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "3(?:[2-5]1|[67]|8[013-9])|4(?:[235]1|4[01346-9]|6[168]|7|[89][18])|5(?:[2-578]1|6[128]|9)|6(?:[0389]1|28|4[14]|5|6[01346-9])|7(?:[2-589]|61)|8(?:0[014-9]|[12]|[3-7]1)|9(?:[24]1|[358])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[13-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{7,8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -1979,6 +2697,52 @@ countryBE =
     , countryCode = Just 32
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[23]|4[23]|9[2-4]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[15-7]|8(?:0[2-8]|[1-79])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "4"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -2089,6 +2853,19 @@ countryBF =
     , countryCode = Just 226
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[25-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -2139,6 +2916,96 @@ countryBG =
     , countryCode = Just 359
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d)(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "43[1-6]|70[1-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{2,3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[356]|4[124-7]|7[1-9]|8[1-6]|9[1-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "43[1-7]|70[1-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "7|80"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[48]|9[08]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -2239,6 +3106,19 @@ countryBH =
     , countryCode = Just 973
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[13679]|8[047]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -2334,6 +3214,19 @@ countryBI =
     , countryCode = Just 257
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[2367]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -2384,6 +3277,19 @@ countryBJ =
     , countryCode = Just 229
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[2689]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -2464,6 +3370,7 @@ countryBL =
     , countryCode = Just 590
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -2514,6 +3421,7 @@ countryBM =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -2619,6 +3527,19 @@ countryBN =
     , countryCode = Just 673
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-578]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -2669,6 +3590,41 @@ countryBO =
     , countryCode = Just 591
     , internationalPrefix = Just "00(?:1\\d)?"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-4]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "[67]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -2739,6 +3695,7 @@ countryBQ =
     , countryCode = Just 599
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -2789,6 +3746,88 @@ countryBR =
     , countryCode = Just 55
     , internationalPrefix = Just "00(?:1[245]|2[1-35]|31|4[13]|[56]5|99)"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "300|4(?:0[02]|37)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "300|4(?:0(?:0|20)|370)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2,3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[3589]00"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "1[125689]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[2-9](?:0[1-9]|[1-9])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "9(?:0[1-9]|[1-9])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2-$3"
+          , leadingDigits =
+                [ "[1-9][1-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{5})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2-$3"
+          , leadingDigits =
+                [ "[1-9][1-9]9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -2909,6 +3948,7 @@ countryBS =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -3034,6 +4074,30 @@ countryBT =
     , countryCode = Just 975
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[23568]|4[5-7]|7[246]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "1[67]|7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -3089,6 +4153,41 @@ countryBW =
     , countryCode = Just 267
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-6]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "90"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -3169,6 +4268,80 @@ countryBY =
     , countryCode = Just 375
     , internationalPrefix = Just "810"
     , nationalPrefix = Just "8"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "800"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "800"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2-$3-$4"
+          , leadingDigits =
+                [ "1(?:5[24]|6[235]|7[467])|2(?:1[246]|2[25]|3[26])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:5[24]|6(?:2|3[04-9]|5[0346-9])|7(?:[46]|7[37-9]))|2(?:1[246]|2[25]|3[26])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2-$3"
+          , leadingDigits =
+                [ "1(?:[56]|7[179])|2[1-3]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:[56]|7(?:1[3-9]|7|9[2-7]))|2[1-3]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2-$3-$4"
+          , leadingDigits =
+                [ "[1-4]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3,4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -3284,6 +4457,30 @@ countryBZ =
     , countryCode = Just 501
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[2-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{4})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3-$4"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -3349,6 +4546,7 @@ countryCA =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -3469,6 +4667,7 @@ countryCC =
     , countryCode = Just 61
     , internationalPrefix = Just "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011"
     , nationalPrefix = Just "0"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -3584,6 +4783,52 @@ countryCD =
     , countryCode = Just 243
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "88"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[1-6]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -3634,6 +4879,19 @@ countryCF =
     , countryCode = Just 236
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[278]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -3699,6 +4957,41 @@ countryCG =
     , countryCode = Just 242
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "801"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[02]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -3764,6 +5057,41 @@ countryCH =
     , countryCode = Just 41
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[2-7]|[89]1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8[047]|9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4 $5"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -3919,6 +5247,19 @@ countryCI =
     , countryCode = Just 225
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[02-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -3969,6 +5310,19 @@ countryCK =
     , countryCode = Just 682
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -4019,6 +5373,107 @@ countryCL =
     , countryCode = Just 56
     , internationalPrefix = Just "(?:0|1(?:1[0-69]|2[0-57]|5[13-58]|69|7[0167]|8[018]))0"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "1(?:[03-58]|[29]1)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2[23]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "3[2-5]|[47][1-35]|5[1-3578]|6[13-57]|8(?:0[1-9]|[1-9])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "9[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "44"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[68]00"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "600"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -4129,6 +5584,30 @@ countryCM =
     , countryCode = Just 237
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "88"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4 $5"
+          , leadingDigits =
+                [ "[26]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -4194,6 +5673,178 @@ countryCN =
     , countryCode = Just 86
     , internationalPrefix = Just "(?:1(?:[12]\\d{3}|79\\d{2}|9[0-7]\\d{2}))?00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[48]00"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "100|95"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{5,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "(?:10|2\\d)[19]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "(?:10|2\\d)(?:10|9[56])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "(?:10|2\\d)(?:100|9[56])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[3-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "[3-9]\\d\\d[19]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "[3-9]\\d\\d(?:10|9[56])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3,4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "21"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "10[1-9]|2[02-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "10[1-9]|2[02-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "10(?:[1-79]|8(?:0[1-9]|[1-9]))|2[02-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "3(?:1[02-9]|35|49|5|7[02-68]|9[1-68])|4(?:1[02-9]|2[179]|[35][2-9]|6[47-9]|7|8[23])|5(?:3[03-9]|4[36]|5[02-9]|6[1-46]|7[028]|80|9[2-46-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]|2[248]|3[04-9]|4[3-6]|6[2368])|8(?:1[236-8]|2[5-7]|3|5[1-9]|7[02-9]|8[36-8]|9[1-7])|9(?:0[1-3689]|1[1-79]|[379]|4[13]|5[1-5])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "3(?:11|7[179])|4(?:[15]1|3[1-35])|5(?:1|2[37]|3[12]|51|7[13-79]|9[15])|7(?:[39]1|5[457]|6[09])|8(?:[57]1|98)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "807"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "8078"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1(?:[3-57-9]|6[25-7])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "108"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1080"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "10800"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{7,8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "950"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -4314,6 +5965,44 @@ countryCO =
     , countryCode = Just 57
     , internationalPrefix = Just "00(?:4(?:[14]4|56)|[579])"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1(?:[2-79]|8[2-9])|[24-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "3"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "1(?:80|9)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:800|9)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -4399,6 +6088,30 @@ countryCR =
     , countryCode = Just 506
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[24-7]|8[3-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -4494,6 +6207,41 @@ countryCU =
     , countryCode = Just 53
     , internationalPrefix = Just "119"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{4,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-4]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{6,7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "5"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -4549,6 +6297,19 @@ countryCV =
     , countryCode = Just 238
     , internationalPrefix = Just "0"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2-59]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -4599,6 +6360,30 @@ countryCW =
     , countryCode = Just 599
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[3467]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "9[4-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -4679,6 +6464,7 @@ countryCX =
     , countryCode = Just 61
     , internationalPrefix = Just "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011"
     , nationalPrefix = Just "0"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -4794,6 +6580,19 @@ countryCY =
     , countryCode = Just 357
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[257-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -4919,6 +6718,41 @@ countryCZ =
     , countryCode = Just 420
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2-8]|9[015-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -5074,6 +6908,218 @@ countryDE =
     , countryCode = Just 49
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3,13})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "3[02]|40|[68]9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3,12})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2(?:0[1-389]|1[124]|2[18]|3[14]|[4-9]1)|3(?:[35-9][15]|4[015])|(?:4[2-9]|[57][1-9]|[68][1-8])1|9(?:06|[1-9]1)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "2(?:0[1-389]|1(?:[14]|2[0-8])|2[18]|3[14]|[4-9]1)|3(?:[35-9][15]|4[015])|(?:4[2-9]|[57][1-9]|[68][1-8])1|9(?:06|[1-9]1)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "138"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3,11})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[24-6]|3(?:[3569][02-46-9]|4[2-4679]|7[2-467]|8[2-46-8])|7(?:0[2-8]|[1-9])|8(?:0[2-9]|[1-8])|9(?:0[7-9]|[1-9])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "[24-6]|3(?:3(?:0[1-467]|2[127-9]|3[124578]|[46][1246]|7[1257-9]|8[1256]|9[145])|4(?:2[135]|3[1357]|4[13578]|6[1246]|7[1356]|9[1346])|5(?:0[14]|2[1-3589]|3[1357]|[49][1246]|6[1-4]|7[13468]|8[13568])|6(?:0[1356]|2[1-489]|3[124-6]|4[1347]|6[13]|7[12579]|8[1-356]|9[135])|7(?:2[1-7]|3[1357]|4[145]|6[1-5]|7[1-4])|8(?:21|3[1468]|4[1347]|6|7[1467]|8[136])|9(?:0[12479]|2[1358]|3[1357]|4[134679]|6[1-9]|7[136]|8[147]|9[1468]))|7(?:0[2-8]|[1-9])|8(?:0[2-9]|[1-8])|9(?:0[7-9]|[1-9])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5,11})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "181"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d)(\\d{4,10})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1(?:3|80)|9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{3,10})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "3"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{7,8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1[67]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{7,12})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "15[1279]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "15[0568]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "18[2-579]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "18[2-579]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "18(?:[2-479]|5(?:0[1-9]|[1-9]))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "18[68]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "18"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{7,8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1(?:6[023]|7)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "15[013-68]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{2})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "15"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -5234,6 +7280,19 @@ countryDJ =
     , countryCode = Just 253
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[27]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -5284,6 +7343,19 @@ countryDK =
     , countryCode = Just 45
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -5364,6 +7436,7 @@ countryDM =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -5469,6 +7542,7 @@ countryDO =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -5574,6 +7648,41 @@ countryDZ =
     , countryCode = Just 213
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[1-4]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[5-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -5684,6 +7793,52 @@ countryEC =
     , countryCode = Just 593
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[2-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2-$3"
+          , leadingDigits =
+                [ "[2-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -5769,6 +7924,58 @@ countryEE =
     , countryCode = Just 372
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[369]|4[3-8]|5(?:[0-2]|5[0-478]|6[45])|7[1-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "[369]|4[3-8]|5(?:[02]|1(?:[0-8]|95)|5[0-478]|6(?:4[0-4]|5[1-589]))|7[1-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[45]|8(?:00|[1-4])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "[45]|8(?:00[1-9]|[1-4])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "80"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -5879,6 +8086,41 @@ countryEG =
     , countryCode = Just 20
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{7,8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[23]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{6,7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1[35]|[4-6]|8[2468]|9[235-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[189]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -5964,6 +8206,7 @@ countryEH =
     , countryCode = Just 212
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -6059,6 +8302,19 @@ countryER =
     , countryCode = Just 291
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[178]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -6114,6 +8370,30 @@ countryES =
     , countryCode = Just 34
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[89]00"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[568]|7[0-48]|9(?:0[12]|[1-8])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -6239,6 +8519,19 @@ countryET =
     , countryCode = Just 251
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[1-59]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -6294,6 +8587,63 @@ countryFI =
     , countryCode = Just 358
     , internationalPrefix = Just "00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "11"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{4,9})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2568][1-8]|3(?:0[1-9]|[1-9])|9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4,8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1(?:0[1-9]|[3-9])|2(?:0[1-9]|9)|[45]|7[135]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3,7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "(?:1|20)0|[36-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -6404,6 +8754,30 @@ countryFJ =
     , countryCode = Just 679
     , internationalPrefix = Just "0(?:0|52)"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[235-9]|45"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -6469,6 +8843,7 @@ countryFK =
     , countryCode = Just 500
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -6519,6 +8894,19 @@ countryFM =
     , countryCode = Just 691
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[39]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -6569,6 +8957,19 @@ countryFO =
     , countryCode = Just 298
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -6664,6 +9065,41 @@ countryFR =
     , countryCode = Just 33
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "11"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4 $5"
+          , leadingDigits =
+                [ "[1-79]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -6789,6 +9225,30 @@ countryGA =
     , countryCode = Just 241
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[2-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -6839,6 +9299,126 @@ countryGB =
     , countryCode = Just 44
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "845"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "8454"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "84546"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "845464"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "800"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "8001"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "80011"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "800111"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "8001111"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "800"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{5,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1(?:[2-79][02-9]|8)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:[24][02-9]|3(?:[02-79]|8[0-46-9])|5(?:[04-9]|2[024-9]|3[014-689])|6(?:[02-8]|9[0-24578])|7(?:[02-57-9]|6[013-9])|8|9(?:[0235-9]|4[2-9]))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:[24][02-9]|3(?:[02-79]|8(?:[0-4689]|7[0-24-9]))|5(?:[04-9]|2(?:[025-9]|4[013-9])|3(?:[014-68]|9[0-37-9]))|6(?:[02-8]|9(?:[0-2458]|7[0-25689]))|7(?:[02-57-9]|6(?:[013-79]|8[0-25689]))|8|9(?:[0235-9]|4(?:[2-57-9]|6[0-689])))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{4,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1(?:38|5[23]|69|7|94)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[25]|7(?:0|6[024-9])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "[25]|7(?:0|6(?:[04-9]|2[356]))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[1389]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -6984,6 +9564,7 @@ countryGD =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -7089,6 +9670,41 @@ countryGE =
     , countryCode = Just 995
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[348]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "5|79"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -7189,6 +9805,19 @@ countryGF =
     , countryCode = Just 594
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[56]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -7239,6 +9868,7 @@ countryGG =
     , countryCode = Just 44
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -7384,6 +10014,41 @@ countryGH =
     , countryCode = Just 233
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[237]|80"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[235]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -7469,6 +10134,19 @@ countryGI =
     , countryCode = Just 350
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -7519,6 +10197,19 @@ countryGL =
     , countryCode = Just 299
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "19|[2-689]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -7599,6 +10290,19 @@ countryGM =
     , countryCode = Just 220
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -7649,6 +10353,30 @@ countryGN =
     , countryCode = Just 224
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "3"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[67]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -7714,6 +10442,19 @@ countryGP =
     , countryCode = Just 590
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[56]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -7764,6 +10505,30 @@ countryGQ =
     , countryCode = Just 240
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[235]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -7844,6 +10609,41 @@ countryGR =
     , countryCode = Just 30
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "21|7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2[3-8]1|[689]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -7954,6 +10754,30 @@ countryGT =
     , countryCode = Just 502
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -8034,6 +10858,7 @@ countryGU =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -8139,6 +10964,30 @@ countryGW =
     , countryCode = Just 245
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "40"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[49]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -8204,6 +11053,19 @@ countryGY =
     , countryCode = Just 592
     , internationalPrefix = Just "001"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-46-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -8284,6 +11146,55 @@ countryHK =
     , countryCode = Just 852
     , internationalPrefix = Just "00(?:30|5[09]|[126-9]?)"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "900"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "9003"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-7]|8[1-4]|9(?:0[1-9]|[1-8])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -8409,6 +11320,19 @@ countryHN =
     , countryCode = Just 504
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[237-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -8459,6 +11383,85 @@ countryHR =
     , countryCode = Just 385
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2,3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "6[01]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2,3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{4})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2-5]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[67]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -8574,6 +11577,19 @@ countryHT =
     , countryCode = Just 509
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2-489]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -8654,6 +11670,30 @@ countryHU =
     , countryCode = Just 36
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "06"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -8784,6 +11824,107 @@ countryID =
     , countryCode = Just 62
     , internationalPrefix = Just "0(?:0[17-9]|10(?:00|1[67]))"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "15"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{5,9})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2[124]|[36]1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5,7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "800"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5,8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-79]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3,4})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "8[1-35-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{6,8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "804"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d)(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "80"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})(\\d{4,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -8914,6 +12055,118 @@ countryIE =
     , countryCode = Just 353
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2[24-9]|47|58|6[237-9]|9[35-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[45]0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3,4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2569]|4[1-69]|7[14]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "76|8[235-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "81"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "4"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -9089,6 +12342,96 @@ countryIL =
     , countryCode = Just 972
     , internationalPrefix = Just "0(?:0|1[2-9])"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "125"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "[2-489]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "121"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "[57]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "12"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "159"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3-$4"
+          , leadingDigits =
+                [ "1[7-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{1,2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3-$4"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -9249,6 +12592,7 @@ countryIM =
     , countryCode = Just 44
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -9379,6 +12723,142 @@ countryIN =
     , countryCode = Just 91
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "5[0236-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "180"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1800"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "11|2[02]|33|4[04]|79[1-7]|80[2-46]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "11|2[02]|33|4[04]|79(?:[1-6]|7[19])|80(?:[2-4]|6[0-589])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "11|2[02]|33|4[04]|79(?:[124-6]|3(?:[02-9]|1[0-24-9])|7(?:1|9[1-6]))|80(?:[2-4]|6[0-589])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1(?:2[0-249]|3[0-25]|4[145]|[59][14]|[68]|7[1257])|2(?:1[257]|3[013]|4[01]|5[0137]|6[0158]|78|8[1568]|9[14])|3(?:26|4[1-3]|5[34]|6[01489]|7[02-46]|8[159])|4(?:1[36]|2[1-47]|3[15]|5[12]|6[0-26-9]|7[0-24-9]|8[013-57]|9[014-7])|5(?:1[025]|22|[36][25]|4[28]|5[12]|[78]1|9[15])|6(?:12|[2-4]1|5[17]|6[13]|7[14]|80)|7(?:12|2[14]|3[134]|4[47]|5[15]|61|88)|8(?:16|2[014]|3[126]|6[136]|7[078]|8[34]|91)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:2[0-249]|3[0-25]|4[145]|[59][14]|6(?:0[2-7]|[1-9])|7[1257]|8(?:[06][2-7]|[1-57-9]))|2(?:1[257]|3[013]|4[01]|5[0137]|6[0158]|78|8[1568]|9[14])|3(?:26|4[1-3]|5[34]|6[01489]|7[02-46]|8[159])|4(?:1[36]|2[1-47]|3[15]|5[12]|6[0-26-9]|7[0-24-9]|8[013-57]|9[014-7])|5(?:1[025]|22|[36][25]|4[28]|5(?:1|2[2-7])|[78]1|9[15])|6(?:12[2-7]|[2-4]1|5[17]|6[13]|7[14]|80)|7(?:12|(?:2[14]|5[15])[2-6]|3(?:1[2-7]|[34][2-6])|4[47][2-7]|61[346]|88[0-8])|8(?:(?:16|2[014]|3[126]|6[136])[2-7]|7(?:0[2-6]|[78][2-7])|8(?:3[2-7]|4[235-7])|91[3-7])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:2[0-249]|3[0-25]|4[145]|[59][14]|6(?:0[2-7]|[1-9])|7[1257]|8(?:[06][2-7]|[1-57-9]))|2(?:1[257]|3[013]|4[01]|5[0137]|6[0158]|78|8[1568]|9[14])|3(?:26|4[1-3]|5[34]|6[01489]|7[02-46]|8[159])|4(?:1[36]|2[1-47]|3[15]|5[12]|6[0-26-9]|7[0-24-9]|8[013-57]|9[014-7])|5(?:1[025]|22|[36][25]|4[28]|5(?:1|2[2-7])|[78]1|9[15])|6(?:12(?:[2-6]|7[0-8])|[2-4]1|5[17]|6[13]|7[14]|80)|7(?:12|(?:2[14]|5[15])[2-6]|3(?:1(?:[2-6]|71)|[34][2-6])|4[47](?:[2-6]|7[19])|61[346]|88(?:[01][2-7]|[2-7]|82))|8(?:(?:16|2[014]|3[126]|6[136])(?:[2-6]|7[19])|7(?:0[2-6]|[78](?:[2-6]|7[19]))|8(?:3(?:[2-6]|7[19])|4(?:[2356]|7[19]))|91(?:[3-6]|7[19]))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1(?:[23579]|4[236-9])|[2-5]|6(?:1[1358]|2[2457-9]|3[2-5]|[4-8])|7(?:1[013-9]|28|3[129]|4[1-35689]|5[29]|6[02-5]|70)|807"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:[23579]|4[236-9])|[2-5]|6(?:1[1358]|2(?:[2457]|84|95)|3(?:[2-4]|55)|[4-8])|7(?:1(?:[013-8]|9[6-9])|28[6-8]|3(?:17|2[0-49]|9[2-57])|4(?:1[2-4]|[29][0-7]|3[0-8]|[56]|8[0-24-7])|5(?:2[1-3]|9[0-6])|6(?:0[5689]|2[5-9]|3[02-8]|4|5[0-367])|70[13-7])|807[19]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:[23579]|4[236-9])|[2-5]|6(?:1[1358]|2(?:[2457]|84|95)|3(?:[2-4]|55)|[4-8])|7(?:1(?:[013-8]|9[6-9])|(?:28[6-8]|4(?:1[2-4]|[29][0-7]|3[0-8]|[56]\\d|8[0-24-7])|5(?:2[1-3]|9[0-6])|6(?:0[5689]|2[5-9]|3[02-8]|4\\d|5[0-367])|70[13-7])[2-7]|3(?:179|(?:2[0-49]|9[2-57])[2-7]))|807(?:1|9[1-3])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[6-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "14"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{2,4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1(?:6|8[06])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:6|8[06]0)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -9509,6 +12989,19 @@ countryIO =
     , countryCode = Just 246
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "3"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -9559,6 +13052,41 @@ countryIQ =
     , countryCode = Just 964
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2-6]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -9614,6 +13142,52 @@ countryIR =
     , countryCode = Just 98
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "96"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "(?:1[137]|2[13-68]|3[1458]|4[145]|5[1468]|6[16]|7[1467]|8[13467])[12689]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[1-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -9714,6 +13288,30 @@ countryIS =
     , countryCode = Just 354
     , internationalPrefix = Just "00|1(?:0(?:01|[12]0)|100)"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[4-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "3"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -9839,6 +13437,121 @@ countryIT =
     , countryCode = Just 39
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{4,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "0[26]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "0[13-57-9][0159]|8(?:03|4[17]|9[245])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "0[13-57-9][0159]|8(?:03|4[17]|9(?:2|[45][0-4]))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{2,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "0(?:[13-579][2-46-8]|8[236-8])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "894"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3,4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "0[26]|5"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1(?:44|[67]|99)|[38]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3,4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "0[13-57-9][0159]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "3"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "0[26]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -9979,6 +13692,7 @@ countryJE =
     , countryCode = Just 44
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -10124,6 +13838,7 @@ countryJM =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -10229,6 +13944,52 @@ countryJO =
     , countryCode = Just 962
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2356]|87"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "7[457-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -10369,6 +14130,214 @@ countryJP =
     , countryCode = Just 81
     , internationalPrefix = Just "010"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "007"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "0077"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "00777"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "00777[01]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "(?:12|57|99)0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d)(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "1(?:26|3[79]|4[56]|5[4-68]|6[3-5])|499|5(?:76|97)|746|8(?:3[89]|47|51|63)|9(?:49|80|9[16])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:267|3(?:7[247]|9[278])|4(?:5[67]|66)|5(?:47|58|64|8[67])|6(?:3[245]|48|5[4-68]))|499[2468]|5(?:76|97)9|7468|8(?:3(?:8[78]|96)|477|51[24]|636)|9(?:496|802|9(?:1[23]|69))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:267|3(?:7[247]|9[278])|4(?:5[67]|66)|5(?:47|58|64|8[67])|6(?:3[245]|48|5[4-68]))|499[2468]|5(?:769|979[2-69])|7468|8(?:3(?:8[78]|96[2457-9])|477|51[24]|636[2-57-9])|9(?:496|802|9(?:1[23]|69))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "1(?:[2-46]|5[2-8]|7[2-689]|8[2-7]|9[1-578])|2(?:2[03-689]|3[3-58]|4[0-468]|5[04-8]|6[013-8]|7[06-9]|8[02-57-9]|9[13])|4(?:2[28]|3[689]|6[035-7]|7[05689]|80|9[3-5])|5(?:3[1-36-9]|4[4578]|5[013-8]|[67]|8[14-7]|9[4-9])|7(?:2[15]|3[5-9]|4|6[135-8]|7[0-4689]|9[014-9])|8(?:2[49]|3[3-8]|4[5-8]|5[2-9]|6[35-9]|7[579]|8[03-579]|9[2-8])|9(?:[23]0|4[02-46-9]|5[024-79]|6[4-9]|7[2-47-9]|8[02-7]|9[3-7])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:[2-46]|5(?:[236-8]|[45][2-69])|7[2-689]|8[2-7]|9[1-578])|2(?:2(?:[04-689]|3[23])|3[3-58]|4[0-468]|5(?:[0468][2-9]|5[78]|7[2-4])|6(?:[0135-8]|4[2-5])|7(?:[0679]|8[2-7])|8(?:[024578]|3[25-9]|9[6-9])|9(?:11|3[2-4]))|4(?:2(?:2[2-9]|8[237-9])|3[689]|6[035-7]|7(?:[059][2-8]|[68])|80|9[3-5])|5(?:3[1-36-9]|4[4578]|5[013-8]|[67]|8[14-7]|9(?:[4-7]|[89][2-8]))|7(?:2[15]|3[5-9]|4|6[135-8]|7[0-4689]|9(?:[017-9]|4[6-8]|5[2-478]|6[2-589]))|8(?:2(?:4[4-8]|9[2-8])|3(?:[3-6][2-9]|7[2-6]|8[2-5])|4[5-8]|5[2-9]|6(?:[37]|5[4-7]|6[2-9]|8[2-8]|9[236-9])|7[579]|8[03-579]|9[2-8])|9(?:[23]0|4[02-46-9]|5[024-79]|6[4-9]|7[2-47-9]|8[02-7]|9(?:3[34]|4[2-69]|[5-7]))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:[2-46]|5(?:[236-8]|[45][2-69])|7[2-689]|8[2-7]|9[1-578])|2(?:2(?:[04-689]|3[23])|3[3-58]|4[0-468]|5(?:[0468][2-9]|5[78]|7[2-4])|6(?:[0135-8]|4[2-5])|7(?:[0679]|8[2-7])|8(?:[024578]|3[25-9]|9[6-9])|9(?:11|3[2-4]))|4(?:2(?:2[2-9]|8[237-9])|3[689]|6[035-7]|7(?:[059][2-8]|[68])|80|9[3-5])|5(?:3[1-36-9]|4[4578]|5[013-8]|[67]|8[14-7]|9(?:[4-7]|[89][2-8]))|7(?:2[15]|3[5-9]|4|6[135-8]|7[0-4689]|9(?:[017-9]|4[6-8]|5[2-478]|6[2-589]))|8(?:2(?:4[4-8]|9(?:20|[3578]|4[04-9]|6[56]))|3(?:[3-6][2-9]|7(?:[2-5]|6[0-59])|8[2-5])|4[5-8]|5[2-9]|6(?:[37]|5(?:[467]|5[014-9])|6(?:[2-8]|9[02-69])|8[2-8]|9(?:[236-8]|9[23]))|7[579]|8[03-579]|9[2-8])|9(?:[23]0|4[02-46-9]|5[024-79]|6[4-9]|7[2-47-9]|8[02-7]|9(?:3(?:3[02-9]|4[0-24689])|4[2-69]|[5-7]))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:[2-46]|5(?:[236-8]|[45][2-69])|7[2-689]|8[2-7]|9[1-578])|2(?:2(?:[04-689]|3[23])|3[3-58]|4[0-468]|5(?:[0468][2-9]|5[78]|7[2-4])|6(?:[0135-8]|4[2-5])|7(?:[0679]|8[2-7])|8(?:[024578]|3[25-9]|9[6-9])|9(?:11|3[2-4]))|4(?:2(?:2[2-9]|8[237-9])|3[689]|6[035-7]|7(?:[059][2-8]|[68])|80|9[3-5])|5(?:3[1-36-9]|4[4578]|5[013-8]|[67]|8[14-7]|9(?:[4-7]|[89][2-8]))|7(?:2[15]|3[5-9]|4|6[135-8]|7[0-4689]|9(?:[017-9]|4[6-8]|5[2-478]|6[2-589]))|8(?:2(?:4[4-8]|9(?:20|[3578]|4[04-9]|6(?:5[25]|60)))|3(?:[3-6][2-9]|7(?:[2-5]|6[0-59])|8[2-5])|4[5-8]|5[2-9]|6(?:[37]|5(?:[467]|5[014-9])|6(?:[2-8]|9[02-69])|8[2-8]|9(?:[236-8]|9[23]))|7[579]|8[03-579]|9[2-8])|9(?:[23]0|4[02-46-9]|5[024-79]|6[4-9]|7[2-47-9]|8[02-7]|9(?:3(?:3[02-9]|4[0-24689])|4[2-69]|[5-7]))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "1|2(?:2[37]|5[5-9]|64|78|8[39]|91)|4(?:2[2689]|64|7[347])|5[2-589]|60|8(?:2[124589]|3[279]|[46-9])|9(?:[235-8]|93)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1|2(?:2[37]|5(?:[57]|[68]0|9[19])|64|78|8[39]|917)|4(?:2(?:20|[68]|9[178])|64|7[347])|5[2-589]|60|8(?:2[124589]|3[279]|[46-9])|9(?:[235-8]|93[34])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1|2(?:2[37]|5(?:[57]|[68]0|9(?:17|99))|64|78|8[39]|917)|4(?:2(?:20|[68]|9[178])|64|7[347])|5[2-589]|60|8(?:2[124589]|3[279]|[46-9])|9(?:[235-8]|93[34])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "2(?:[34]7|[56]9|74|9[14-79])|82|993"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "[36]|4(?:2[09]|7[01])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "2[2-9]|4|7[235-9]|9[49]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{2})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "007"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "800"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "008"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "[2579]|80"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})(\\d{4,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{5})(\\d{5,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{6})(\\d{6,7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -10524,6 +14493,41 @@ countryKE =
     , countryCode = Just 254
     , internationalPrefix = Just "000"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{5,7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[24-6]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -10604,6 +14608,41 @@ countryKG =
     , countryCode = Just 996
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[25-79]|31[25]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "3"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d)(\\d{2,3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -10674,6 +14713,30 @@ countryKH =
     , countryCode = Just 855
     , internationalPrefix = Just "00[14-9]"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[1-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -10759,6 +14822,7 @@ countryKI =
     , countryCode = Just 686
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -10824,6 +14888,19 @@ countryKM =
     , countryCode = Just 269
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[3478]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -10889,6 +14966,7 @@ countryKN =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -10994,6 +15072,41 @@ countryKP =
     , countryCode = Just 850
     , internationalPrefix = Just "00|99"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -11064,6 +15177,135 @@ countryKR =
     , countryCode = Just 82
     , internationalPrefix = Just "00(?:[125689]|3(?:[46]5|91)|7(?:00|27|3|55|6[126]))"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "(?:3[1-3]|[46][1-4]|5[1-5])1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "1(?:5[246-9]|6[046-8]|8[03579])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "1(?:5(?:22|44|66|77|88|99)|6(?:[07]0|44|6[16]|88)|8(?:00|33|55|77|99))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3,4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "60|8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3,4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "[1346]|5[1-5]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "[57]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{5})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "5"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "003"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "0030"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{3,4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -11224,6 +15466,30 @@ countryKW =
     , countryCode = Just 965
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[169]|2(?:[235]|4[1-35-9])|52"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[25]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -11289,6 +15555,7 @@ countryKY =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -11409,6 +15676,7 @@ countryKZ =
     , countryCode = Just 7
     , internationalPrefix = Just "810"
     , nationalPrefix = Just "8"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -11534,6 +15802,41 @@ countryLA =
     , countryCode = Just 856
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2[13]|3[14]|[4-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "3"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -11604,6 +15907,30 @@ countryLB =
     , countryCode = Just 961
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[13-69]|7(?:[2-57]|62|8[0-7]|9[04-9])|8[02-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[7-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -11684,6 +16011,7 @@ countryLC =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -11789,6 +16117,41 @@ countryLI =
     , countryCode = Just 423
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[237-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "6[56]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "6"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -11899,6 +16262,30 @@ countryLK =
     , countryCode = Just 94
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[1-689]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -11969,6 +16356,41 @@ countryLR =
     , countryCode = Just 231
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[45]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[3578]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -12034,6 +16456,19 @@ countryLS =
     , countryCode = Just 266
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2568]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -12099,6 +16534,52 @@ countryLT =
     , countryCode = Just 370
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "8"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "52[0-79]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "37|4(?:[15]|6[1-8])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[3-6]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[7-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -12224,6 +16705,107 @@ countryLU =
     , countryCode = Just 352
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2(?:0[2-689]|[2-9])|[3-57]|8(?:0[2-9]|[13-9])|9(?:0[89]|[2-579])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2(?:0[2-689]|[2-9])|[3-57]|8(?:0[2-9]|[13-9])|9(?:0[89]|[2-579])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "20[2-689]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{1,2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "2(?:[0367]|4[3-8])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "80[01]|90[015]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "20"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "6"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})(\\d{1,2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4 $5"
+          , leadingDigits =
+                [ "2(?:[0367]|4[3-8])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{1,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "2[2-9]|[3-57-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -12334,6 +16916,19 @@ countryLV =
     , countryCode = Just 371
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[269]|8[01]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -12429,6 +17024,19 @@ countryLY =
     , countryCode = Just 218
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[25-79]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -12484,6 +17092,66 @@ countryMA =
     , countryCode = Just 212
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "5(?:2[015-7]|3[0-4])|[67]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "5(?:2[2-489]|3[5-9]|9)|892"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "5(?:2(?:[2-48]|9[0-7])|3(?:[5-79]|8[0-7])|9)|892"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "5[23]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "5"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -12579,6 +17247,52 @@ countryMC =
     , countryCode = Just 377
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[39]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "4"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4 $5"
+          , leadingDigits =
+                [ "6"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -12659,6 +17373,41 @@ countryMD =
     , countryCode = Just 373
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "22|3"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[25-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -12784,6 +17533,19 @@ countryME =
     , countryCode = Just 382
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -12899,6 +17661,7 @@ countryMF =
     , countryCode = Just 590
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -12949,6 +17712,19 @@ countryMG =
     , countryCode = Just 261
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{3})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[23]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -13019,6 +17795,19 @@ countryMH =
     , countryCode = Just 692
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[2-6]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -13084,6 +17873,41 @@ countryMK =
     , countryCode = Just 389
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[347]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d)(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[58]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -13184,6 +18008,33 @@ countryML =
     , countryCode = Just 223
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "67[057-9]|74[045]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "67(?:0[09]|[59]9|77|8[89])|74(?:0[02]|44|55)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[24-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -13264,6 +18115,107 @@ countryMM =
     , countryCode = Just 95
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "16|2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[45]|6(?:0[23]|[1-689]|7[235-7])|7(?:[0-4]|5[2-7])|8[1-6]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[12]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[4-7]|8[1-35]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{4,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "9(?:2[0-4]|[35-9]|4[137-9])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "92"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{5})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -13349,6 +18301,66 @@ countryMN =
     , countryCode = Just 976
     , internationalPrefix = Just "001"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[12]1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[57-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[12]2[1-3]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{5,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[12](?:27|3[2-8]|4[2-68]|5[1-4689])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "[12](?:27|3[2-8]|4[2-68]|5[1-4689])[0-3]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{4,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[12]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -13419,6 +18431,19 @@ countryMO =
     , countryCode = Just 853
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[268]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -13469,6 +18494,7 @@ countryMP =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -13574,6 +18600,19 @@ countryMQ =
     , countryCode = Just 596
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[56]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -13624,6 +18663,19 @@ countryMR =
     , countryCode = Just 222
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[2-48]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -13689,6 +18741,7 @@ countryMS =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -13794,6 +18847,19 @@ countryMT =
     , countryCode = Just 356
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2357-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -13919,6 +18985,30 @@ countryMU =
     , countryCode = Just 230
     , internationalPrefix = Just "0(?:0|[24-7]0|3[03])"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-46]|8(?:0[0-2]|14|3[129])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "5"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -14014,6 +19104,30 @@ countryMV =
     , countryCode = Just 960
     , internationalPrefix = Just "0(?:0|19)"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[367]|4(?:00|[56])|9[14-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -14109,6 +19223,52 @@ countryMW =
     , countryCode = Just 265
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[17-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "3"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -14174,6 +19334,52 @@ countryMX =
     , countryCode = Just 52
     , internationalPrefix = Just "0[09]"
     , nationalPrefix = Just "01"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "33|5[56]|81"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$2 $3 $4"
+          , leadingDigits =
+                [ "1(?:33|5[56]|81)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$2 $3 $4"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -14289,6 +19495,74 @@ countryMY =
     , countryCode = Just 60
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3"
+          , leadingDigits =
+                [ "[4-79]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3"
+          , leadingDigits =
+                [ "1(?:[0249]|[367][2-9]|8[1-9])|8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3"
+          , leadingDigits =
+                [ "3"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3"
+          , leadingDigits =
+                [ "15"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3"
+          , leadingDigits =
+                [ "11"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3-$4"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -14389,6 +19663,30 @@ countryMZ =
     , countryCode = Just 258
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2|8[2-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -14454,6 +19752,52 @@ countryNA =
     , countryCode = Just 264
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "88"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "6"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8[0-5]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -14549,6 +19893,19 @@ countryNC =
     , countryCode = Just 687
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1.$2.$3"
+          , leadingDigits =
+                [ "[2-47-9]|5[0-4]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -14614,6 +19971,30 @@ countryNE =
     , countryCode = Just 227
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "09|2[01]|[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -14694,6 +20075,30 @@ countryNF =
     , countryCode = Just 672
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "3"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -14754,6 +20159,74 @@ countryNG =
     , countryCode = Just 234
     , internationalPrefix = Just "009"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "78"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[12]|9(?:0[3-9]|[1-9])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{2,3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[3-7]|8[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[7-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})(\\d{4,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[78]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5})(\\d{5,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[78]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -14839,6 +20312,19 @@ countryNI =
     , countryCode = Just 505
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[125-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -14904,6 +20390,74 @@ countryNL =
     , countryCode = Just 31
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "14"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4,7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[89]0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1[035]|2[0346]|3[03568]|4[0356]|5[0358]|[7-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[1-5]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "6[1-58]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "6"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -15044,6 +20598,30 @@ countryNO =
     , countryCode = Just 47
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[235-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[489]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -15199,6 +20777,41 @@ countryNP =
     , countryCode = Just 977
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "1[2-6]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[1-8]|9(?:[1-579]|6[2-6])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -15254,6 +20867,19 @@ countryNR =
     , countryCode = Just 674
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[458]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -15304,6 +20930,19 @@ countryNU =
     , countryCode = Just 683
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -15354,6 +20993,63 @@ countryNZ =
     , countryCode = Just 64
     , internationalPrefix = Just "0(?:0|161)"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3"
+          , leadingDigits =
+                [ "24|[346]|7[2-57-9]|9[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "80|9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2(?:10|74)|[59]|80"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3,4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2[028]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[278]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -15469,6 +21165,41 @@ countryOM =
     , countryCode = Just 968
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[58]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[79]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -15549,6 +21280,30 @@ countryPA =
     , countryCode = Just 507
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[1-57-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "6"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -15629,6 +21384,52 @@ countryPE =
     , countryCode = Just 51
     , internationalPrefix = Just "19(?:1[124]|77|90)00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[4-7]|8[2-4]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -15744,6 +21545,30 @@ countryPF =
     , countryCode = Just 689
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "44"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[48]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -15809,6 +21634,30 @@ countryPG =
     , countryCode = Just 675
     , internationalPrefix = Just "00|140[1-3]"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "18|[2-69]|85"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[78]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -15889,6 +21738,102 @@ countryPH =
     , countryCode = Just 63
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "3(?:23|39|46)|4(?:2[3-6]|[35]9|4[26]|76)|5(?:22|44)|642|8(?:62|8[245])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "3(?:230|397|461)|4(?:2(?:35|[46]4|51)|396|4(?:22|63)|59[347]|76[15])|5(?:221|446)|642[23]|8(?:622|8(?:[24]2|5[13]))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "3[2-68]|4[2-9]|[5-7]|8[2-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "3(?:[23568]|4(?:[0-57-9]|6[02-8]))|4(?:2(?:[0-689]|7[0-8])|[3-8]|9(?:[0-246-9]|3[1-9]|5[0-57-9]))|[5-7]|8(?:[2-7]|8(?:[0-24-9]|3[0-35-9]))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[34]|88"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{1,2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -15959,6 +21904,99 @@ countryPK =
     , countryCode = Just 92
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[89]0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{7,8})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "(?:2[125]|4[0-246-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91)[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{6,7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2(?:3[2358]|4[2-4]|9[2-8])|45[3479]|54[2-467]|60[468]|72[236]|8(?:2[2-689]|3[23578]|4[3478]|5[2356])|9(?:2[2-8]|3[27-9]|4[2-6]|6[3569]|9[25-8])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "(?:2(?:3[2358]|4[2-4]|9[2-8])|45[3479]|54[2-467]|60[468]|72[236]|8(?:2[2-689]|3[23578]|4[3478]|5[2356]))[2-9]|9(?:2(?:2[2-9]|[3-8])|(?:3[27-9]|4[2-6]|6[3569])[2-9]|9(?:[25-7][2-9]|8))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "58"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "3"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "2[125]|4[0-246-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[24-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -16074,6 +22112,77 @@ countryPL =
     , countryCode = Just 48
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "19"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "11|64"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "(?:1[2-8]|2[2-69]|3[2-4]|4[1-468]|5[24-689]|6[1-3578]|7[14-7]|8[1-79]|9[145])1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "(?:1[2-8]|2[2-69]|3[2-4]|4[1-468]|5[24-689]|6[1-3578]|7[14-7]|8[1-79]|9[145])19"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2,3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "64"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "1[2-8]|2|3[2-4]|4[1-468]|5[24-689]|6[1-3578]|7[14-7]|8[1-79]|9[145]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[3-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -16214,6 +22323,19 @@ countryPM =
     , countryCode = Just 508
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[45]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -16264,6 +22386,7 @@ countryPR =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -16369,6 +22492,41 @@ countryPS =
     , countryCode = Just 970
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2489]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "5"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -16454,6 +22612,30 @@ countryPT =
     , countryCode = Just 351
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2[12]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[236-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -16609,6 +22791,19 @@ countryPW =
     , countryCode = Just 680
     , internationalPrefix = Just "01[12]"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -16659,6 +22854,85 @@ countryPY =
     , countryCode = Just 595
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-9]0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[26]1|3[289]|4[1246-8]|7[1-3]|8[1-36]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2[279]|3[13-5]|4[359]|5|6[347]|7[46-8]|85"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[26]1|3[289]|4[1246-8]|7[1-3]|8[1-36]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2-7]|85"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -16744,6 +23018,30 @@ countryQA =
     , countryCode = Just 974
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2[126]|8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[3-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -16824,6 +23122,19 @@ countryRE =
     , countryCode = Just 262
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[268]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -16919,6 +23230,55 @@ countryRO =
     , countryCode = Just 40
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "219|31"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2[3-6]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "2[3-6]\\d9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[23]1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[237-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -17029,6 +23389,30 @@ countryRS =
     , countryCode = Just 381
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3,9})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "(?:2[389]|39)0|[7-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{5,10})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[1-36]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -17129,6 +23513,37 @@ countryRU =
     , countryCode = Just 7
     , internationalPrefix = Just "810"
     , nationalPrefix = Just "8"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits = []
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2-$3-$4"
+          , leadingDigits =
+                [ "[3489]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -17229,6 +23644,41 @@ countryRW =
     , countryCode = Just 250
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[7-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -17309,6 +23759,63 @@ countrySA =
     , countryCode = Just 966
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "5"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "81"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -17424,6 +23931,19 @@ countrySB =
     , countryCode = Just 677
     , internationalPrefix = Just "0[01]"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "7|8[4-9]|9(?:1[2-9]|2[013-9]|3[0-2]|[46]|5[0-46-9]|7[0-689]|8[0-79]|9[0-8])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -17504,6 +24024,19 @@ countrySC =
     , countryCode = Just 248
     , internationalPrefix = Just "0(?:[02]|10?)"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[246]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -17584,6 +24117,19 @@ countrySD =
     , countryCode = Just 249
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[19]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -17634,6 +24180,140 @@ countrySE =
     , countryCode = Just 46
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2,3})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3"
+          , leadingDigits =
+                [ "20"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3"
+          , leadingDigits =
+                [ "[12][136]|3[356]|4[0246]|6[03]|90[1-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "9(?:00|39|44)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{2,3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3 $4"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2,3})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3"
+          , leadingDigits =
+                [ "1[2457]|2(?:[247-9]|5[0138])|3[0247-9]|4[1357-9]|5[0-35-9]|6(?:[125689]|4[02-57]|7[0-2])|9(?:[125-8]|3[02-5]|4[0-3])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2,3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3 $4"
+          , leadingDigits =
+                [ "1[013689]|2[0136]|3[1356]|4[0246]|54|6[03]|90[1-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2,3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3"
+          , leadingDigits =
+                [ "9(?:0|39|44)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{3})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3 $4"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3 $4"
+          , leadingDigits =
+                [ "[13-5]|2(?:[247-9]|5[0138])|6(?:[124-689]|7[0-2])|9(?:[125-8]|3[02-5]|4[0-3])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3 $4"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3 $4"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2 $3 $4 $5"
+          , leadingDigits =
+                [ "[26]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -17774,6 +24454,52 @@ countrySG =
     , countryCode = Just 65
     , internationalPrefix = Just "0[0-3]\\d"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[369]|8[1-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "70"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -17884,6 +24610,7 @@ countrySH =
     , countryCode = Just 290
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -17949,6 +24676,52 @@ countrySI =
     , countryCode = Just 386
     , internationalPrefix = Just "00|10(?:22|66|88|99)"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "8[09]|9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[12]|[357][2-8]|4[24-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[3467]|51"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[58]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -18049,6 +24822,7 @@ countrySJ =
     , countryCode = Just 47
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -18204,6 +24978,80 @@ countrySK =
     , countryCode = Just 421
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{2})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "21"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2,3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[3-5][1-8]1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "[3-5][1-8]1[67]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "909"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "9090"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3})(\\d{3})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1/$2 $3 $4"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1/$2 $3 $4"
+          , leadingDigits =
+                [ "[3-5]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[689]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -18359,6 +25207,19 @@ countrySL =
     , countryCode = Just 232
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -18414,6 +25275,30 @@ countrySM =
     , countryCode = Just 378
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[5-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -18499,6 +25384,30 @@ countrySN =
     , countryCode = Just 221
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[379]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -18609,6 +25518,74 @@ countrySO =
     , countryCode = Just 252
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "8[125]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "[134]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[15]|2[0-79]|3[0-46-8]|4[0-7]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "24|[67]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[348]|64|79[0-8]|90"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{5,7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[12679]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -18659,6 +25636,41 @@ countrySR =
     , countryCode = Just 597
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[2-4]|5[2-58]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2-$3"
+          , leadingDigits =
+                [ "5"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[6-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -18724,6 +25736,19 @@ countrySS =
     , countryCode = Just 211
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[19]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -18774,6 +25799,19 @@ countryST =
     , countryCode = Just 239
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[29]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -18824,6 +25862,41 @@ countrySV =
     , countryCode = Just 503
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[267]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -18904,6 +25977,7 @@ countrySX =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19009,6 +26083,30 @@ countrySY =
     , countryCode = Just 963
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[1-5]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19064,6 +26162,30 @@ countrySZ =
     , countryCode = Just 268
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[0237]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{5})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19174,6 +26296,7 @@ countryTA =
     , countryCode = Just 290
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19209,6 +26332,7 @@ countryTC =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19334,6 +26458,19 @@ countryTD =
     , countryCode = Just 235
     , internationalPrefix = Just "00|16"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[2679]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19384,6 +26521,19 @@ countryTG =
     , countryCode = Just 228
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[279]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19434,6 +26584,41 @@ countryTH =
     , countryCode = Just 66
     , internationalPrefix = Just "00[1-9]"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "14|[3-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19529,6 +26714,55 @@ countryTJ =
     , countryCode = Just 992
     , internationalPrefix = Just "810"
     , nationalPrefix = Just "8"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{4})(\\d)(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "3(?:[1245]|3[12])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "3(?:[1245]|3(?:1[0-689]|2))"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{6})(\\d)(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "33"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "4[148]|[578]|9(?:[0235-9]|1[0-69])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[349]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19584,6 +26818,7 @@ countryTK =
     , countryCode = Just 690
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19634,6 +26869,30 @@ countryTL =
     , countryCode = Just 670
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[2-489]|70"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19729,6 +26988,41 @@ countryTM =
     , countryCode = Just 993
     , internationalPrefix = Just "810"
     , nationalPrefix = Just "8"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2-$3-$4"
+          , leadingDigits =
+                [ "12"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "6"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d)(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2-$3-$4"
+          , leadingDigits =
+                [ "[1-5]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19779,6 +27073,19 @@ countryTN =
     , countryCode = Just 216
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2-57-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19874,6 +27181,41 @@ countryTO =
     , countryCode = Just 676
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[2-6]|7[014]|8[05]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "7[578]|8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -19939,6 +27281,52 @@ countryTR =
     , countryCode = Just 90
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d)(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "444"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[2-4]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "512|[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "5"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -20079,6 +27467,7 @@ countryTT =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -20204,6 +27593,7 @@ countryTV =
     , countryCode = Just 688
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -20254,6 +27644,63 @@ countryTW =
     , countryCode = Just 886
     , internationalPrefix = Just "0(?:0[25-79]|19)"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d)(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "202"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d)(\\d{3,4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[25][2-8]|[346]|7[1-9]|8[27-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[258]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -20379,6 +27826,41 @@ countryTZ =
     , countryCode = Just 255
     , internationalPrefix = Just "00[056]"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[24]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[67]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{2})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -20504,6 +27986,47 @@ countryUA =
     , countryCode = Just 380
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "(?:3[1-8]|4[136-8])2|5(?:[12457]2|6[24])|6(?:[12][29]|[49]2|5[24])|[89]0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "3(?:[1-46-8]2[013-9]|52)|4(?:[1378]2|62[013-9])|5(?:[12457]2|6[24])|6(?:[12][29]|[49]2|5[24])|[89]0"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "3[1-8]|4(?:[1367]|[45][6-9]|8[4-6])|5(?:[1-5]|6[0135689]|7[4-6])|6(?:[12][3-7]|[459])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "3[1-8]|4(?:[1367]|[45][6-9]|8[4-6])|5(?:[1-5]|6(?:[015689]|3[02389])|7[4-6])|6(?:[12][3-7]|[459])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[3-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -20604,6 +28127,44 @@ countryUG =
     , countryCode = Just 256
     , internationalPrefix = Just "00[057]"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "3|4(?:[0-5]|6[0-36-9])"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "202"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "2024"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[247-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -20689,6 +28250,30 @@ countryUS =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "($1) $2-$3"
+          , leadingDigits =
+                [ "[2-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -20809,6 +28394,41 @@ countryUY =
     , countryCode = Just 598
     , internationalPrefix = Just "0(?:0|1[3-9]\\d)"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "8|90"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[24]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "9"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -20894,6 +28514,19 @@ countryUZ =
     , countryCode = Just 998
     , internationalPrefix = Just "810"
     , nationalPrefix = Just "8"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[679]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -20944,6 +28577,7 @@ countryVA =
     , countryCode = Just 39
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -21069,6 +28703,7 @@ countryVC =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -21174,6 +28809,19 @@ countryVE =
     , countryCode = Just 58
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1-$2"
+          , leadingDigits =
+                [ "[24589]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -21259,6 +28907,7 @@ countryVG =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -21364,6 +29013,7 @@ countryVI =
     , countryCode = Just 1
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -21469,6 +29119,96 @@ countryVN =
     , countryCode = Just 84
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "80"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[17]99"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "69"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{4,6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "1"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3 $4"
+          , leadingDigits =
+                [ "[69]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[3578]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{4})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2[48]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -21594,6 +29334,19 @@ countryVU =
     , countryCode = Just 678
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[579]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -21674,6 +29427,19 @@ countryWF =
     , countryCode = Just 681
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{2})(\\d{2})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[4-8]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -21739,6 +29505,41 @@ countryWS =
     , countryCode = Just 685
     , internationalPrefix = Just "0"
     , nationalPrefix = Nothing
+    , availableFormats =
+        [ { pattern =
+                "(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1"
+          , leadingDigits =
+                [ "[2-6]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3,7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -21804,6 +29605,41 @@ countryXK =
     , countryCode = Just 383
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[2-4]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[89]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[23]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -21884,6 +29720,30 @@ countryYE =
     , countryCode = Just 967
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[1-6]|7[24-68]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -21939,6 +29799,7 @@ countryYT =
     , countryCode = Just 262
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats = []
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -22004,6 +29865,52 @@ countryZA =
     , countryCode = Just 27
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{2})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "8[1-4]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{2,3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "8[1-4]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "860"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[1-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -22129,6 +30036,37 @@ countryZM =
     , countryCode = Just 260
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits = []
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[28]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[79]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
@@ -22199,6 +30137,124 @@ countryZW =
     , countryCode = Just 263
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
+    , availableFormats =
+        [ { pattern =
+                "(\\d)(\\d{3})(\\d{2,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "[49]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2(?:0[45]|2[278]|[49]8|[78])|3(?:[09]8|17|3[78]|[78])|5[15][78]|6(?:[29]8|37|[68][78]|75)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "80"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{7})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "2(?:[05-79]2|4)|(?:39|5[45]|6[15-8])2|8[13-59]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "2(?:02[014]|4|[56]20|[79]2)|392|5(?:42|525)|6(?:[16-8]21|52[013])|8[13-59]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "7"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{3})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "2(?:1[39]|2[0157]|[378]|[56][14])|3(?:12|29)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                , "2(?:1[39]|2[0157]|[378]|[56][14])|3(?:123|29)"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{6})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "8"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[16]|2(?:[0-256]|9[0-79])|3(?:[09][0-79]|1[0-689]|[24-6]|3[0-69])|5[0-35-9]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{2})(\\d{3})(\\d{3,4})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2 $3"
+          , leadingDigits =
+                [ "29|[35]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        , { pattern =
+                "(\\d{4})(\\d{3,5})"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          , format = "$1 $2"
+          , leadingDigits =
+                [ "[25]"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+                ]
+          }
+        ]
     , numberDescriptions =
         [ { descriptionType = GeneralDesc
           , exampleNumber = ""
