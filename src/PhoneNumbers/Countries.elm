@@ -266,16 +266,12 @@ countryAC =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[01589]\\d|[46])\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[01589]\\d|[46])\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "62889"
           , possibleLengths =
                 Just
@@ -366,16 +362,12 @@ countryAD =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1|6\\d)\\d{7}|[136-9]\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1|6\\d)\\d{7}|[136-9]\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -507,16 +499,12 @@ countryAE =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[4-7]\\d|9[0-689])\\d{7}|800\\d{2,9}|[2-4679]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[4-7]\\d|9[0-689])\\d{7}|800\\d{2,9}|[2-4679]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22345678"
           , possibleLengths =
                 Just
@@ -646,16 +634,12 @@ countryAF =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-7]\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-7]\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "234567890"
           , possibleLengths =
                 Just
@@ -702,16 +686,12 @@ countryAG =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:268|[58]\\d\\d|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:268|[58]\\d\\d|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2684601234"
           , possibleLengths =
                 Just
@@ -848,16 +828,12 @@ countryAI =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:264|[58]\\d\\d|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:264|[58]\\d\\d|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2644612345"
           , possibleLengths =
                 Just
@@ -1010,16 +986,12 @@ countryAL =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:[2-58]|6\\d)\\d\\d|700)\\d{5}|(?:8\\d{2,3}|900)\\d{3}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[2-58]|6\\d)\\d\\d|700)\\d{5}|(?:8\\d{2,3}|900)\\d{3}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22345678"
           , possibleLengths =
                 Just
@@ -1171,16 +1143,12 @@ countryAM =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[1-489]\\d|55|60|77)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[1-489]\\d|55|60|77)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "10123456"
           , possibleLengths =
                 Just
@@ -1299,16 +1267,12 @@ countryAO =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[29]\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[29]\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "222123456"
           , possibleLengths =
                 Just
@@ -1493,16 +1457,12 @@ countryAR =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:11|(?:[2368]|9\\d)\\d)\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:11|(?:[2368]|9\\d)\\d)\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -1614,16 +1574,12 @@ countryAS =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[58]\\d\\d|684|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[58]\\d\\d|684|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "6846221234"
           , possibleLengths =
                 Just
@@ -1809,16 +1765,12 @@ countryAT =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[1-35-9]\\d{8,12}|4(?:[0-24-9]\\d{4,11}|3(?:(?:0\\d|5[02-9])\\d{3,9}|2\\d{4,5}|[3467]\\d{4}|8\\d{4,6}|9\\d{4,7}))|[1-35-8]\\d{7}|[1-35-7]\\d{6}|[135-7]\\d{5}|[15]\\d{4}|1\\d{3}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[1-35-9]\\d{8,12}|4(?:[0-24-9]\\d{4,11}|3(?:(?:0\\d|5[02-9])\\d{3,9}|2\\d{4,5}|[3467]\\d{4}|8\\d{4,6}|9\\d{4,7}))|[1-35-8]\\d{7}|[1-35-7]\\d{6}|[135-7]\\d{5}|[15]\\d{4}|1\\d{3}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "1234567890"
           , possibleLengths =
                 Just
@@ -2028,16 +1980,12 @@ countryAU =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "1\\d{4,9}|(?:[2-478]\\d\\d|550)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "1\\d{4,9}|(?:[2-478]\\d\\d|550)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -2186,16 +2134,12 @@ countryAW =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[25-79]\\d\\d|800)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[25-79]\\d\\d|800)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "5212345"
           , possibleLengths =
                 Just
@@ -2282,16 +2226,12 @@ countryAX =
     , internationalPrefix = Just "00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))"
     , nationalPrefix = Just "0"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:(?:[1247]\\d|3[0-46-9]|[56]0)\\d\\d|800)\\d{4,6}|(?:[1-47]\\d|50)\\d{4,5}|2\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[1247]\\d|3[0-46-9]|[56]0)\\d\\d|800)\\d{4,6}|(?:[1-47]\\d|50)\\d{4,5}|2\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "181234567"
           , possibleLengths =
                 Just
@@ -2429,16 +2369,12 @@ countryAZ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:(?:[12457]\\d|60|88)\\d|365)\\d{3}|900200)\\d{3}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:(?:[12457]\\d|60|88)\\d|365)\\d{3}|900200)\\d{3}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "123123456"
           , possibleLengths =
                 Just
@@ -2560,16 +2496,12 @@ countryBA =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[3589]\\d|49|6\\d\\d?|70)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[3589]\\d|49|6\\d\\d?|70)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "30212345"
           , possibleLengths =
                 Just
@@ -2676,16 +2608,12 @@ countryBB =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:246|[58]\\d\\d|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:246|[58]\\d\\d|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2464123456"
           , possibleLengths =
                 Just
@@ -2872,16 +2800,12 @@ countryBD =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[13469]\\d{9}|8[0-79]\\d{7,8}|[2-7]\\d{8}|[2-9]\\d{7}|[3-689]\\d{6}|[57-9]\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[13469]\\d{9}|8[0-79]\\d{7,8}|[2-7]\\d{8}|[2-9]\\d{7}|[3-689]\\d{6}|[57-9]\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "27111234"
           , possibleLengths =
                 Just
@@ -2998,16 +2922,12 @@ countryBE =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "4\\d{8}|[1-9]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "4\\d{8}|[1-9]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "12345678"
           , possibleLengths =
                 Just
@@ -3121,16 +3041,12 @@ countryBF =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[25-7]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[25-7]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "20491234"
           , possibleLengths =
                 Just
@@ -3272,16 +3188,12 @@ countryBG =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-7]\\d{6,7}|[89]\\d{6,8}|2\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-7]\\d{6,7}|[89]\\d{6,8}|2\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2123456"
           , possibleLengths =
                 Just
@@ -3385,16 +3297,12 @@ countryBH =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[136-9]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[136-9]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "17001234"
           , possibleLengths =
                 Just
@@ -3493,16 +3401,12 @@ countryBI =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[267]\\d|31)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[267]\\d|31)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22201234"
           , possibleLengths =
                 Just
@@ -3556,16 +3460,12 @@ countryBJ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2689]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2689]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "20211234"
           , possibleLengths =
                 Just
@@ -3637,16 +3537,12 @@ countryBL =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:590|69\\d)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:590|69\\d)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "590271234"
           , possibleLengths =
                 Just
@@ -3688,16 +3584,12 @@ countryBM =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:441|[58]\\d\\d|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:441|[58]\\d\\d|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "4412345678"
           , possibleLengths =
                 Just
@@ -3806,16 +3698,12 @@ countryBN =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-578]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-578]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2345678"
           , possibleLengths =
                 Just
@@ -3891,16 +3779,12 @@ countryBO =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[2-467]\\d{3}|80017)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[2-467]\\d{3}|80017)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22123456"
           , possibleLengths =
                 Just
@@ -3962,16 +3846,12 @@ countryBQ =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[34]1|7\\d)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[34]1|7\\d)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "7151234"
           , possibleLengths =
                 Just
@@ -4097,16 +3977,12 @@ countryBR =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[1-46-9]\\d\\d|5(?:[0-46-9]\\d|5[0-24679]))\\d{8}|[1-9]\\d{9}|[3589]\\d{8}|[34]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[1-46-9]\\d\\d|5(?:[0-46-9]\\d|5[0-24679]))\\d{8}|[1-9]\\d{9}|[3589]\\d{8}|[34]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -4218,16 +4094,12 @@ countryBS =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:242|[58]\\d\\d|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:242|[58]\\d\\d|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2423456789"
           , possibleLengths =
                 Just
@@ -4378,16 +4250,12 @@ countryBT =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[17]\\d{7}|[2-8]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[17]\\d{7}|[2-8]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2345678"
           , possibleLengths =
                 Just
@@ -4468,16 +4336,12 @@ countryBW =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:[2-6]|7\\d)\\d|90)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[2-6]|7\\d)\\d|90)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2401234"
           , possibleLengths =
                 Just
@@ -4619,16 +4483,12 @@ countryBY =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[12]\\d|33|44|902)\\d{7}|8(?:0[0-79]\\d{5,7}|[1-7]\\d{9})|8(?:1[0-489]|[5-79]\\d)\\d{7}|8[1-79]\\d{6,7}|8[0-79]\\d{5}|8\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[12]\\d|33|44|902)\\d{7}|8(?:0[0-79]\\d{5,7}|[1-7]\\d{9})|8(?:1[0-489]|[5-79]\\d)\\d{7}|8[1-79]\\d{6,7}|8[0-79]\\d{5}|8\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -4758,16 +4618,12 @@ countryBZ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:0800\\d|[2-8])\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:0800\\d|[2-8])\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2221234"
           , possibleLengths =
                 Just
@@ -4824,16 +4680,12 @@ countryCA =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[2-8]\\d|90)\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[2-8]\\d|90)\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "5062345678"
           , possibleLengths =
                 Just
@@ -4945,16 +4797,12 @@ countryCC =
     , internationalPrefix = Just "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011"
     , nationalPrefix = Just "0"
     , availableFormats = []
+    , generalNumberPattern =
+        "1\\d{5,9}|(?:[48]\\d\\d|550)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "1\\d{5,9}|(?:[48]\\d\\d|550)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "891621234"
           , possibleLengths =
                 Just
@@ -5106,16 +4954,12 @@ countryCD =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[189]\\d{8}|[1-68]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[189]\\d{8}|[1-68]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "1234567"
           , possibleLengths =
                 Just
@@ -5169,16 +5013,12 @@ countryCF =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[27]\\d{3}|8776)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[27]\\d{3}|8776)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21612345"
           , possibleLengths =
                 Just
@@ -5269,16 +5109,12 @@ countryCG =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:0\\d|80)\\d|222)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:0\\d|80)\\d|222)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "222123456"
           , possibleLengths =
                 Just
@@ -5369,16 +5205,12 @@ countryCH =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "8\\d{11}|[2-9]\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "8\\d{11}|[2-9]\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "212345678"
           , possibleLengths =
                 Just
@@ -5537,16 +5369,12 @@ countryCI =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[02-8]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[02-8]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21234567"
           , possibleLengths =
                 Just
@@ -5600,16 +5428,12 @@ countryCK =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-8]\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-8]\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21234"
           , possibleLengths =
                 Just
@@ -5751,16 +5575,12 @@ countryCL =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1230|[2-57-9]\\d|6\\d{1,3})\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1230|[2-57-9]\\d|6\\d{1,3})\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -5885,16 +5705,12 @@ countryCM =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[26]\\d\\d|88)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[26]\\d\\d|88)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "222123456"
           , possibleLengths =
                 Just
@@ -6122,16 +5938,12 @@ countryCN =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:(?:1[03-68]|2\\d)\\d\\d|[3-79])\\d|8[0-57-9])\\d{7}|[1-579]\\d{10}|8[0-57-9]\\d{8,9}|[1-79]\\d{9}|[1-9]\\d{7}|[12]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:(?:1[03-68]|2\\d)\\d\\d|[3-79])\\d|8[0-57-9])\\d{7}|[1-579]\\d{10}|8[0-57-9]\\d{8,9}|[1-79]\\d{9}|[1-9]\\d{7}|[12]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -6280,16 +6092,12 @@ countryCO =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1\\d|3)\\d{9}|[124-8]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1\\d|3)\\d{9}|[124-8]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "12345678"
           , possibleLengths =
                 Just
@@ -6389,16 +6197,12 @@ countryCR =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:8\\d|90)\\d{8}|[24-8]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:8\\d|90)\\d{8}|[24-8]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22123456"
           , possibleLengths =
                 Just
@@ -6519,16 +6323,12 @@ countryCU =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-57]\\d{7}|[2-47]\\d{6}|[34]\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-57]\\d{7}|[2-47]\\d{6}|[34]\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "71234567"
           , possibleLengths =
                 Just
@@ -6587,16 +6387,12 @@ countryCV =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-59]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-59]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2211234"
           , possibleLengths =
                 Just
@@ -6661,16 +6457,12 @@ countryCW =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[34]1|60|(?:7|9\\d)\\d)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[34]1|60|(?:7|9\\d)\\d)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "94351234"
           , possibleLengths =
                 Just
@@ -6742,16 +6534,12 @@ countryCX =
     , internationalPrefix = Just "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011"
     , nationalPrefix = Just "0"
     , availableFormats = []
+    , generalNumberPattern =
+        "1\\d{5,9}|(?:[48]\\d\\d|550)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "1\\d{5,9}|(?:[48]\\d\\d|550)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "891641234"
           , possibleLengths =
                 Just
@@ -6870,16 +6658,12 @@ countryCY =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[279]\\d|[58]0)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[279]\\d|[58]0)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22345678"
           , possibleLengths =
                 Just
@@ -7030,16 +6814,12 @@ countryCZ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[2-578]\\d|60|9\\d{1,4})\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[2-578]\\d|60|9\\d{1,4})\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "212345678"
           , possibleLengths =
                 Just
@@ -7397,16 +7177,12 @@ countryDE =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1|[235-9]\\d{11}|4(?:[0-8]\\d{2,10}|9(?:[05]\\d{7}|[46][1-8]\\d{2,6})))\\d{3}|[1-35-9]\\d{6,13}|49(?:(?:[0-25]\\d|3[1-689])\\d{4,8}|4[1-8]\\d{4}|6[0-8]\\d{3,4}|7[1-7]\\d{5,8})|497[0-7]\\d{4}|49(?:[0-2579]\\d|[34][1-9])\\d{3}|[1-9]\\d{5}|[13468]\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1|[235-9]\\d{11}|4(?:[0-8]\\d{2,10}|9(?:[05]\\d{7}|[46][1-8]\\d{2,6})))\\d{3}|[1-35-9]\\d{6,13}|49(?:(?:[0-25]\\d|3[1-689])\\d{4,8}|4[1-8]\\d{4}|6[0-8]\\d{3,4}|7[1-7]\\d{5,8})|497[0-7]\\d{4}|49(?:[0-2579]\\d|[34][1-9])\\d{3}|[1-9]\\d{5}|[13468]\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "30123456"
           , possibleLengths =
                 Just
@@ -7570,16 +7346,12 @@ countryDJ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:2\\d|77)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:2\\d|77)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21360003"
           , possibleLengths =
                 Just
@@ -7633,16 +7405,12 @@ countryDK =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-9]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-9]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "32123456"
           , possibleLengths =
                 Just
@@ -7714,16 +7482,12 @@ countryDM =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[58]\\d\\d|767|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[58]\\d\\d|767|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "7674201234"
           , possibleLengths =
                 Just
@@ -7820,16 +7584,12 @@ countryDO =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[58]\\d\\d|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[58]\\d\\d|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "8092345678"
           , possibleLengths =
                 Just
@@ -7960,16 +7720,12 @@ countryDZ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[1-4]|[5-79]\\d|80)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[1-4]|[5-79]\\d|80)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "12345678"
           , possibleLengths =
                 Just
@@ -8116,16 +7872,12 @@ countryEC =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "1800\\d{6,7}|(?:[2-7]|9\\d)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "1800\\d{6,7}|(?:[2-7]|9\\d)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22123456"
           , possibleLengths =
                 Just
@@ -8253,16 +8005,12 @@ countryEE =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "8\\d{9}|[4578]\\d{7}|(?:[3-8]\\d\\d|900)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "8\\d{9}|[4578]\\d{7}|(?:[3-8]\\d\\d|900)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -8398,16 +8146,12 @@ countryEG =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[189]\\d?|[24-6])\\d{8}|[135]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[189]\\d?|[24-6])\\d{8}|[135]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "234567890"
           , possibleLengths =
                 Just
@@ -8484,16 +8228,12 @@ countryEH =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
+    , generalNumberPattern =
+        "[5-8]\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[5-8]\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "528812345"
           , possibleLengths =
                 Just
@@ -8592,16 +8332,12 @@ countryER =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[178]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[178]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "8370362"
           , possibleLengths =
                 Just
@@ -8693,16 +8429,12 @@ countryES =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:51|[6-9]\\d)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:51|[6-9]\\d)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "810123456"
           , possibleLengths =
                 Just
@@ -8831,16 +8563,12 @@ countryET =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:11|[2-59]\\d)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:11|[2-59]\\d)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "111112345"
           , possibleLengths =
                 Just
@@ -8943,16 +8671,12 @@ countryFI =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[124-7]\\d|3[0-46-9])\\d{8}|[1-9]\\d{5,8}|[1-35689]\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[124-7]\\d|3[0-46-9])\\d{8}|[1-9]\\d{5,8}|[1-35689]\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -9077,16 +8801,12 @@ countryFJ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:0800\\d|[235-9])\\d|45)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:0800\\d|[235-9])\\d|45)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "3212345"
           , possibleLengths =
                 Just
@@ -9143,16 +8863,12 @@ countryFK =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
+    , generalNumberPattern =
+        "[2-7]\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-7]\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "31234"
           , possibleLengths =
                 Just
@@ -9206,16 +8922,12 @@ countryFM =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[39]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[39]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "3201234"
           , possibleLengths =
                 Just
@@ -9269,16 +8981,12 @@ countryFO =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[2-8]\\d|90)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[2-8]\\d|90)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "201234"
           , possibleLengths =
                 Just
@@ -9410,16 +9118,12 @@ countryFR =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[1-9]\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[1-9]\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "123456789"
           , possibleLengths =
                 Just
@@ -9559,16 +9263,12 @@ countryGA =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:0\\d|[2-7])\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:0\\d|[2-7])\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "01441234"
           , possibleLengths =
                 Just
@@ -9729,16 +9429,12 @@ countryGB =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[1-357-9]\\d{9}|[18]\\d{8}|8\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[1-357-9]\\d{9}|[18]\\d{8}|8\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "1212345678"
           , possibleLengths =
                 Just
@@ -9875,16 +9571,12 @@ countryGD =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:473|[58]\\d\\d|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:473|[58]\\d\\d|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "4732691234"
           , possibleLengths =
                 Just
@@ -10015,16 +9707,12 @@ countryGE =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[3-57]\\d\\d|800)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[3-57]\\d\\d|800)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -10128,16 +9816,12 @@ countryGF =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[56]94\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[56]94\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "594101234"
           , possibleLengths =
                 Just
@@ -10179,16 +9863,12 @@ countryGG =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:1481|[357-9]\\d{3})\\d{6}|8\\d{6}(?:\\d{2})?"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1481|[357-9]\\d{3})\\d{6}|8\\d{6}(?:\\d{2})?"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "1481256789"
           , possibleLengths =
                 Just
@@ -10359,16 +10039,12 @@ countryGH =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[235]\\d{3}|800)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[235]\\d{3}|800)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -10457,16 +10133,12 @@ countryGI =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[25]\\d\\d|629)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[25]\\d\\d|629)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "20012345"
           , possibleLengths =
                 Just
@@ -10520,16 +10192,12 @@ countryGL =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:19|[2-689]\\d)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:19|[2-689]\\d)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "321000"
           , possibleLengths =
                 Just
@@ -10613,16 +10281,12 @@ countryGM =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-9]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-9]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "5661234"
           , possibleLengths =
                 Just
@@ -10687,16 +10351,12 @@ countryGN =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:30|6\\d\\d|722)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:30|6\\d\\d|722)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "30241234"
           , possibleLengths =
                 Just
@@ -10765,16 +10425,12 @@ countryGP =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:590|69\\d)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:590|69\\d)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "590201234"
           , possibleLengths =
                 Just
@@ -10839,16 +10495,12 @@ countryGQ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:222|(?:3\\d|55|[89]0)\\d)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:222|(?:3\\d|55|[89]0)\\d)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "333091234"
           , possibleLengths =
                 Just
@@ -10954,16 +10606,12 @@ countryGR =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[268]\\d|[79]0)\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[268]\\d|[79]0)\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2123456789"
           , possibleLengths =
                 Just
@@ -11088,16 +10736,12 @@ countryGT =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1\\d{3}|[2-7])\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1\\d{3}|[2-7])\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22456789"
           , possibleLengths =
                 Just
@@ -11169,16 +10813,12 @@ countryGU =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[58]\\d\\d|671|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[58]\\d\\d|671|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "6713001234"
           , possibleLengths =
                 Just
@@ -11298,16 +10938,12 @@ countryGW =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[49]\\d{8}|4\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[49]\\d{8}|4\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "443201234"
           , possibleLengths =
                 Just
@@ -11376,16 +11012,12 @@ countryGY =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:(?:[2-46]\\d|77)\\d|862)\\d|9008)\\d{3}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:(?:[2-46]\\d|77)\\d|862)\\d|9008)\\d{3}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2201234"
           , possibleLengths =
                 Just
@@ -11505,16 +11137,12 @@ countryHK =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "8[0-46-9]\\d{6,7}|9\\d{4}(?:\\d(?:\\d(?:\\d{4})?)?)?|(?:[235-79]\\d|46)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "8[0-46-9]\\d{6,7}|9\\d{4}(?:\\d(?:\\d(?:\\d{4})?)?)?|(?:[235-79]\\d|46)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21234567"
           , possibleLengths =
                 Just
@@ -11643,16 +11271,12 @@ countryHN =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[237-9]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[237-9]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22123456"
           , possibleLengths =
                 Just
@@ -11772,16 +11396,12 @@ countryHR =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[24-69]\\d|3[0-79])\\d{7}|80\\d{5,7}|[1-79]\\d{7}|6\\d{5,6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[24-69]\\d|3[0-79])\\d{7}|80\\d{5,7}|[1-79]\\d{7}|6\\d{5,6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "12345678"
           , possibleLengths =
                 Just
@@ -11900,16 +11520,12 @@ countryHT =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-489]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-489]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22453300"
           , possibleLengths =
                 Just
@@ -12004,16 +11620,12 @@ countryHU =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2357]\\d{8}|[1-9]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2357]\\d{8}|[1-9]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -12235,16 +11847,12 @@ countryID =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[1-36]|8\\d{5})\\d{6}|[1-9]\\d{8,10}|[2-9]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[1-36]|8\\d{5})\\d{6}|[1-9]\\d{8,10}|[2-9]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -12477,16 +12085,12 @@ countryIE =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[148]\\d{9}|[124-9]\\d{8}|[124-69]\\d{7}|[24-69]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[148]\\d{9}|[124-9]\\d{8}|[124-69]\\d{7}|[24-69]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -12742,16 +12346,12 @@ countryIL =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "1\\d{6}(?:\\d{3,5})?|[57]\\d{8}|[1-489]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "1\\d{6}(?:\\d{3,5})?|[57]\\d{8}|[1-489]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -12903,16 +12503,12 @@ countryIM =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:1624|(?:[3578]\\d|90)\\d\\d)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1624|(?:[3578]\\d|90)\\d\\d)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "1624756789"
           , possibleLengths =
                 Just
@@ -13186,16 +12782,12 @@ countryIN =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:00800|1\\d{0,5}|[2-9]\\d\\d)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:00800|1\\d{0,5}|[2-9]\\d\\d)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -13329,16 +12921,12 @@ countryIO =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "3\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "3\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "3709100"
           , possibleLengths =
                 Just
@@ -13414,16 +13002,12 @@ countryIQ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1|[2-6]\\d?|7\\d\\d)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1|[2-6]\\d?|7\\d\\d)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "12345678"
           , possibleLengths =
                 Just
@@ -13515,16 +13099,12 @@ countryIR =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[1-9]\\d{9}|(?:[1-8]\\d\\d|9)\\d{3,4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[1-9]\\d{9}|(?:[1-8]\\d\\d|9)\\d{3,4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -13639,16 +13219,12 @@ countryIS =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:38\\d|[4-9])\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:38\\d|[4-9])\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "4101234"
           , possibleLengths =
                 Just
@@ -13904,16 +13480,12 @@ countryIT =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "0\\d{6}(?:\\d{4})?|3[0-8]\\d{9}|(?:[0138]\\d?|55)\\d{8}|[08]\\d{5}(?:\\d{2})?"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "0\\d{6}(?:\\d{4})?|3[0-8]\\d{9}|(?:[0138]\\d?|55)\\d{8}|[08]\\d{5}(?:\\d{2})?"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -14045,16 +13617,12 @@ countryJE =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:1534|(?:[3578]\\d|90)\\d\\d)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1534|(?:[3578]\\d|90)\\d\\d)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "1534456789"
           , possibleLengths =
                 Just
@@ -14191,16 +13759,12 @@ countryJM =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[58]\\d\\d|658|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[58]\\d\\d|658|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "8765230123"
           , possibleLengths =
                 Just
@@ -14342,16 +13906,12 @@ countryJO =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:(?:[268]|7\\d)\\d|32|53)\\d|900)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:(?:[268]|7\\d)\\d|32|53)\\d|900)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "62001234"
           , possibleLengths =
                 Just
@@ -14699,16 +14259,12 @@ countryJP =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "00[1-9]\\d{6,14}|[257-9]\\d{9}|(?:00|[1-9]\\d\\d)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "00[1-9]\\d{6,14}|[257-9]\\d{9}|(?:00|[1-9]\\d\\d)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -14889,16 +14445,12 @@ countryKE =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:2|80)0\\d?|[4-7]\\d\\d|900)\\d{6}|[4-6]\\d{6,7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:2|80)0\\d?|[4-7]\\d\\d|900)\\d{6}|[4-6]\\d{6,7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "202012345"
           , possibleLengths =
                 Just
@@ -15004,16 +14556,12 @@ countryKG =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[235-7]\\d|99)\\d{7}|800\\d{6,7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[235-7]\\d|99)\\d{7}|800\\d{6,7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "312123456"
           , possibleLengths =
                 Just
@@ -15098,16 +14646,12 @@ countryKH =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "1\\d{9}|[1-9]\\d{7,8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "1\\d{9}|[1-9]\\d{7,8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "23756789"
           , possibleLengths =
                 Just
@@ -15184,16 +14728,12 @@ countryKI =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[37]\\d|6[0-79])\\d{6}|(?:[2-48]\\d|50)\\d{3}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[37]\\d|6[0-79])\\d{6}|(?:[2-48]\\d|50)\\d{3}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "31234"
           , possibleLengths =
                 Just
@@ -15262,16 +14802,12 @@ countryKM =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[3478]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[3478]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "7712345"
           , possibleLengths =
                 Just
@@ -15328,16 +14864,12 @@ countryKN =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[58]\\d\\d|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[58]\\d\\d|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "8692361234"
           , possibleLengths =
                 Just
@@ -15468,16 +15000,12 @@ countryKP =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:19\\d|2)\\d|85)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:19\\d|2)\\d|85)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -15670,16 +15198,12 @@ countryKR =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:00[1-9]\\d{2,4}|[12]|5\\d{3})\\d{7}|(?:(?:00|[13-6])\\d|70)\\d{8}|(?:[1-6]\\d|80)\\d{7}|[3-6]\\d{4,5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:00[1-9]\\d{2,4}|[12]|5\\d{3})\\d{7}|(?:(?:00|[13-6])\\d|70)\\d{8}|(?:[1-6]\\d|80)\\d{7}|[3-6]\\d{4,5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -15854,16 +15378,12 @@ countryKW =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:18|[2569]\\d\\d)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:18|[2569]\\d\\d)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22345678"
           , possibleLengths =
                 Just
@@ -15920,16 +15440,12 @@ countryKY =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:345|[58]\\d\\d|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:345|[58]\\d\\d|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "3452221234"
           , possibleLengths =
                 Just
@@ -16041,16 +15557,12 @@ countryKZ =
     , internationalPrefix = Just "810"
     , nationalPrefix = Just "8"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:33622|(?:7\\d|80)\\d{3})\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:33622|(?:7\\d|80)\\d{3})\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -16201,16 +15713,12 @@ countryLA =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:2\\d|3)\\d{8}|(?:[235-8]\\d|41)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:2\\d|3)\\d{8}|(?:[235-8]\\d|41)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21212862"
           , possibleLengths =
                 Just
@@ -16295,16 +15803,12 @@ countryLB =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[7-9]\\d{7}|[13-9]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[7-9]\\d{7}|[13-9]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "1123456"
           , possibleLengths =
                 Just
@@ -16376,16 +15880,12 @@ countryLC =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[58]\\d\\d|758|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[58]\\d\\d|758|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "7584305678"
           , possibleLengths =
                 Just
@@ -16516,16 +16016,12 @@ countryLI =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:[2378]|6\\d\\d)\\d|90)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[2378]|6\\d\\d)\\d|90)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2345678"
           , possibleLengths =
                 Just
@@ -16650,16 +16146,12 @@ countryLK =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[1-7]\\d|[89]1)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[1-7]\\d|[89]1)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "112345678"
           , possibleLengths =
                 Just
@@ -16755,16 +16247,12 @@ countryLR =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:2|33|5\\d|77|88)\\d{7}|[45]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:2|33|5\\d|77|88)\\d{7}|[45]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21234567"
           , possibleLengths =
                 Just
@@ -16833,16 +16321,12 @@ countryLS =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[256]\\d\\d|800)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[256]\\d\\d|800)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22123456"
           , possibleLengths =
                 Just
@@ -16944,16 +16428,12 @@ countryLT =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[3469]\\d|52|[78]0)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[3469]\\d|52|[78]0)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "31234567"
           , possibleLengths =
                 Just
@@ -17170,16 +16650,12 @@ countryLU =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2457-9]\\d{3,10}|3(?:[0-46-9]\\d{2,9}|5(?:[013-9]\\d{1,8}|2\\d{1,3}))|6\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2457-9]\\d{3,10}|3(?:[0-46-9]\\d{2,9}|5(?:[013-9]\\d{1,8}|2\\d{1,3}))|6\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "27123456"
           , possibleLengths =
                 Just
@@ -17293,16 +16769,12 @@ countryLV =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[268]\\d|90)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[268]\\d|90)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "63123456"
           , possibleLengths =
                 Just
@@ -17401,16 +16873,12 @@ countryLY =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[2569]\\d|71)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[2569]\\d|71)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "212345678"
           , possibleLengths =
                 Just
@@ -17516,16 +16984,12 @@ countryMA =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[5-8]\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[5-8]\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "520123456"
           , possibleLengths =
                 Just
@@ -17657,16 +17121,12 @@ countryMC =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:[349]|6\\d)\\d\\d|870)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[349]|6\\d)\\d\\d|870)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -17772,16 +17232,12 @@ countryMD =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[235-7]\\d|[89]0)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[235-7]\\d|[89]0)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22212345"
           , possibleLengths =
                 Just
@@ -17910,16 +17366,12 @@ countryME =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:20|[3-79]\\d|80\\d?)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:20|[3-79]\\d|80\\d?)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "30234567"
           , possibleLengths =
                 Just
@@ -18026,16 +17478,12 @@ countryMF =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:590|69\\d)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:590|69\\d)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "590271234"
           , possibleLengths =
                 Just
@@ -18089,16 +17537,12 @@ countryMG =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[23]\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[23]\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "202123456"
           , possibleLengths =
                 Just
@@ -18172,16 +17616,12 @@ countryMH =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:[256]\\d|45)\\d|329)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[256]\\d|45)\\d|329)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2471234"
           , possibleLengths =
                 Just
@@ -18272,16 +17712,12 @@ countryMK =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-578]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-578]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22012345"
           , possibleLengths =
                 Just
@@ -18399,16 +17835,12 @@ countryML =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[246-9]\\d|50)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[246-9]\\d|50)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -18580,16 +18012,12 @@ countryMM =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1|[24-7]\\d)\\d{5,7}|8\\d{6,9}|9(?:[0-46-9]\\d{6,8}|5\\d{6})|2\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1|[24-7]\\d)\\d{5,7}|8\\d{6,9}|9(?:[0-46-9]\\d{6,8}|5\\d{6})|2\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "1234567"
           , possibleLengths =
                 Just
@@ -18725,16 +18153,12 @@ countryMN =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[12]\\d{8,9}|[1257-9]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[12]\\d{8,9}|[1257-9]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "50123456"
           , possibleLengths =
                 Just
@@ -18808,16 +18232,12 @@ countryMO =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:28|[68]\\d)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:28|[68]\\d)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "28212345"
           , possibleLengths =
                 Just
@@ -18859,16 +18279,12 @@ countryMP =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[58]\\d\\d|(?:67|90)0)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[58]\\d\\d|(?:67|90)0)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "6702345678"
           , possibleLengths =
                 Just
@@ -18977,16 +18393,12 @@ countryMQ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:596|69\\d)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:596|69\\d)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "596301234"
           , possibleLengths =
                 Just
@@ -19040,16 +18452,12 @@ countryMR =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[2-4]\\d\\d|800)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[2-4]\\d\\d|800)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "35123456"
           , possibleLengths =
                 Just
@@ -19106,16 +18514,12 @@ countryMS =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:(?:[58]\\d\\d|900)\\d\\d|66449)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[58]\\d\\d|900)\\d\\d|66449)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "6644912345"
           , possibleLengths =
                 Just
@@ -19224,16 +18628,12 @@ countryMT =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:[2579]\\d\\d|800)\\d|3550)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[2579]\\d\\d|800)\\d|3550)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21001234"
           , possibleLengths =
                 Just
@@ -19373,16 +18773,12 @@ countryMU =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[2-468]|5\\d)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[2-468]|5\\d)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "54480123"
           , possibleLengths =
                 Just
@@ -19492,16 +18888,12 @@ countryMV =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:800|9[0-57-9]\\d)\\d{7}|[34679]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:800|9[0-57-9]\\d)\\d{7}|[34679]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "6701234"
           , possibleLengths =
                 Just
@@ -19633,16 +19025,12 @@ countryMW =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "1\\d{6}(?:\\d{2})?|(?:[23]1|77|88|99)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "1\\d{6}(?:\\d{2})?|(?:[23]1|77|88|99)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "1234567"
           , possibleLengths =
                 Just
@@ -19755,16 +19143,12 @@ countryMX =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1\\d|[2-9])\\d{9}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1\\d|[2-9])\\d{9}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2221234567"
           , possibleLengths =
                 Just
@@ -19938,16 +19322,12 @@ countryMY =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1\\d\\d?|3\\d|[4-9])\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1\\d\\d?|3\\d|[4-9])\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "323856789"
           , possibleLengths =
                 Just
@@ -20062,16 +19442,12 @@ countryMZ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:2|8\\d)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:2|8\\d)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21123456"
           , possibleLengths =
                 Just
@@ -20173,16 +19549,12 @@ countryNA =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[68]\\d{7,8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[68]\\d{7,8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "61221234"
           , possibleLengths =
                 Just
@@ -20292,16 +19664,12 @@ countryNC =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-57-9]\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-57-9]\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "201234"
           , possibleLengths =
                 Just
@@ -20381,16 +19749,12 @@ countryNE =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[0289]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[0289]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "20201234"
           , possibleLengths =
                 Just
@@ -20485,16 +19849,12 @@ countryNF =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[13]\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[13]\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "106609"
           , possibleLengths =
                 Just
@@ -20613,16 +19973,12 @@ countryNG =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[78]\\d{10,13}|[7-9]\\d{9}|[1-9]\\d{7}|[124-7]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[78]\\d{10,13}|[7-9]\\d{9}|[1-9]\\d{7}|[124-7]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "18040123"
           , possibleLengths =
                 Just
@@ -20711,16 +20067,12 @@ countryNI =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1800|[25-8]\\d{3})\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1800|[25-8]\\d{3})\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21234567"
           , possibleLengths =
                 Just
@@ -20866,16 +20218,12 @@ countryNL =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[124-7]\\d\\d|3(?:[02-9]\\d|1[0-8])|[89]\\d{0,3})\\d{6}|1\\d{4,5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[124-7]\\d\\d|3(?:[02-9]\\d|1[0-8])|[89]\\d{0,3})\\d{6}|1\\d{4,5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -21030,16 +20378,12 @@ countryNO =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:0|[2-9]\\d{3})\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:0|[2-9]\\d{3})\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21234567"
           , possibleLengths =
                 Just
@@ -21220,16 +20564,12 @@ countryNP =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "9\\d{9}|[1-9]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "9\\d{9}|[1-9]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "14567890"
           , possibleLengths =
                 Just
@@ -21288,16 +20628,12 @@ countryNR =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:444|55\\d|888)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:444|55\\d|888)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "4441234"
           , possibleLengths =
                 Just
@@ -21351,16 +20687,12 @@ countryNU =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[47]|888\\d)\\d{3}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[47]|888\\d)\\d{3}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "7012"
           , possibleLengths =
                 Just
@@ -21458,16 +20790,12 @@ countryNZ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[28]\\d{7,9}|[346]\\d{7}|(?:508|[79]\\d)\\d{6,7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[28]\\d{7,9}|[346]\\d{7}|(?:508|[79]\\d)\\d{6,7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "32345678"
           , possibleLengths =
                 Just
@@ -21608,16 +20936,12 @@ countryOM =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[279]\\d{3}|500|8007\\d?)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[279]\\d{3}|500|8007\\d?)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "23123456"
           , possibleLengths =
                 Just
@@ -21712,16 +21036,12 @@ countryPA =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[1-57-9]|6\\d)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[1-57-9]|6\\d)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2001234"
           , possibleLengths =
                 Just
@@ -21838,16 +21158,12 @@ countryPE =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[14-8]|9\\d)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[14-8]|9\\d)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "11234567"
           , possibleLengths =
                 Just
@@ -21977,16 +21293,12 @@ countryPF =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[48]\\d{7}|4\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[48]\\d{7}|4\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -22066,16 +21378,12 @@ countryPG =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:180|[78]\\d{3})\\d{4}|(?:[2-589]\\d|64)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:180|[78]\\d{3})\\d{4}|(?:[2-589]\\d|64)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "3123456"
           , possibleLengths =
                 Just
@@ -22242,16 +21550,12 @@ countryPH =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1800\\d{2,4}|2|[89]\\d{4})\\d{5}|[3-8]\\d{8}|[28]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1800\\d{2,4}|2|[89]\\d{4})\\d{5}|[3-8]\\d{8}|[28]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21234567"
           , possibleLengths =
                 Just
@@ -22405,16 +21709,12 @@ countryPK =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:122|[24-8]\\d{4,5}|9(?:[013-9]\\d{2,4}|2(?:[01]\\d\\d|2(?:[025-8]\\d|1[01]))\\d))\\d{6}|(?:[2-8]\\d{3}|92(?:[0-7]\\d|8[1-9]))\\d{6}|[24-9]\\d{8}|[89]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:122|[24-8]\\d{4,5}|9(?:[013-9]\\d{2,4}|2(?:[01]\\d\\d|2(?:[025-8]\\d|1[01]))\\d))\\d{6}|(?:[2-8]\\d{3}|92(?:[0-7]\\d|8[1-9]))\\d{6}|[24-9]\\d{8}|[89]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2123456789"
           , possibleLengths =
                 Just
@@ -22591,16 +21891,12 @@ countryPL =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[1-9]\\d{6}(?:\\d{2})?|6\\d{5}(?:\\d{2})?"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[1-9]\\d{6}(?:\\d{2})?|6\\d{5}(?:\\d{2})?"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "123456789"
           , possibleLengths =
                 Just
@@ -22744,16 +22040,12 @@ countryPM =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[45]\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[45]\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "430123"
           , possibleLengths =
                 Just
@@ -22795,16 +22087,12 @@ countryPR =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[589]\\d\\d|787)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[589]\\d\\d|787)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "7872345678"
           , possibleLengths =
                 Just
@@ -22935,16 +22223,12 @@ countryPS =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:1\\d|5)\\d\\d|[2489]2)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:1\\d|5)\\d\\d|[2489]2)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22234567"
           , possibleLengths =
                 Just
@@ -23044,16 +22328,12 @@ countryPT =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[26-9]\\d|30)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[26-9]\\d|30)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "212345678"
           , possibleLengths =
                 Just
@@ -23212,16 +22492,12 @@ countryPW =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[25-8]\\d\\d|345|488|900)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[25-8]\\d\\d|345|488|900)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2771234"
           , possibleLengths =
                 Just
@@ -23341,16 +22617,12 @@ countryPY =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[2-46-9]\\d|5[0-8])\\d{7}|[2-9]\\d{5,7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[2-46-9]\\d|5[0-8])\\d{7}|[2-9]\\d{5,7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "212345678"
           , possibleLengths =
                 Just
@@ -23450,16 +22722,12 @@ countryQA =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:2|[3-7]\\d)\\d\\d|800)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:2|[3-7]\\d)\\d\\d|800)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "44123456"
           , possibleLengths =
                 Just
@@ -23543,16 +22811,12 @@ countryRE =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:26|[68]\\d)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:26|[68]\\d)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "262161234"
           , possibleLengths =
                 Just
@@ -23687,16 +22951,12 @@ countryRO =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[237]\\d|[89]0)\\d{7}|[23]\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[237]\\d|[89]0)\\d{7}|[23]\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "211234567"
           , possibleLengths =
                 Just
@@ -23821,16 +23081,12 @@ countryRS =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[127]\\d{6,11}|3(?:[0-79]\\d{5,10}|8(?:[02-9]\\d{4,9}|1\\d{4,5}))|6\\d{7,9}|800\\d{3,9}|90\\d{4,8}|7\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[127]\\d{6,11}|3(?:[0-79]\\d{5,10}|8(?:[02-9]\\d{4,9}|1\\d{4,5}))|6\\d{7,9}|800\\d{3,9}|90\\d{4,8}|7\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "10234567"
           , possibleLengths =
                 Just
@@ -23956,16 +23212,12 @@ countryRU =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[347-9]\\d{9}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[347-9]\\d{9}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "3011234567"
           , possibleLengths =
                 Just
@@ -24091,16 +23343,12 @@ countryRW =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:06|[27]\\d\\d|[89]00)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:06|[27]\\d\\d|[89]00)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "250123456"
           , possibleLengths =
                 Just
@@ -24228,16 +23476,12 @@ countrySA =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:[15]|8\\d)\\d|92)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[15]|8\\d)\\d|92)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "112345678"
           , possibleLengths =
                 Just
@@ -24356,16 +23600,12 @@ countrySB =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[1-6]|[7-9]\\d\\d)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[1-6]|[7-9]\\d\\d)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "40123"
           , possibleLengths =
                 Just
@@ -24449,16 +23689,12 @@ countrySC =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:[249]\\d|64)\\d\\d|8000)\\d{3}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[249]\\d|64)\\d\\d|8000)\\d{3}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "4217123"
           , possibleLengths =
                 Just
@@ -24542,16 +23778,12 @@ countrySD =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[19]\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[19]\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "153123456"
           , possibleLengths =
                 Just
@@ -24726,16 +23958,12 @@ countrySE =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[26]\\d\\d|9)\\d{9}|[1-9]\\d{8}|[1-689]\\d{7}|[1-4689]\\d{6}|2\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[26]\\d\\d|9)\\d{9}|[1-9]\\d{8}|[1-689]\\d{7}|[1-4689]\\d{6}|2\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "8123456"
           , possibleLengths =
                 Just
@@ -24923,16 +24151,12 @@ countrySG =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1\\d{3}|[369]|7000|8(?:\\d{2})?)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1\\d{3}|[369]|7000|8(?:\\d{2})?)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "61234567"
           , possibleLengths =
                 Just
@@ -25034,16 +24258,12 @@ countrySH =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[256]\\d|8)\\d{3}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[256]\\d|8)\\d{3}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22158"
           , possibleLengths =
                 Just
@@ -25145,16 +24365,12 @@ countrySI =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[1-8]\\d{7}|90\\d{4,6}|8\\d{4,6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[1-8]\\d{7}|90\\d{4,6}|8\\d{4,6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "12345678"
           , possibleLengths =
                 Just
@@ -25246,16 +24462,12 @@ countrySJ =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:0|(?:[4589]\\d|79)\\d\\d)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:0|(?:[4589]\\d|79)\\d\\d)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "79123456"
           , possibleLengths =
                 Just
@@ -25475,16 +24687,12 @@ countrySK =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-689]\\d{8}|[2-59]\\d{6}|[2-5]\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-689]\\d{8}|[2-59]\\d{6}|[2-5]\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -25643,16 +24851,12 @@ countrySL =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[2-578]\\d|66|99)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[2-578]\\d|66|99)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22221234"
           , possibleLengths =
                 Just
@@ -25733,16 +24937,12 @@ countrySM =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:0549|[5-7]\\d)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:0549|[5-7]\\d)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "0549886377"
           , possibleLengths =
                 Just
@@ -25842,16 +25042,12 @@ countrySN =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[378]\\d{4}|93330)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[378]\\d{4}|93330)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "301012345"
           , possibleLengths =
                 Just
@@ -26020,16 +25216,12 @@ countrySO =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[346-9]\\d{8}|[12679]\\d{7}|(?:[1-4]\\d|59)\\d{5}|[1348]\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[346-9]\\d{8}|[12679]\\d{7}|(?:[1-4]\\d|59)\\d{5}|[1348]\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "4012345"
           , possibleLengths =
                 Just
@@ -26105,16 +25297,12 @@ countrySR =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[2-5]|68|[78]\\d)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[2-5]|68|[78]\\d)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "211234"
           , possibleLengths =
                 Just
@@ -26183,16 +25371,12 @@ countrySS =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[19]\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[19]\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "181234567"
           , possibleLengths =
                 Just
@@ -26246,16 +25430,12 @@ countryST =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:22|9\\d)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:22|9\\d)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2221234"
           , possibleLengths =
                 Just
@@ -26331,16 +25511,12 @@ countrySV =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[267]\\d{7}|[89]00\\d{4}(?:\\d{4})?"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[267]\\d{7}|[89]00\\d{4}(?:\\d{4})?"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21234567"
           , possibleLengths =
                 Just
@@ -26412,16 +25588,12 @@ countrySX =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:(?:[58]\\d\\d|900)\\d|7215)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[58]\\d\\d|900)\\d|7215)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "7215425678"
           , possibleLengths =
                 Just
@@ -26541,16 +25713,12 @@ countrySY =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[1-39]\\d{8}|[1-5]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[1-39]\\d{8}|[1-5]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "112345678"
           , possibleLengths =
                 Just
@@ -26620,16 +25788,12 @@ countrySZ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:0800|(?:[237]\\d|900)\\d\\d)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:0800|(?:[237]\\d|900)\\d\\d)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -26731,16 +25895,12 @@ countryTA =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
+    , generalNumberPattern =
+        "8\\d{3}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "8\\d{3}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "8999"
           , possibleLengths =
                 Just
@@ -26767,16 +25927,12 @@ countryTC =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[58]\\d\\d|649|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[58]\\d\\d|649|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "6497121234"
           , possibleLengths =
                 Just
@@ -26905,16 +26061,12 @@ countryTD =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:22|[69]\\d|77)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:22|[69]\\d|77)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22501234"
           , possibleLengths =
                 Just
@@ -26968,16 +26120,12 @@ countryTG =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[279]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[279]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22212345"
           , possibleLengths =
                 Just
@@ -27053,16 +26201,12 @@ countryTH =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1\\d\\d?|[2-57]|[689]\\d)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1\\d\\d?|[2-57]|[689]\\d)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21234567"
           , possibleLengths =
                 Just
@@ -27197,16 +26341,12 @@ countryTJ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[3-59]\\d|77|88)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[3-59]\\d|77|88)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "372123456"
           , possibleLengths =
                 Just
@@ -27253,16 +26393,12 @@ countryTK =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
+    , generalNumberPattern =
+        "[2-47]\\d{3,6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-47]\\d{3,6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "3101"
           , possibleLengths =
                 Just
@@ -27327,16 +26463,12 @@ countryTL =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[2-4]\\d|7\\d\\d?|[89]0)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[2-4]\\d|7\\d\\d?|[89]0)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2112345"
           , possibleLengths =
                 Just
@@ -27457,16 +26589,12 @@ countryTM =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[1-6]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[1-6]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "12345678"
           , possibleLengths =
                 Just
@@ -27520,16 +26648,12 @@ countryTN =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-57-9]\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-57-9]\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "30010123"
           , possibleLengths =
                 Just
@@ -27650,16 +26774,12 @@ countryTO =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:080|[56])0|[2-4]\\d|[78]\\d(?:\\d{2})?)\\d{3}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:080|[56])0|[2-4]\\d|[78]\\d(?:\\d{2})?)\\d{3}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "20123"
           , possibleLengths =
                 Just
@@ -27767,16 +26887,12 @@ countryTR =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[2-58]\\d\\d|900)\\d{7}|4\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[2-58]\\d\\d|900)\\d{7}|4\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -27908,16 +27024,12 @@ countryTT =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[58]\\d\\d|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[58]\\d\\d|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "8682211234"
           , possibleLengths =
                 Just
@@ -28034,16 +27146,12 @@ countryTV =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:2|7\\d\\d|90)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:2|7\\d\\d|90)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "20123"
           , possibleLengths =
                 Just
@@ -28141,16 +27249,12 @@ countryTW =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[24589]|7\\d)\\d{8}|[2-8]\\d{7}|2\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[24589]|7\\d)\\d{8}|[2-8]\\d{7}|2\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "221234567"
           , possibleLengths =
                 Just
@@ -28301,16 +27405,12 @@ countryTZ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[26-8]\\d|41|90)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[26-8]\\d|41|90)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -28467,16 +27567,12 @@ countryUA =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[3-9]\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[3-9]\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "311234567"
           , possibleLengths =
                 Just
@@ -28605,16 +27701,12 @@ countryUG =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:[29]0|[347]\\d)\\d|800)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[29]0|[347]\\d)\\d|800)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "312345678"
           , possibleLengths =
                 Just
@@ -28714,16 +27806,12 @@ countryUS =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[2-9]\\d{9}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[2-9]\\d{9}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2015550123"
           , possibleLengths =
                 Just
@@ -28869,16 +27957,12 @@ countryUY =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[249]\\d\\d|80)\\d{5}|9\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[249]\\d\\d|80)\\d{5}|9\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "21231234"
           , possibleLengths =
                 Just
@@ -28967,16 +28051,12 @@ countryUZ =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[679]\\d{8}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[679]\\d{8}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "669050123"
           , possibleLengths =
                 Just
@@ -29018,16 +28098,12 @@ countryVA =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
+    , generalNumberPattern =
+        "0\\d{6}(?:\\d{4})?|3[0-8]\\d{9}|(?:[0138]\\d?|55)\\d{8}|[08]\\d{5}(?:\\d{2})?"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "0\\d{6}(?:\\d{4})?|3[0-8]\\d{9}|(?:[0138]\\d?|55)\\d{8}|[08]\\d{5}(?:\\d{2})?"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "0669812345"
           , possibleLengths =
                 Just
@@ -29144,16 +28220,12 @@ countryVC =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:[58]\\d\\d|784|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[58]\\d\\d|784|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "7842661234"
           , possibleLengths =
                 Just
@@ -29262,16 +28334,12 @@ countryVE =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:[24]\\d|50)\\d|[89]00)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[24]\\d|50)\\d|[89]00)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2121234567"
           , possibleLengths =
                 Just
@@ -29348,16 +28416,12 @@ countryVG =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:284|[58]\\d\\d|900)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:284|[58]\\d\\d|900)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "2842291234"
           , possibleLengths =
                 Just
@@ -29454,16 +28518,12 @@ countryVI =
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:(?:34|90)0|[58]\\d\\d)\\d{7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:34|90)0|[58]\\d\\d)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "3406421234"
           , possibleLengths =
                 Just
@@ -29649,16 +28709,12 @@ countryVN =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[12]\\d{9}|[135-9]\\d{8}|(?:[16]\\d?|[78])\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[12]\\d{9}|[135-9]\\d{8}|(?:[16]\\d?|[78])\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = NoInternationalDialling
+        [ { descriptionType = NoInternationalDialling
           , exampleNumber = ""
           , possibleLengths =
                 Just
@@ -29787,16 +28843,12 @@ countryVU =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:[23]|(?:[57]\\d|90)\\d)\\d|[48]8)\\d{3}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:[23]|(?:[57]\\d|90)\\d)\\d|[48]8)\\d{3}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22123"
           , possibleLengths =
                 Just
@@ -29880,16 +28932,12 @@ countryWF =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[45]0|68|72|8\\d)\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[45]0|68|72|8\\d)\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "501234"
           , possibleLengths =
                 Just
@@ -29980,16 +29028,12 @@ countryWS =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[2-6]|8\\d(?:\\d{4})?)\\d{4}|[78]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[2-6]|8\\d(?:\\d{4})?)\\d{4}|[78]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "22123"
           , possibleLengths =
                 Just
@@ -30080,16 +29124,12 @@ countryXK =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:[23]\\d{2,3}|4\\d\\d|[89]00)\\d{5}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:[23]\\d{2,3}|4\\d\\d|[89]00)\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "28012345"
           , possibleLengths =
                 Just
@@ -30184,16 +29224,12 @@ countryYE =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:1|7\\d)\\d{7}|[1-7]\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:1|7\\d)\\d{7}|[1-7]\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "1234567"
           , possibleLengths =
                 Just
@@ -30240,16 +29276,12 @@ countryYT =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
+    , generalNumberPattern =
+        "(?:(?:26|63)9|80\\d)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:26|63)9|80\\d)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "269601234"
           , possibleLengths =
                 Just
@@ -30351,16 +29383,12 @@ countryZA =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "[1-9]\\d{8}|8\\d{4,7}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "[1-9]\\d{8}|8\\d{4,7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "101234567"
           , possibleLengths =
                 Just
@@ -30511,16 +29539,12 @@ countryZM =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "(?:(?:21|76|9\\d)\\d|800)\\d{6}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "(?:(?:21|76|9\\d)\\d|800)\\d{6}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "211234567"
           , possibleLengths =
                 Just
@@ -30702,16 +29726,12 @@ countryZW =
                 ]
           }
         ]
+    , generalNumberPattern =
+        "2(?:[0-57-9]\\d{6,8}|6[0-24-9]\\d{6,7})|[38]\\d{9}|[35-8]\\d{8}|[3-6]\\d{7}|[1-689]\\d{6}|[1-3569]\\d{5}|[1356]\\d{4}"
+            |> Regex.fromString
+            |> Maybe.withDefault Regex.never
     , numberDescriptions =
-        [ { descriptionType = GeneralDesc
-          , exampleNumber = ""
-          , possibleLengths = Nothing
-          , pattern =
-                "2(?:[0-57-9]\\d{6,8}|6[0-24-9]\\d{6,7})|[38]\\d{9}|[35-8]\\d{8}|[3-6]\\d{7}|[1-689]\\d{6}|[1-3569]\\d{5}|[1356]\\d{4}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { descriptionType = FixedLine
+        [ { descriptionType = FixedLine
           , exampleNumber = "1312345"
           , possibleLengths =
                 Just

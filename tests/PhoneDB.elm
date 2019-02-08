@@ -13,10 +13,13 @@ suite =
             \_ ->
                 let
                     descriptions =
-                        List.concatMap .numberDescriptions Countries.all
+                        Countries.all
+                            |> List.concatMap .numberDescriptions
+                            |> List.filter (\desc -> not <| String.isEmpty desc.exampleNumber)
 
                     passesValidation =
-                        List.filter validExampleNumber descriptions
+                        descriptions
+                            |> List.filter validExampleNumber
 
                     validExampleNumber desc =
                         case Regex.find desc.pattern desc.exampleNumber of

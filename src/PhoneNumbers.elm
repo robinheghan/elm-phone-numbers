@@ -14,13 +14,13 @@ type alias Territory =
     , internationalPrefix : Maybe String
     , nationalPrefix : Maybe String
     , availableFormats : List NumberFormat
+    , generalNumberPattern : Regex
     , numberDescriptions : List NumberDescription
     }
 
 
 type DescriptionType
-    = GeneralDesc
-    | FixedLine
+    = FixedLine
     | Mobile
     | TollFree
     | PremiumRate

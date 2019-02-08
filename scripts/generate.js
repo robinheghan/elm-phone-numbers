@@ -48,6 +48,7 @@ function filterTerritory(territory) {
 }
 
 function territoryToJSON(territory) {
+  const generalDescription = numberDescriptionToJSON('', territory.generalDesc[0]);
   const numberDescriptions = [];
 
   for (const key in territory) {
@@ -70,6 +71,7 @@ function territoryToJSON(territory) {
     internationalPrefix: territory.$.internationalPrefix,
     nationalPrefix: territory.$.nationalPrefix,
     availableFormats: availableFormats,
+    generalNumberPattern: generalDescription.pattern,
     numberDescriptions: numberDescriptions
   };
 }
@@ -105,7 +107,6 @@ function extractXmlSingleValue(xml) {
 
 function numberDescriptionKeyType(key) {
   const numberDescriptions = {
-    generalDesc: 'GeneralDesc',
     fixedLine: 'FixedLine',
     mobile: 'Mobile',
     tollFree: 'TollFree',
@@ -140,6 +141,7 @@ country${territory.id} =
     , internationalPrefix = ${elmMaybe(territory.internationalPrefix, true)}
     , nationalPrefix = ${elmMaybe(territory.nationalPrefix, true)}
     , availableFormats = ${elmList(availableFormats)}
+    , generalNumberPattern = ${elmRegex(territory.generalNumberPattern)}
     , numberDescriptions = ${elmList(numberDescriptions)}
     }
 `;
