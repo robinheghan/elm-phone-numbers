@@ -3,12 +3,15 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
+    "test": "elm-test",
     "phonedb:download": "node scripts/download_db.js",
     "phonedb:generate": "node scripts/generate.js && elm-format --yes src/PhoneNumbers/Countries.elm"
   },
+  "dependencies": {},
   "devDependencies": {
     "elm": "^0.19.0-bugfix2",
     "elm-format": "0.8.1",
-    "xml2js": "^0.4.19"
+    "xml2js": "^0.4.19",
+    "elm-test": "^0.19.0-rev4"
   }
 }
