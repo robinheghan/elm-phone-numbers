@@ -11,7 +11,7 @@ module PhoneNumbers.Countries exposing (..)
 -}
 
 import Regex
-import PhoneNumbers exposing (DescriptionType(..))
+import PhoneNumbers exposing (Territory, DescriptionType(..))
 `;
 
 const parseOptions = {
@@ -25,13 +25,21 @@ xml2js.parseString(dbString, parseOptions, (err, result) => {
     return;
   }
 
-  const converted = result.territories[0].territory
+  const territories = result.territories[0].territory
         .filter(filterTerritory)
-        .map(territoryToJSON)
+        .map(territoryToJSON);
+
+  const elmAllTerritories = `
+{-| -}
+all : List Territory
+all = ${elmList(territories.map(t => "country" + t.id))}
+`;
+
+  const elmTerritories = territories
         .map(elmify)
         .join('');
 
-  const countryFileContent = header + converted;
+  const countryFileContent = header + elmAllTerritories + elmTerritories;
   fs.writeFileSync(targetPath, countryFileContent, 'utf-8');
 });
 
@@ -125,7 +133,7 @@ function elmify(territory) {
 
   return `
 {-|-}
-country${territory.id} : PhoneNumbers.Territory
+country${territory.id} : Territory
 country${territory.id} =
     { id = "${territory.id}"
     , countryCode = ${elmMaybe(territory.countryCode, false)}

@@ -1,14 +1,265 @@
-module PhoneNumbers.Countries exposing (countryAC, countryAD, countryAE, countryAF, countryAG, countryAI, countryAL, countryAM, countryAO, countryAR, countryAS, countryAT, countryAU, countryAW, countryAX, countryAZ, countryBA, countryBB, countryBD, countryBE, countryBF, countryBG, countryBH, countryBI, countryBJ, countryBL, countryBM, countryBN, countryBO, countryBQ, countryBR, countryBS, countryBT, countryBW, countryBY, countryBZ, countryCA, countryCC, countryCD, countryCF, countryCG, countryCH, countryCI, countryCK, countryCL, countryCM, countryCN, countryCO, countryCR, countryCU, countryCV, countryCW, countryCX, countryCY, countryCZ, countryDE, countryDJ, countryDK, countryDM, countryDO, countryDZ, countryEC, countryEE, countryEG, countryEH, countryER, countryES, countryET, countryFI, countryFJ, countryFK, countryFM, countryFO, countryFR, countryGA, countryGB, countryGD, countryGE, countryGF, countryGG, countryGH, countryGI, countryGL, countryGM, countryGN, countryGP, countryGQ, countryGR, countryGT, countryGU, countryGW, countryGY, countryHK, countryHN, countryHR, countryHT, countryHU, countryID, countryIE, countryIL, countryIM, countryIN, countryIO, countryIQ, countryIR, countryIS, countryIT, countryJE, countryJM, countryJO, countryJP, countryKE, countryKG, countryKH, countryKI, countryKM, countryKN, countryKP, countryKR, countryKW, countryKY, countryKZ, countryLA, countryLB, countryLC, countryLI, countryLK, countryLR, countryLS, countryLT, countryLU, countryLV, countryLY, countryMA, countryMC, countryMD, countryME, countryMF, countryMG, countryMH, countryMK, countryML, countryMM, countryMN, countryMO, countryMP, countryMQ, countryMR, countryMS, countryMT, countryMU, countryMV, countryMW, countryMX, countryMY, countryMZ, countryNA, countryNC, countryNE, countryNF, countryNG, countryNI, countryNL, countryNO, countryNP, countryNR, countryNU, countryNZ, countryOM, countryPA, countryPE, countryPF, countryPG, countryPH, countryPK, countryPL, countryPM, countryPR, countryPS, countryPT, countryPW, countryPY, countryQA, countryRE, countryRO, countryRS, countryRU, countryRW, countrySA, countrySB, countrySC, countrySD, countrySE, countrySG, countrySH, countrySI, countrySJ, countrySK, countrySL, countrySM, countrySN, countrySO, countrySR, countrySS, countryST, countrySV, countrySX, countrySY, countrySZ, countryTA, countryTC, countryTD, countryTG, countryTH, countryTJ, countryTK, countryTL, countryTM, countryTN, countryTO, countryTR, countryTT, countryTV, countryTW, countryTZ, countryUA, countryUG, countryUS, countryUY, countryUZ, countryVA, countryVC, countryVE, countryVG, countryVI, countryVN, countryVU, countryWF, countryWS, countryXK, countryYE, countryYT, countryZA, countryZM, countryZW)
+module PhoneNumbers.Countries exposing (all, countryAC, countryAD, countryAE, countryAF, countryAG, countryAI, countryAL, countryAM, countryAO, countryAR, countryAS, countryAT, countryAU, countryAW, countryAX, countryAZ, countryBA, countryBB, countryBD, countryBE, countryBF, countryBG, countryBH, countryBI, countryBJ, countryBL, countryBM, countryBN, countryBO, countryBQ, countryBR, countryBS, countryBT, countryBW, countryBY, countryBZ, countryCA, countryCC, countryCD, countryCF, countryCG, countryCH, countryCI, countryCK, countryCL, countryCM, countryCN, countryCO, countryCR, countryCU, countryCV, countryCW, countryCX, countryCY, countryCZ, countryDE, countryDJ, countryDK, countryDM, countryDO, countryDZ, countryEC, countryEE, countryEG, countryEH, countryER, countryES, countryET, countryFI, countryFJ, countryFK, countryFM, countryFO, countryFR, countryGA, countryGB, countryGD, countryGE, countryGF, countryGG, countryGH, countryGI, countryGL, countryGM, countryGN, countryGP, countryGQ, countryGR, countryGT, countryGU, countryGW, countryGY, countryHK, countryHN, countryHR, countryHT, countryHU, countryID, countryIE, countryIL, countryIM, countryIN, countryIO, countryIQ, countryIR, countryIS, countryIT, countryJE, countryJM, countryJO, countryJP, countryKE, countryKG, countryKH, countryKI, countryKM, countryKN, countryKP, countryKR, countryKW, countryKY, countryKZ, countryLA, countryLB, countryLC, countryLI, countryLK, countryLR, countryLS, countryLT, countryLU, countryLV, countryLY, countryMA, countryMC, countryMD, countryME, countryMF, countryMG, countryMH, countryMK, countryML, countryMM, countryMN, countryMO, countryMP, countryMQ, countryMR, countryMS, countryMT, countryMU, countryMV, countryMW, countryMX, countryMY, countryMZ, countryNA, countryNC, countryNE, countryNF, countryNG, countryNI, countryNL, countryNO, countryNP, countryNR, countryNU, countryNZ, countryOM, countryPA, countryPE, countryPF, countryPG, countryPH, countryPK, countryPL, countryPM, countryPR, countryPS, countryPT, countryPW, countryPY, countryQA, countryRE, countryRO, countryRS, countryRU, countryRW, countrySA, countrySB, countrySC, countrySD, countrySE, countrySG, countrySH, countrySI, countrySJ, countrySK, countrySL, countrySM, countrySN, countrySO, countrySR, countrySS, countryST, countrySV, countrySX, countrySY, countrySZ, countryTA, countryTC, countryTD, countryTG, countryTH, countryTJ, countryTK, countryTL, countryTM, countryTN, countryTO, countryTR, countryTT, countryTV, countryTW, countryTZ, countryUA, countryUG, countryUS, countryUY, countryUZ, countryVA, countryVC, countryVE, countryVG, countryVI, countryVN, countryVU, countryWF, countryWS, countryXK, countryYE, countryYT, countryZA, countryZM, countryZW)
 
 {-| This file is auto generated. Do not edit this file directly.
 -}
 
-import PhoneNumbers exposing (DescriptionType(..))
+import PhoneNumbers exposing (DescriptionType(..), Territory)
 import Regex
 
 
 {-| -}
-countryAC : PhoneNumbers.Territory
+all : List Territory
+all =
+    [ countryAC
+    , countryAD
+    , countryAE
+    , countryAF
+    , countryAG
+    , countryAI
+    , countryAL
+    , countryAM
+    , countryAO
+    , countryAR
+    , countryAS
+    , countryAT
+    , countryAU
+    , countryAW
+    , countryAX
+    , countryAZ
+    , countryBA
+    , countryBB
+    , countryBD
+    , countryBE
+    , countryBF
+    , countryBG
+    , countryBH
+    , countryBI
+    , countryBJ
+    , countryBL
+    , countryBM
+    , countryBN
+    , countryBO
+    , countryBQ
+    , countryBR
+    , countryBS
+    , countryBT
+    , countryBW
+    , countryBY
+    , countryBZ
+    , countryCA
+    , countryCC
+    , countryCD
+    , countryCF
+    , countryCG
+    , countryCH
+    , countryCI
+    , countryCK
+    , countryCL
+    , countryCM
+    , countryCN
+    , countryCO
+    , countryCR
+    , countryCU
+    , countryCV
+    , countryCW
+    , countryCX
+    , countryCY
+    , countryCZ
+    , countryDE
+    , countryDJ
+    , countryDK
+    , countryDM
+    , countryDO
+    , countryDZ
+    , countryEC
+    , countryEE
+    , countryEG
+    , countryEH
+    , countryER
+    , countryES
+    , countryET
+    , countryFI
+    , countryFJ
+    , countryFK
+    , countryFM
+    , countryFO
+    , countryFR
+    , countryGA
+    , countryGB
+    , countryGD
+    , countryGE
+    , countryGF
+    , countryGG
+    , countryGH
+    , countryGI
+    , countryGL
+    , countryGM
+    , countryGN
+    , countryGP
+    , countryGQ
+    , countryGR
+    , countryGT
+    , countryGU
+    , countryGW
+    , countryGY
+    , countryHK
+    , countryHN
+    , countryHR
+    , countryHT
+    , countryHU
+    , countryID
+    , countryIE
+    , countryIL
+    , countryIM
+    , countryIN
+    , countryIO
+    , countryIQ
+    , countryIR
+    , countryIS
+    , countryIT
+    , countryJE
+    , countryJM
+    , countryJO
+    , countryJP
+    , countryKE
+    , countryKG
+    , countryKH
+    , countryKI
+    , countryKM
+    , countryKN
+    , countryKP
+    , countryKR
+    , countryKW
+    , countryKY
+    , countryKZ
+    , countryLA
+    , countryLB
+    , countryLC
+    , countryLI
+    , countryLK
+    , countryLR
+    , countryLS
+    , countryLT
+    , countryLU
+    , countryLV
+    , countryLY
+    , countryMA
+    , countryMC
+    , countryMD
+    , countryME
+    , countryMF
+    , countryMG
+    , countryMH
+    , countryMK
+    , countryML
+    , countryMM
+    , countryMN
+    , countryMO
+    , countryMP
+    , countryMQ
+    , countryMR
+    , countryMS
+    , countryMT
+    , countryMU
+    , countryMV
+    , countryMW
+    , countryMX
+    , countryMY
+    , countryMZ
+    , countryNA
+    , countryNC
+    , countryNE
+    , countryNF
+    , countryNG
+    , countryNI
+    , countryNL
+    , countryNO
+    , countryNP
+    , countryNR
+    , countryNU
+    , countryNZ
+    , countryOM
+    , countryPA
+    , countryPE
+    , countryPF
+    , countryPG
+    , countryPH
+    , countryPK
+    , countryPL
+    , countryPM
+    , countryPR
+    , countryPS
+    , countryPT
+    , countryPW
+    , countryPY
+    , countryQA
+    , countryRE
+    , countryRO
+    , countryRS
+    , countryRU
+    , countryRW
+    , countrySA
+    , countrySB
+    , countrySC
+    , countrySD
+    , countrySE
+    , countrySG
+    , countrySH
+    , countrySI
+    , countrySJ
+    , countrySK
+    , countrySL
+    , countrySM
+    , countrySN
+    , countrySO
+    , countrySR
+    , countrySS
+    , countryST
+    , countrySV
+    , countrySX
+    , countrySY
+    , countrySZ
+    , countryTA
+    , countryTC
+    , countryTD
+    , countryTG
+    , countryTH
+    , countryTJ
+    , countryTK
+    , countryTL
+    , countryTM
+    , countryTN
+    , countryTO
+    , countryTR
+    , countryTT
+    , countryTV
+    , countryTW
+    , countryTZ
+    , countryUA
+    , countryUG
+    , countryUS
+    , countryUY
+    , countryUZ
+    , countryVA
+    , countryVC
+    , countryVE
+    , countryVG
+    , countryVI
+    , countryVN
+    , countryVU
+    , countryWF
+    , countryWS
+    , countryXK
+    , countryYE
+    , countryYT
+    , countryZA
+    , countryZM
+    , countryZW
+    ]
+
+
+{-| -}
+countryAC : Territory
 countryAC =
     { id = "AC"
     , countryCode = Just 247
@@ -74,7 +325,7 @@ countryAC =
 
 
 {-| -}
-countryAD : PhoneNumbers.Territory
+countryAD : Territory
 countryAD =
     { id = "AD"
     , countryCode = Just 376
@@ -204,7 +455,7 @@ countryAD =
 
 
 {-| -}
-countryAE : PhoneNumbers.Territory
+countryAE : Territory
 countryAE =
     { id = "AE"
     , countryCode = Just 971
@@ -365,7 +616,7 @@ countryAE =
 
 
 {-| -}
-countryAF : PhoneNumbers.Territory
+countryAF : Territory
 countryAF =
     { id = "AF"
     , countryCode = Just 93
@@ -444,7 +695,7 @@ countryAF =
 
 
 {-| -}
-countryAG : PhoneNumbers.Territory
+countryAG : Territory
 countryAG =
     { id = "AG"
     , countryCode = Just 1
@@ -590,7 +841,7 @@ countryAG =
 
 
 {-| -}
-countryAI : PhoneNumbers.Territory
+countryAI : Territory
 countryAI =
     { id = "AI"
     , countryCode = Just 1
@@ -696,7 +947,7 @@ countryAI =
 
 
 {-| -}
-countryAL : PhoneNumbers.Territory
+countryAL : Territory
 countryAL =
     { id = "AL"
     , countryCode = Just 355
@@ -868,7 +1119,7 @@ countryAL =
 
 
 {-| -}
-countryAM : PhoneNumbers.Territory
+countryAM : Territory
 countryAM =
     { id = "AM"
     , countryCode = Just 374
@@ -1029,7 +1280,7 @@ countryAM =
 
 
 {-| -}
-countryAO : PhoneNumbers.Territory
+countryAO : Territory
 countryAO =
     { id = "AO"
     , countryCode = Just 244
@@ -1092,7 +1343,7 @@ countryAO =
 
 
 {-| -}
-countryAR : PhoneNumbers.Territory
+countryAR : Territory
 countryAR =
     { id = "AR"
     , countryCode = Just 54
@@ -1356,7 +1607,7 @@ countryAR =
 
 
 {-| -}
-countryAS : PhoneNumbers.Territory
+countryAS : Territory
 countryAS =
     { id = "AS"
     , countryCode = Just 1
@@ -1462,7 +1713,7 @@ countryAS =
 
 
 {-| -}
-countryAT : PhoneNumbers.Territory
+countryAT : Territory
 countryAT =
     { id = "AT"
     , countryCode = Just 43
@@ -1667,7 +1918,7 @@ countryAT =
 
 
 {-| -}
-countryAU : PhoneNumbers.Territory
+countryAU : Territory
 countryAU =
     { id = "AU"
     , countryCode = Just 61
@@ -1916,7 +2167,7 @@ countryAU =
 
 
 {-| -}
-countryAW : PhoneNumbers.Territory
+countryAW : Territory
 countryAW =
     { id = "AW"
     , countryCode = Just 297
@@ -2024,7 +2275,7 @@ countryAW =
 
 
 {-| -}
-countryAX : PhoneNumbers.Territory
+countryAX : Territory
 countryAX =
     { id = "AX"
     , countryCode = Just 358
@@ -2120,7 +2371,7 @@ countryAX =
 
 
 {-| -}
-countryAZ : PhoneNumbers.Territory
+countryAZ : Territory
 countryAZ =
     { id = "AZ"
     , countryCode = Just 994
@@ -2253,7 +2504,7 @@ countryAZ =
 
 
 {-| -}
-countryBA : PhoneNumbers.Territory
+countryBA : Territory
 countryBA =
     { id = "BA"
     , countryCode = Just 387
@@ -2414,7 +2665,7 @@ countryBA =
 
 
 {-| -}
-countryBB : PhoneNumbers.Territory
+countryBB : Territory
 countryBB =
     { id = "BB"
     , countryCode = Just 1
@@ -2565,7 +2816,7 @@ countryBB =
 
 
 {-| -}
-countryBD : PhoneNumbers.Territory
+countryBD : Territory
 countryBD =
     { id = "BD"
     , countryCode = Just 880
@@ -2691,7 +2942,7 @@ countryBD =
 
 
 {-| -}
-countryBE : PhoneNumbers.Territory
+countryBE : Territory
 countryBE =
     { id = "BE"
     , countryCode = Just 32
@@ -2847,7 +3098,7 @@ countryBE =
 
 
 {-| -}
-countryBF : PhoneNumbers.Territory
+countryBF : Territory
 countryBF =
     { id = "BF"
     , countryCode = Just 226
@@ -2910,7 +3161,7 @@ countryBF =
 
 
 {-| -}
-countryBG : PhoneNumbers.Territory
+countryBG : Territory
 countryBG =
     { id = "BG"
     , countryCode = Just 359
@@ -3100,7 +3351,7 @@ countryBG =
 
 
 {-| -}
-countryBH : PhoneNumbers.Territory
+countryBH : Territory
 countryBH =
     { id = "BH"
     , countryCode = Just 973
@@ -3208,7 +3459,7 @@ countryBH =
 
 
 {-| -}
-countryBI : PhoneNumbers.Territory
+countryBI : Territory
 countryBI =
     { id = "BI"
     , countryCode = Just 257
@@ -3271,7 +3522,7 @@ countryBI =
 
 
 {-| -}
-countryBJ : PhoneNumbers.Territory
+countryBJ : Territory
 countryBJ =
     { id = "BJ"
     , countryCode = Just 229
@@ -3364,7 +3615,7 @@ countryBJ =
 
 
 {-| -}
-countryBL : PhoneNumbers.Territory
+countryBL : Territory
 countryBL =
     { id = "BL"
     , countryCode = Just 590
@@ -3415,7 +3666,7 @@ countryBL =
 
 
 {-| -}
-countryBM : PhoneNumbers.Territory
+countryBM : Territory
 countryBM =
     { id = "BM"
     , countryCode = Just 1
@@ -3521,7 +3772,7 @@ countryBM =
 
 
 {-| -}
-countryBN : PhoneNumbers.Territory
+countryBN : Territory
 countryBN =
     { id = "BN"
     , countryCode = Just 673
@@ -3584,7 +3835,7 @@ countryBN =
 
 
 {-| -}
-countryBO : PhoneNumbers.Territory
+countryBO : Territory
 countryBO =
     { id = "BO"
     , countryCode = Just 591
@@ -3689,7 +3940,7 @@ countryBO =
 
 
 {-| -}
-countryBQ : PhoneNumbers.Territory
+countryBQ : Territory
 countryBQ =
     { id = "BQ"
     , countryCode = Just 599
@@ -3740,7 +3991,7 @@ countryBQ =
 
 
 {-| -}
-countryBR : PhoneNumbers.Territory
+countryBR : Territory
 countryBR =
     { id = "BR"
     , countryCode = Just 55
@@ -3942,7 +4193,7 @@ countryBR =
 
 
 {-| -}
-countryBS : PhoneNumbers.Territory
+countryBS : Territory
 countryBS =
     { id = "BS"
     , countryCode = Just 1
@@ -4068,7 +4319,7 @@ countryBS =
 
 
 {-| -}
-countryBT : PhoneNumbers.Territory
+countryBT : Territory
 countryBT =
     { id = "BT"
     , countryCode = Just 975
@@ -4147,7 +4398,7 @@ countryBT =
 
 
 {-| -}
-countryBW : PhoneNumbers.Territory
+countryBW : Territory
 countryBW =
     { id = "BW"
     , countryCode = Just 267
@@ -4262,7 +4513,7 @@ countryBW =
 
 
 {-| -}
-countryBY : PhoneNumbers.Territory
+countryBY : Territory
 countryBY =
     { id = "BY"
     , countryCode = Just 375
@@ -4451,7 +4702,7 @@ countryBY =
 
 
 {-| -}
-countryBZ : PhoneNumbers.Territory
+countryBZ : Territory
 countryBZ =
     { id = "BZ"
     , countryCode = Just 501
@@ -4540,7 +4791,7 @@ countryBZ =
 
 
 {-| -}
-countryCA : PhoneNumbers.Territory
+countryCA : Territory
 countryCA =
     { id = "CA"
     , countryCode = Just 1
@@ -4661,7 +4912,7 @@ countryCA =
 
 
 {-| -}
-countryCC : PhoneNumbers.Territory
+countryCC : Territory
 countryCC =
     { id = "CC"
     , countryCode = Just 61
@@ -4777,7 +5028,7 @@ countryCC =
 
 
 {-| -}
-countryCD : PhoneNumbers.Territory
+countryCD : Territory
 countryCD =
     { id = "CD"
     , countryCode = Just 243
@@ -4873,7 +5124,7 @@ countryCD =
 
 
 {-| -}
-countryCF : PhoneNumbers.Territory
+countryCF : Territory
 countryCF =
     { id = "CF"
     , countryCode = Just 236
@@ -4951,7 +5202,7 @@ countryCF =
 
 
 {-| -}
-countryCG : PhoneNumbers.Territory
+countryCG : Territory
 countryCG =
     { id = "CG"
     , countryCode = Just 242
@@ -5051,7 +5302,7 @@ countryCG =
 
 
 {-| -}
-countryCH : PhoneNumbers.Territory
+countryCH : Territory
 countryCH =
     { id = "CH"
     , countryCode = Just 41
@@ -5241,7 +5492,7 @@ countryCH =
 
 
 {-| -}
-countryCI : PhoneNumbers.Territory
+countryCI : Territory
 countryCI =
     { id = "CI"
     , countryCode = Just 225
@@ -5304,7 +5555,7 @@ countryCI =
 
 
 {-| -}
-countryCK : PhoneNumbers.Territory
+countryCK : Territory
 countryCK =
     { id = "CK"
     , countryCode = Just 682
@@ -5367,7 +5618,7 @@ countryCK =
 
 
 {-| -}
-countryCL : PhoneNumbers.Territory
+countryCL : Territory
 countryCL =
     { id = "CL"
     , countryCode = Just 56
@@ -5578,7 +5829,7 @@ countryCL =
 
 
 {-| -}
-countryCM : PhoneNumbers.Territory
+countryCM : Territory
 countryCM =
     { id = "CM"
     , countryCode = Just 237
@@ -5667,7 +5918,7 @@ countryCM =
 
 
 {-| -}
-countryCN : PhoneNumbers.Territory
+countryCN : Territory
 countryCN =
     { id = "CN"
     , countryCode = Just 86
@@ -5959,7 +6210,7 @@ countryCN =
 
 
 {-| -}
-countryCO : PhoneNumbers.Territory
+countryCO : Territory
 countryCO =
     { id = "CO"
     , countryCode = Just 57
@@ -6082,7 +6333,7 @@ countryCO =
 
 
 {-| -}
-countryCR : PhoneNumbers.Territory
+countryCR : Territory
 countryCR =
     { id = "CR"
     , countryCode = Just 506
@@ -6201,7 +6452,7 @@ countryCR =
 
 
 {-| -}
-countryCU : PhoneNumbers.Territory
+countryCU : Territory
 countryCU =
     { id = "CU"
     , countryCode = Just 53
@@ -6291,7 +6542,7 @@ countryCU =
 
 
 {-| -}
-countryCV : PhoneNumbers.Territory
+countryCV : Territory
 countryCV =
     { id = "CV"
     , countryCode = Just 238
@@ -6354,7 +6605,7 @@ countryCV =
 
 
 {-| -}
-countryCW : PhoneNumbers.Territory
+countryCW : Territory
 countryCW =
     { id = "CW"
     , countryCode = Just 599
@@ -6458,7 +6709,7 @@ countryCW =
 
 
 {-| -}
-countryCX : PhoneNumbers.Territory
+countryCX : Territory
 countryCX =
     { id = "CX"
     , countryCode = Just 61
@@ -6574,7 +6825,7 @@ countryCX =
 
 
 {-| -}
-countryCY : PhoneNumbers.Territory
+countryCY : Territory
 countryCY =
     { id = "CY"
     , countryCode = Just 357
@@ -6712,7 +6963,7 @@ countryCY =
 
 
 {-| -}
-countryCZ : PhoneNumbers.Territory
+countryCZ : Territory
 countryCZ =
     { id = "CZ"
     , countryCode = Just 420
@@ -6902,7 +7153,7 @@ countryCZ =
 
 
 {-| -}
-countryDE : PhoneNumbers.Territory
+countryDE : Territory
 countryDE =
     { id = "DE"
     , countryCode = Just 49
@@ -7274,7 +7525,7 @@ countryDE =
 
 
 {-| -}
-countryDJ : PhoneNumbers.Territory
+countryDJ : Territory
 countryDJ =
     { id = "DJ"
     , countryCode = Just 253
@@ -7337,7 +7588,7 @@ countryDJ =
 
 
 {-| -}
-countryDK : PhoneNumbers.Territory
+countryDK : Territory
 countryDK =
     { id = "DK"
     , countryCode = Just 45
@@ -7430,7 +7681,7 @@ countryDK =
 
 
 {-| -}
-countryDM : PhoneNumbers.Territory
+countryDM : Territory
 countryDM =
     { id = "DM"
     , countryCode = Just 1
@@ -7536,7 +7787,7 @@ countryDM =
 
 
 {-| -}
-countryDO : PhoneNumbers.Territory
+countryDO : Territory
 countryDO =
     { id = "DO"
     , countryCode = Just 1
@@ -7642,7 +7893,7 @@ countryDO =
 
 
 {-| -}
-countryDZ : PhoneNumbers.Territory
+countryDZ : Territory
 countryDZ =
     { id = "DZ"
     , countryCode = Just 213
@@ -7787,7 +8038,7 @@ countryDZ =
 
 
 {-| -}
-countryEC : PhoneNumbers.Territory
+countryEC : Territory
 countryEC =
     { id = "EC"
     , countryCode = Just 593
@@ -7918,7 +8169,7 @@ countryEC =
 
 
 {-| -}
-countryEE : PhoneNumbers.Territory
+countryEE : Territory
 countryEE =
     { id = "EE"
     , countryCode = Just 372
@@ -8080,7 +8331,7 @@ countryEE =
 
 
 {-| -}
-countryEG : PhoneNumbers.Territory
+countryEG : Territory
 countryEG =
     { id = "EG"
     , countryCode = Just 20
@@ -8200,7 +8451,7 @@ countryEG =
 
 
 {-| -}
-countryEH : PhoneNumbers.Territory
+countryEH : Territory
 countryEH =
     { id = "EH"
     , countryCode = Just 212
@@ -8296,7 +8547,7 @@ countryEH =
 
 
 {-| -}
-countryER : PhoneNumbers.Territory
+countryER : Territory
 countryER =
     { id = "ER"
     , countryCode = Just 291
@@ -8364,7 +8615,7 @@ countryER =
 
 
 {-| -}
-countryES : PhoneNumbers.Territory
+countryES : Territory
 countryES =
     { id = "ES"
     , countryCode = Just 34
@@ -8513,7 +8764,7 @@ countryES =
 
 
 {-| -}
-countryET : PhoneNumbers.Territory
+countryET : Territory
 countryET =
     { id = "ET"
     , countryCode = Just 251
@@ -8581,7 +8832,7 @@ countryET =
 
 
 {-| -}
-countryFI : PhoneNumbers.Territory
+countryFI : Territory
 countryFI =
     { id = "FI"
     , countryCode = Just 358
@@ -8748,7 +8999,7 @@ countryFI =
 
 
 {-| -}
-countryFJ : PhoneNumbers.Territory
+countryFJ : Territory
 countryFJ =
     { id = "FJ"
     , countryCode = Just 679
@@ -8837,7 +9088,7 @@ countryFJ =
 
 
 {-| -}
-countryFK : PhoneNumbers.Territory
+countryFK : Territory
 countryFK =
     { id = "FK"
     , countryCode = Just 500
@@ -8888,7 +9139,7 @@ countryFK =
 
 
 {-| -}
-countryFM : PhoneNumbers.Territory
+countryFM : Territory
 countryFM =
     { id = "FM"
     , countryCode = Just 691
@@ -8951,7 +9202,7 @@ countryFM =
 
 
 {-| -}
-countryFO : PhoneNumbers.Territory
+countryFO : Territory
 countryFO =
     { id = "FO"
     , countryCode = Just 298
@@ -9059,7 +9310,7 @@ countryFO =
 
 
 {-| -}
-countryFR : PhoneNumbers.Territory
+countryFR : Territory
 countryFR =
     { id = "FR"
     , countryCode = Just 33
@@ -9219,7 +9470,7 @@ countryFR =
 
 
 {-| -}
-countryGA : PhoneNumbers.Territory
+countryGA : Territory
 countryGA =
     { id = "GA"
     , countryCode = Just 241
@@ -9293,7 +9544,7 @@ countryGA =
 
 
 {-| -}
-countryGB : PhoneNumbers.Territory
+countryGB : Territory
 countryGB =
     { id = "GB"
     , countryCode = Just 44
@@ -9558,7 +9809,7 @@ countryGB =
 
 
 {-| -}
-countryGD : PhoneNumbers.Territory
+countryGD : Territory
 countryGD =
     { id = "GD"
     , countryCode = Just 1
@@ -9664,7 +9915,7 @@ countryGD =
 
 
 {-| -}
-countryGE : PhoneNumbers.Territory
+countryGE : Territory
 countryGE =
     { id = "GE"
     , countryCode = Just 995
@@ -9799,7 +10050,7 @@ countryGE =
 
 
 {-| -}
-countryGF : PhoneNumbers.Territory
+countryGF : Territory
 countryGF =
     { id = "GF"
     , countryCode = Just 594
@@ -9862,7 +10113,7 @@ countryGF =
 
 
 {-| -}
-countryGG : PhoneNumbers.Territory
+countryGG : Territory
 countryGG =
     { id = "GG"
     , countryCode = Just 44
@@ -10008,7 +10259,7 @@ countryGG =
 
 
 {-| -}
-countryGH : PhoneNumbers.Territory
+countryGH : Territory
 countryGH =
     { id = "GH"
     , countryCode = Just 233
@@ -10128,7 +10379,7 @@ countryGH =
 
 
 {-| -}
-countryGI : PhoneNumbers.Territory
+countryGI : Territory
 countryGI =
     { id = "GI"
     , countryCode = Just 350
@@ -10191,7 +10442,7 @@ countryGI =
 
 
 {-| -}
-countryGL : PhoneNumbers.Territory
+countryGL : Territory
 countryGL =
     { id = "GL"
     , countryCode = Just 299
@@ -10284,7 +10535,7 @@ countryGL =
 
 
 {-| -}
-countryGM : PhoneNumbers.Territory
+countryGM : Territory
 countryGM =
     { id = "GM"
     , countryCode = Just 220
@@ -10347,7 +10598,7 @@ countryGM =
 
 
 {-| -}
-countryGN : PhoneNumbers.Territory
+countryGN : Territory
 countryGN =
     { id = "GN"
     , countryCode = Just 224
@@ -10436,7 +10687,7 @@ countryGN =
 
 
 {-| -}
-countryGP : PhoneNumbers.Territory
+countryGP : Territory
 countryGP =
     { id = "GP"
     , countryCode = Just 590
@@ -10499,7 +10750,7 @@ countryGP =
 
 
 {-| -}
-countryGQ : PhoneNumbers.Territory
+countryGQ : Territory
 countryGQ =
     { id = "GQ"
     , countryCode = Just 240
@@ -10603,7 +10854,7 @@ countryGQ =
 
 
 {-| -}
-countryGR : PhoneNumbers.Territory
+countryGR : Territory
 countryGR =
     { id = "GR"
     , countryCode = Just 30
@@ -10748,7 +10999,7 @@ countryGR =
 
 
 {-| -}
-countryGT : PhoneNumbers.Territory
+countryGT : Territory
 countryGT =
     { id = "GT"
     , countryCode = Just 502
@@ -10852,7 +11103,7 @@ countryGT =
 
 
 {-| -}
-countryGU : PhoneNumbers.Territory
+countryGU : Territory
 countryGU =
     { id = "GU"
     , countryCode = Just 1
@@ -10958,7 +11209,7 @@ countryGU =
 
 
 {-| -}
-countryGW : PhoneNumbers.Territory
+countryGW : Territory
 countryGW =
     { id = "GW"
     , countryCode = Just 245
@@ -11047,7 +11298,7 @@ countryGW =
 
 
 {-| -}
-countryGY : PhoneNumbers.Territory
+countryGY : Territory
 countryGY =
     { id = "GY"
     , countryCode = Just 592
@@ -11140,7 +11391,7 @@ countryGY =
 
 
 {-| -}
-countryHK : PhoneNumbers.Territory
+countryHK : Territory
 countryHK =
     { id = "HK"
     , countryCode = Just 852
@@ -11314,7 +11565,7 @@ countryHK =
 
 
 {-| -}
-countryHN : PhoneNumbers.Territory
+countryHN : Territory
 countryHN =
     { id = "HN"
     , countryCode = Just 504
@@ -11377,7 +11628,7 @@ countryHN =
 
 
 {-| -}
-countryHR : PhoneNumbers.Territory
+countryHR : Territory
 countryHR =
     { id = "HR"
     , countryCode = Just 385
@@ -11571,7 +11822,7 @@ countryHR =
 
 
 {-| -}
-countryHT : PhoneNumbers.Territory
+countryHT : Territory
 countryHT =
     { id = "HT"
     , countryCode = Just 509
@@ -11664,7 +11915,7 @@ countryHT =
 
 
 {-| -}
-countryHU : PhoneNumbers.Territory
+countryHU : Territory
 countryHU =
     { id = "HU"
     , countryCode = Just 36
@@ -11818,7 +12069,7 @@ countryHU =
 
 
 {-| -}
-countryID : PhoneNumbers.Territory
+countryID : Territory
 countryID =
     { id = "ID"
     , countryCode = Just 62
@@ -12049,7 +12300,7 @@ countryID =
 
 
 {-| -}
-countryIE : PhoneNumbers.Territory
+countryIE : Territory
 countryIE =
     { id = "IE"
     , countryCode = Just 353
@@ -12336,7 +12587,7 @@ countryIE =
 
 
 {-| -}
-countryIL : PhoneNumbers.Territory
+countryIL : Territory
 countryIL =
     { id = "IL"
     , countryCode = Just 972
@@ -12586,7 +12837,7 @@ countryIL =
 
 
 {-| -}
-countryIM : PhoneNumbers.Territory
+countryIM : Territory
 countryIM =
     { id = "IM"
     , countryCode = Just 44
@@ -12717,7 +12968,7 @@ countryIM =
 
 
 {-| -}
-countryIN : PhoneNumbers.Territory
+countryIN : Territory
 countryIN =
     { id = "IN"
     , countryCode = Just 91
@@ -12983,7 +13234,7 @@ countryIN =
 
 
 {-| -}
-countryIO : PhoneNumbers.Territory
+countryIO : Territory
 countryIO =
     { id = "IO"
     , countryCode = Just 246
@@ -13046,7 +13297,7 @@ countryIO =
 
 
 {-| -}
-countryIQ : PhoneNumbers.Territory
+countryIQ : Territory
 countryIQ =
     { id = "IQ"
     , countryCode = Just 964
@@ -13136,7 +13387,7 @@ countryIQ =
 
 
 {-| -}
-countryIR : PhoneNumbers.Territory
+countryIR : Territory
 countryIR =
     { id = "IR"
     , countryCode = Just 98
@@ -13282,7 +13533,7 @@ countryIR =
 
 
 {-| -}
-countryIS : PhoneNumbers.Territory
+countryIS : Territory
 countryIS =
     { id = "IS"
     , countryCode = Just 354
@@ -13431,7 +13682,7 @@ countryIS =
 
 
 {-| -}
-countryIT : PhoneNumbers.Territory
+countryIT : Territory
 countryIT =
     { id = "IT"
     , countryCode = Just 39
@@ -13686,7 +13937,7 @@ countryIT =
 
 
 {-| -}
-countryJE : PhoneNumbers.Territory
+countryJE : Territory
 countryJE =
     { id = "JE"
     , countryCode = Just 44
@@ -13832,7 +14083,7 @@ countryJE =
 
 
 {-| -}
-countryJM : PhoneNumbers.Territory
+countryJM : Territory
 countryJM =
     { id = "JM"
     , countryCode = Just 1
@@ -13938,7 +14189,7 @@ countryJM =
 
 
 {-| -}
-countryJO : PhoneNumbers.Territory
+countryJO : Territory
 countryJO =
     { id = "JO"
     , countryCode = Just 962
@@ -14124,7 +14375,7 @@ countryJO =
 
 
 {-| -}
-countryJP : PhoneNumbers.Territory
+countryJP : Territory
 countryJP =
     { id = "JP"
     , countryCode = Just 81
@@ -14487,7 +14738,7 @@ countryJP =
 
 
 {-| -}
-countryKE : PhoneNumbers.Territory
+countryKE : Territory
 countryKE =
     { id = "KE"
     , countryCode = Just 254
@@ -14602,7 +14853,7 @@ countryKE =
 
 
 {-| -}
-countryKG : PhoneNumbers.Territory
+countryKG : Territory
 countryKG =
     { id = "KG"
     , countryCode = Just 996
@@ -14707,7 +14958,7 @@ countryKG =
 
 
 {-| -}
-countryKH : PhoneNumbers.Territory
+countryKH : Territory
 countryKH =
     { id = "KH"
     , countryCode = Just 855
@@ -14816,7 +15067,7 @@ countryKH =
 
 
 {-| -}
-countryKI : PhoneNumbers.Territory
+countryKI : Territory
 countryKI =
     { id = "KI"
     , countryCode = Just 686
@@ -14882,7 +15133,7 @@ countryKI =
 
 
 {-| -}
-countryKM : PhoneNumbers.Territory
+countryKM : Territory
 countryKM =
     { id = "KM"
     , countryCode = Just 269
@@ -14960,7 +15211,7 @@ countryKM =
 
 
 {-| -}
-countryKN : PhoneNumbers.Territory
+countryKN : Territory
 countryKN =
     { id = "KN"
     , countryCode = Just 1
@@ -15066,7 +15317,7 @@ countryKN =
 
 
 {-| -}
-countryKP : PhoneNumbers.Territory
+countryKP : Territory
 countryKP =
     { id = "KP"
     , countryCode = Just 850
@@ -15171,7 +15422,7 @@ countryKP =
 
 
 {-| -}
-countryKR : PhoneNumbers.Territory
+countryKR : Territory
 countryKR =
     { id = "KR"
     , countryCode = Just 82
@@ -15460,7 +15711,7 @@ countryKR =
 
 
 {-| -}
-countryKW : PhoneNumbers.Territory
+countryKW : Territory
 countryKW =
     { id = "KW"
     , countryCode = Just 965
@@ -15549,7 +15800,7 @@ countryKW =
 
 
 {-| -}
-countryKY : PhoneNumbers.Territory
+countryKY : Territory
 countryKY =
     { id = "KY"
     , countryCode = Just 1
@@ -15670,7 +15921,7 @@ countryKY =
 
 
 {-| -}
-countryKZ : PhoneNumbers.Territory
+countryKZ : Territory
 countryKZ =
     { id = "KZ"
     , countryCode = Just 7
@@ -15796,7 +16047,7 @@ countryKZ =
 
 
 {-| -}
-countryLA : PhoneNumbers.Territory
+countryLA : Territory
 countryLA =
     { id = "LA"
     , countryCode = Just 856
@@ -15901,7 +16152,7 @@ countryLA =
 
 
 {-| -}
-countryLB : PhoneNumbers.Territory
+countryLB : Territory
 countryLB =
     { id = "LB"
     , countryCode = Just 961
@@ -16005,7 +16256,7 @@ countryLB =
 
 
 {-| -}
-countryLC : PhoneNumbers.Territory
+countryLC : Territory
 countryLC =
     { id = "LC"
     , countryCode = Just 1
@@ -16111,7 +16362,7 @@ countryLC =
 
 
 {-| -}
-countryLI : PhoneNumbers.Territory
+countryLI : Territory
 countryLI =
     { id = "LI"
     , countryCode = Just 423
@@ -16256,7 +16507,7 @@ countryLI =
 
 
 {-| -}
-countryLK : PhoneNumbers.Territory
+countryLK : Territory
 countryLK =
     { id = "LK"
     , countryCode = Just 94
@@ -16350,7 +16601,7 @@ countryLK =
 
 
 {-| -}
-countryLR : PhoneNumbers.Territory
+countryLR : Territory
 countryLR =
     { id = "LR"
     , countryCode = Just 231
@@ -16450,7 +16701,7 @@ countryLR =
 
 
 {-| -}
-countryLS : PhoneNumbers.Territory
+countryLS : Territory
 countryLS =
     { id = "LS"
     , countryCode = Just 266
@@ -16528,7 +16779,7 @@ countryLS =
 
 
 {-| -}
-countryLT : PhoneNumbers.Territory
+countryLT : Territory
 countryLT =
     { id = "LT"
     , countryCode = Just 370
@@ -16699,7 +16950,7 @@ countryLT =
 
 
 {-| -}
-countryLU : PhoneNumbers.Territory
+countryLU : Territory
 countryLU =
     { id = "LU"
     , countryCode = Just 352
@@ -16910,7 +17161,7 @@ countryLU =
 
 
 {-| -}
-countryLV : PhoneNumbers.Territory
+countryLV : Territory
 countryLV =
     { id = "LV"
     , countryCode = Just 371
@@ -17018,7 +17269,7 @@ countryLV =
 
 
 {-| -}
-countryLY : PhoneNumbers.Territory
+countryLY : Territory
 countryLY =
     { id = "LY"
     , countryCode = Just 218
@@ -17086,7 +17337,7 @@ countryLY =
 
 
 {-| -}
-countryMA : PhoneNumbers.Territory
+countryMA : Territory
 countryMA =
     { id = "MA"
     , countryCode = Just 212
@@ -17241,7 +17492,7 @@ countryMA =
 
 
 {-| -}
-countryMC : PhoneNumbers.Territory
+countryMC : Territory
 countryMC =
     { id = "MC"
     , countryCode = Just 377
@@ -17367,7 +17618,7 @@ countryMC =
 
 
 {-| -}
-countryMD : PhoneNumbers.Territory
+countryMD : Territory
 countryMD =
     { id = "MD"
     , countryCode = Just 373
@@ -17527,7 +17778,7 @@ countryMD =
 
 
 {-| -}
-countryME : PhoneNumbers.Territory
+countryME : Territory
 countryME =
     { id = "ME"
     , countryCode = Just 382
@@ -17655,7 +17906,7 @@ countryME =
 
 
 {-| -}
-countryMF : PhoneNumbers.Territory
+countryMF : Territory
 countryMF =
     { id = "MF"
     , countryCode = Just 590
@@ -17706,7 +17957,7 @@ countryMF =
 
 
 {-| -}
-countryMG : PhoneNumbers.Territory
+countryMG : Territory
 countryMG =
     { id = "MG"
     , countryCode = Just 261
@@ -17789,7 +18040,7 @@ countryMG =
 
 
 {-| -}
-countryMH : PhoneNumbers.Territory
+countryMH : Territory
 countryMH =
     { id = "MH"
     , countryCode = Just 692
@@ -17867,7 +18118,7 @@ countryMH =
 
 
 {-| -}
-countryMK : PhoneNumbers.Territory
+countryMK : Territory
 countryMK =
     { id = "MK"
     , countryCode = Just 389
@@ -18002,7 +18253,7 @@ countryMK =
 
 
 {-| -}
-countryML : PhoneNumbers.Territory
+countryML : Territory
 countryML =
     { id = "ML"
     , countryCode = Just 223
@@ -18109,7 +18360,7 @@ countryML =
 
 
 {-| -}
-countryMM : PhoneNumbers.Territory
+countryMM : Territory
 countryMM =
     { id = "MM"
     , countryCode = Just 95
@@ -18295,7 +18546,7 @@ countryMM =
 
 
 {-| -}
-countryMN : PhoneNumbers.Territory
+countryMN : Territory
 countryMN =
     { id = "MN"
     , countryCode = Just 976
@@ -18425,7 +18676,7 @@ countryMN =
 
 
 {-| -}
-countryMO : PhoneNumbers.Territory
+countryMO : Territory
 countryMO =
     { id = "MO"
     , countryCode = Just 853
@@ -18488,7 +18739,7 @@ countryMO =
 
 
 {-| -}
-countryMP : PhoneNumbers.Territory
+countryMP : Territory
 countryMP =
     { id = "MP"
     , countryCode = Just 1
@@ -18594,7 +18845,7 @@ countryMP =
 
 
 {-| -}
-countryMQ : PhoneNumbers.Territory
+countryMQ : Territory
 countryMQ =
     { id = "MQ"
     , countryCode = Just 596
@@ -18657,7 +18908,7 @@ countryMQ =
 
 
 {-| -}
-countryMR : PhoneNumbers.Territory
+countryMR : Territory
 countryMR =
     { id = "MR"
     , countryCode = Just 222
@@ -18735,7 +18986,7 @@ countryMR =
 
 
 {-| -}
-countryMS : PhoneNumbers.Territory
+countryMS : Territory
 countryMS =
     { id = "MS"
     , countryCode = Just 1
@@ -18841,7 +19092,7 @@ countryMS =
 
 
 {-| -}
-countryMT : PhoneNumbers.Territory
+countryMT : Territory
 countryMT =
     { id = "MT"
     , countryCode = Just 356
@@ -18979,7 +19230,7 @@ countryMT =
 
 
 {-| -}
-countryMU : PhoneNumbers.Territory
+countryMU : Territory
 countryMU =
     { id = "MU"
     , countryCode = Just 230
@@ -19098,7 +19349,7 @@ countryMU =
 
 
 {-| -}
-countryMV : PhoneNumbers.Territory
+countryMV : Territory
 countryMV =
     { id = "MV"
     , countryCode = Just 960
@@ -19217,7 +19468,7 @@ countryMV =
 
 
 {-| -}
-countryMW : PhoneNumbers.Territory
+countryMW : Territory
 countryMW =
     { id = "MW"
     , countryCode = Just 265
@@ -19328,7 +19579,7 @@ countryMW =
 
 
 {-| -}
-countryMX : PhoneNumbers.Territory
+countryMX : Territory
 countryMX =
     { id = "MX"
     , countryCode = Just 52
@@ -19489,7 +19740,7 @@ countryMX =
 
 
 {-| -}
-countryMY : PhoneNumbers.Territory
+countryMY : Territory
 countryMY =
     { id = "MY"
     , countryCode = Just 60
@@ -19657,7 +19908,7 @@ countryMY =
 
 
 {-| -}
-countryMZ : PhoneNumbers.Territory
+countryMZ : Territory
 countryMZ =
     { id = "MZ"
     , countryCode = Just 258
@@ -19746,7 +19997,7 @@ countryMZ =
 
 
 {-| -}
-countryNA : PhoneNumbers.Territory
+countryNA : Territory
 countryNA =
     { id = "NA"
     , countryCode = Just 264
@@ -19887,7 +20138,7 @@ countryNA =
 
 
 {-| -}
-countryNC : PhoneNumbers.Territory
+countryNC : Territory
 countryNC =
     { id = "NC"
     , countryCode = Just 687
@@ -19965,7 +20216,7 @@ countryNC =
 
 
 {-| -}
-countryNE : PhoneNumbers.Territory
+countryNE : Territory
 countryNE =
     { id = "NE"
     , countryCode = Just 227
@@ -20069,7 +20320,7 @@ countryNE =
 
 
 {-| -}
-countryNF : PhoneNumbers.Territory
+countryNF : Territory
 countryNF =
     { id = "NF"
     , countryCode = Just 672
@@ -20153,7 +20404,7 @@ countryNF =
 
 
 {-| -}
-countryNG : PhoneNumbers.Territory
+countryNG : Territory
 countryNG =
     { id = "NG"
     , countryCode = Just 234
@@ -20306,7 +20557,7 @@ countryNG =
 
 
 {-| -}
-countryNI : PhoneNumbers.Territory
+countryNI : Territory
 countryNI =
     { id = "NI"
     , countryCode = Just 505
@@ -20384,7 +20635,7 @@ countryNI =
 
 
 {-| -}
-countryNL : PhoneNumbers.Territory
+countryNL : Territory
 countryNL =
     { id = "NL"
     , countryCode = Just 31
@@ -20592,7 +20843,7 @@ countryNL =
 
 
 {-| -}
-countryNO : PhoneNumbers.Territory
+countryNO : Territory
 countryNO =
     { id = "NO"
     , countryCode = Just 47
@@ -20771,7 +21022,7 @@ countryNO =
 
 
 {-| -}
-countryNP : PhoneNumbers.Territory
+countryNP : Territory
 countryNP =
     { id = "NP"
     , countryCode = Just 977
@@ -20861,7 +21112,7 @@ countryNP =
 
 
 {-| -}
-countryNR : PhoneNumbers.Territory
+countryNR : Territory
 countryNR =
     { id = "NR"
     , countryCode = Just 674
@@ -20924,7 +21175,7 @@ countryNR =
 
 
 {-| -}
-countryNU : PhoneNumbers.Territory
+countryNU : Territory
 countryNU =
     { id = "NU"
     , countryCode = Just 683
@@ -20987,7 +21238,7 @@ countryNU =
 
 
 {-| -}
-countryNZ : PhoneNumbers.Territory
+countryNZ : Territory
 countryNZ =
     { id = "NZ"
     , countryCode = Just 64
@@ -21159,7 +21410,7 @@ countryNZ =
 
 
 {-| -}
-countryOM : PhoneNumbers.Territory
+countryOM : Territory
 countryOM =
     { id = "OM"
     , countryCode = Just 968
@@ -21274,7 +21525,7 @@ countryOM =
 
 
 {-| -}
-countryPA : PhoneNumbers.Territory
+countryPA : Territory
 countryPA =
     { id = "PA"
     , countryCode = Just 507
@@ -21378,7 +21629,7 @@ countryPA =
 
 
 {-| -}
-countryPE : PhoneNumbers.Territory
+countryPE : Territory
 countryPE =
     { id = "PE"
     , countryCode = Just 51
@@ -21539,7 +21790,7 @@ countryPE =
 
 
 {-| -}
-countryPF : PhoneNumbers.Territory
+countryPF : Territory
 countryPF =
     { id = "PF"
     , countryCode = Just 689
@@ -21628,7 +21879,7 @@ countryPF =
 
 
 {-| -}
-countryPG : PhoneNumbers.Territory
+countryPG : Territory
 countryPG =
     { id = "PG"
     , countryCode = Just 675
@@ -21732,7 +21983,7 @@ countryPG =
 
 
 {-| -}
-countryPH : PhoneNumbers.Territory
+countryPH : Territory
 countryPH =
     { id = "PH"
     , countryCode = Just 63
@@ -21898,7 +22149,7 @@ countryPH =
 
 
 {-| -}
-countryPK : PhoneNumbers.Territory
+countryPK : Territory
 countryPK =
     { id = "PK"
     , countryCode = Just 92
@@ -22106,7 +22357,7 @@ countryPK =
 
 
 {-| -}
-countryPL : PhoneNumbers.Territory
+countryPL : Territory
 countryPL =
     { id = "PL"
     , countryCode = Just 48
@@ -22317,7 +22568,7 @@ countryPL =
 
 
 {-| -}
-countryPM : PhoneNumbers.Territory
+countryPM : Territory
 countryPM =
     { id = "PM"
     , countryCode = Just 508
@@ -22380,7 +22631,7 @@ countryPM =
 
 
 {-| -}
-countryPR : PhoneNumbers.Territory
+countryPR : Territory
 countryPR =
     { id = "PR"
     , countryCode = Just 1
@@ -22486,7 +22737,7 @@ countryPR =
 
 
 {-| -}
-countryPS : PhoneNumbers.Territory
+countryPS : Territory
 countryPS =
     { id = "PS"
     , countryCode = Just 970
@@ -22606,7 +22857,7 @@ countryPS =
 
 
 {-| -}
-countryPT : PhoneNumbers.Territory
+countryPT : Territory
 countryPT =
     { id = "PT"
     , countryCode = Just 351
@@ -22785,7 +23036,7 @@ countryPT =
 
 
 {-| -}
-countryPW : PhoneNumbers.Territory
+countryPW : Territory
 countryPW =
     { id = "PW"
     , countryCode = Just 680
@@ -22848,7 +23099,7 @@ countryPW =
 
 
 {-| -}
-countryPY : PhoneNumbers.Territory
+countryPY : Territory
 countryPY =
     { id = "PY"
     , countryCode = Just 595
@@ -23012,7 +23263,7 @@ countryPY =
 
 
 {-| -}
-countryQA : PhoneNumbers.Territory
+countryQA : Territory
 countryQA =
     { id = "QA"
     , countryCode = Just 974
@@ -23116,7 +23367,7 @@ countryQA =
 
 
 {-| -}
-countryRE : PhoneNumbers.Territory
+countryRE : Territory
 countryRE =
     { id = "RE"
     , countryCode = Just 262
@@ -23224,7 +23475,7 @@ countryRE =
 
 
 {-| -}
-countryRO : PhoneNumbers.Territory
+countryRO : Territory
 countryRO =
     { id = "RO"
     , countryCode = Just 40
@@ -23383,7 +23634,7 @@ countryRO =
 
 
 {-| -}
-countryRS : PhoneNumbers.Territory
+countryRS : Territory
 countryRS =
     { id = "RS"
     , countryCode = Just 381
@@ -23507,7 +23758,7 @@ countryRS =
 
 
 {-| -}
-countryRU : PhoneNumbers.Territory
+countryRU : Territory
 countryRU =
     { id = "RU"
     , countryCode = Just 7
@@ -23638,7 +23889,7 @@ countryRU =
 
 
 {-| -}
-countryRW : PhoneNumbers.Territory
+countryRW : Territory
 countryRW =
     { id = "RW"
     , countryCode = Just 250
@@ -23753,7 +24004,7 @@ countryRW =
 
 
 {-| -}
-countrySA : PhoneNumbers.Territory
+countrySA : Territory
 countrySA =
     { id = "SA"
     , countryCode = Just 966
@@ -23925,7 +24176,7 @@ countrySA =
 
 
 {-| -}
-countrySB : PhoneNumbers.Territory
+countrySB : Territory
 countrySB =
     { id = "SB"
     , countryCode = Just 677
@@ -24018,7 +24269,7 @@ countrySB =
 
 
 {-| -}
-countrySC : PhoneNumbers.Territory
+countrySC : Territory
 countrySC =
     { id = "SC"
     , countryCode = Just 248
@@ -24111,7 +24362,7 @@ countrySC =
 
 
 {-| -}
-countrySD : PhoneNumbers.Territory
+countrySD : Territory
 countrySD =
     { id = "SD"
     , countryCode = Just 249
@@ -24174,7 +24425,7 @@ countrySD =
 
 
 {-| -}
-countrySE : PhoneNumbers.Territory
+countrySE : Territory
 countrySE =
     { id = "SE"
     , countryCode = Just 46
@@ -24448,7 +24699,7 @@ countrySE =
 
 
 {-| -}
-countrySG : PhoneNumbers.Territory
+countrySG : Territory
 countrySG =
     { id = "SG"
     , countryCode = Just 65
@@ -24604,7 +24855,7 @@ countrySG =
 
 
 {-| -}
-countrySH : PhoneNumbers.Territory
+countrySH : Territory
 countrySH =
     { id = "SH"
     , countryCode = Just 290
@@ -24670,7 +24921,7 @@ countrySH =
 
 
 {-| -}
-countrySI : PhoneNumbers.Territory
+countrySI : Territory
 countrySI =
     { id = "SI"
     , countryCode = Just 386
@@ -24816,7 +25067,7 @@ countrySI =
 
 
 {-| -}
-countrySJ : PhoneNumbers.Territory
+countrySJ : Territory
 countrySJ =
     { id = "SJ"
     , countryCode = Just 47
@@ -24972,7 +25223,7 @@ countrySJ =
 
 
 {-| -}
-countrySK : PhoneNumbers.Territory
+countrySK : Territory
 countrySK =
     { id = "SK"
     , countryCode = Just 421
@@ -25201,7 +25452,7 @@ countrySK =
 
 
 {-| -}
-countrySL : PhoneNumbers.Territory
+countrySL : Territory
 countrySL =
     { id = "SL"
     , countryCode = Just 232
@@ -25269,7 +25520,7 @@ countrySL =
 
 
 {-| -}
-countrySM : PhoneNumbers.Territory
+countrySM : Territory
 countrySM =
     { id = "SM"
     , countryCode = Just 378
@@ -25378,7 +25629,7 @@ countrySM =
 
 
 {-| -}
-countrySN : PhoneNumbers.Territory
+countrySN : Territory
 countrySN =
     { id = "SN"
     , countryCode = Just 221
@@ -25512,7 +25763,7 @@ countrySN =
 
 
 {-| -}
-countrySO : PhoneNumbers.Territory
+countrySO : Territory
 countrySO =
     { id = "SO"
     , countryCode = Just 252
@@ -25630,7 +25881,7 @@ countrySO =
 
 
 {-| -}
-countrySR : PhoneNumbers.Territory
+countrySR : Territory
 countrySR =
     { id = "SR"
     , countryCode = Just 597
@@ -25730,7 +25981,7 @@ countrySR =
 
 
 {-| -}
-countrySS : PhoneNumbers.Territory
+countrySS : Territory
 countrySS =
     { id = "SS"
     , countryCode = Just 211
@@ -25793,7 +26044,7 @@ countrySS =
 
 
 {-| -}
-countryST : PhoneNumbers.Territory
+countryST : Territory
 countryST =
     { id = "ST"
     , countryCode = Just 239
@@ -25856,7 +26107,7 @@ countryST =
 
 
 {-| -}
-countrySV : PhoneNumbers.Territory
+countrySV : Territory
 countrySV =
     { id = "SV"
     , countryCode = Just 503
@@ -25971,7 +26222,7 @@ countrySV =
 
 
 {-| -}
-countrySX : PhoneNumbers.Territory
+countrySX : Territory
 countrySX =
     { id = "SX"
     , countryCode = Just 1
@@ -26077,7 +26328,7 @@ countrySX =
 
 
 {-| -}
-countrySY : PhoneNumbers.Territory
+countrySY : Territory
 countrySY =
     { id = "SY"
     , countryCode = Just 963
@@ -26156,7 +26407,7 @@ countrySY =
 
 
 {-| -}
-countrySZ : PhoneNumbers.Territory
+countrySZ : Territory
 countrySZ =
     { id = "SZ"
     , countryCode = Just 268
@@ -26290,7 +26541,7 @@ countrySZ =
 
 
 {-| -}
-countryTA : PhoneNumbers.Territory
+countryTA : Territory
 countryTA =
     { id = "TA"
     , countryCode = Just 290
@@ -26326,7 +26577,7 @@ countryTA =
 
 
 {-| -}
-countryTC : PhoneNumbers.Territory
+countryTC : Territory
 countryTC =
     { id = "TC"
     , countryCode = Just 1
@@ -26452,7 +26703,7 @@ countryTC =
 
 
 {-| -}
-countryTD : PhoneNumbers.Territory
+countryTD : Territory
 countryTD =
     { id = "TD"
     , countryCode = Just 235
@@ -26515,7 +26766,7 @@ countryTD =
 
 
 {-| -}
-countryTG : PhoneNumbers.Territory
+countryTG : Territory
 countryTG =
     { id = "TG"
     , countryCode = Just 228
@@ -26578,7 +26829,7 @@ countryTG =
 
 
 {-| -}
-countryTH : PhoneNumbers.Territory
+countryTH : Territory
 countryTH =
     { id = "TH"
     , countryCode = Just 66
@@ -26708,7 +26959,7 @@ countryTH =
 
 
 {-| -}
-countryTJ : PhoneNumbers.Territory
+countryTJ : Territory
 countryTJ =
     { id = "TJ"
     , countryCode = Just 992
@@ -26812,7 +27063,7 @@ countryTJ =
 
 
 {-| -}
-countryTK : PhoneNumbers.Territory
+countryTK : Territory
 countryTK =
     { id = "TK"
     , countryCode = Just 690
@@ -26863,7 +27114,7 @@ countryTK =
 
 
 {-| -}
-countryTL : PhoneNumbers.Territory
+countryTL : Territory
 countryTL =
     { id = "TL"
     , countryCode = Just 670
@@ -26982,7 +27233,7 @@ countryTL =
 
 
 {-| -}
-countryTM : PhoneNumbers.Territory
+countryTM : Territory
 countryTM =
     { id = "TM"
     , countryCode = Just 993
@@ -27067,7 +27318,7 @@ countryTM =
 
 
 {-| -}
-countryTN : PhoneNumbers.Territory
+countryTN : Territory
 countryTN =
     { id = "TN"
     , countryCode = Just 216
@@ -27175,7 +27426,7 @@ countryTN =
 
 
 {-| -}
-countryTO : PhoneNumbers.Territory
+countryTO : Territory
 countryTO =
     { id = "TO"
     , countryCode = Just 676
@@ -27275,7 +27526,7 @@ countryTO =
 
 
 {-| -}
-countryTR : PhoneNumbers.Territory
+countryTR : Territory
 countryTR =
     { id = "TR"
     , countryCode = Just 90
@@ -27461,7 +27712,7 @@ countryTR =
 
 
 {-| -}
-countryTT : PhoneNumbers.Territory
+countryTT : Territory
 countryTT =
     { id = "TT"
     , countryCode = Just 1
@@ -27587,7 +27838,7 @@ countryTT =
 
 
 {-| -}
-countryTV : PhoneNumbers.Territory
+countryTV : Territory
 countryTV =
     { id = "TV"
     , countryCode = Just 688
@@ -27638,7 +27889,7 @@ countryTV =
 
 
 {-| -}
-countryTW : PhoneNumbers.Territory
+countryTW : Territory
 countryTW =
     { id = "TW"
     , countryCode = Just 886
@@ -27820,7 +28071,7 @@ countryTW =
 
 
 {-| -}
-countryTZ : PhoneNumbers.Territory
+countryTZ : Territory
 countryTZ =
     { id = "TZ"
     , countryCode = Just 255
@@ -27980,7 +28231,7 @@ countryTZ =
 
 
 {-| -}
-countryUA : PhoneNumbers.Territory
+countryUA : Territory
 countryUA =
     { id = "UA"
     , countryCode = Just 380
@@ -28121,7 +28372,7 @@ countryUA =
 
 
 {-| -}
-countryUG : PhoneNumbers.Territory
+countryUG : Territory
 countryUG =
     { id = "UG"
     , countryCode = Just 256
@@ -28244,7 +28495,7 @@ countryUG =
 
 
 {-| -}
-countryUS : PhoneNumbers.Territory
+countryUS : Territory
 countryUS =
     { id = "US"
     , countryCode = Just 1
@@ -28388,7 +28639,7 @@ countryUS =
 
 
 {-| -}
-countryUY : PhoneNumbers.Territory
+countryUY : Territory
 countryUY =
     { id = "UY"
     , countryCode = Just 598
@@ -28508,7 +28759,7 @@ countryUY =
 
 
 {-| -}
-countryUZ : PhoneNumbers.Territory
+countryUZ : Territory
 countryUZ =
     { id = "UZ"
     , countryCode = Just 998
@@ -28571,7 +28822,7 @@ countryUZ =
 
 
 {-| -}
-countryVA : PhoneNumbers.Territory
+countryVA : Territory
 countryVA =
     { id = "VA"
     , countryCode = Just 39
@@ -28697,7 +28948,7 @@ countryVA =
 
 
 {-| -}
-countryVC : PhoneNumbers.Territory
+countryVC : Territory
 countryVC =
     { id = "VC"
     , countryCode = Just 1
@@ -28803,7 +29054,7 @@ countryVC =
 
 
 {-| -}
-countryVE : PhoneNumbers.Territory
+countryVE : Territory
 countryVE =
     { id = "VE"
     , countryCode = Just 58
@@ -28901,7 +29152,7 @@ countryVE =
 
 
 {-| -}
-countryVG : PhoneNumbers.Territory
+countryVG : Territory
 countryVG =
     { id = "VG"
     , countryCode = Just 1
@@ -29007,7 +29258,7 @@ countryVG =
 
 
 {-| -}
-countryVI : PhoneNumbers.Territory
+countryVI : Territory
 countryVI =
     { id = "VI"
     , countryCode = Just 1
@@ -29113,7 +29364,7 @@ countryVI =
 
 
 {-| -}
-countryVN : PhoneNumbers.Territory
+countryVN : Territory
 countryVN =
     { id = "VN"
     , countryCode = Just 84
@@ -29328,7 +29579,7 @@ countryVN =
 
 
 {-| -}
-countryVU : PhoneNumbers.Territory
+countryVU : Territory
 countryVU =
     { id = "VU"
     , countryCode = Just 678
@@ -29421,7 +29672,7 @@ countryVU =
 
 
 {-| -}
-countryWF : PhoneNumbers.Territory
+countryWF : Territory
 countryWF =
     { id = "WF"
     , countryCode = Just 681
@@ -29499,7 +29750,7 @@ countryWF =
 
 
 {-| -}
-countryWS : PhoneNumbers.Territory
+countryWS : Territory
 countryWS =
     { id = "WS"
     , countryCode = Just 685
@@ -29599,7 +29850,7 @@ countryWS =
 
 
 {-| -}
-countryXK : PhoneNumbers.Territory
+countryXK : Territory
 countryXK =
     { id = "XK"
     , countryCode = Just 383
@@ -29714,7 +29965,7 @@ countryXK =
 
 
 {-| -}
-countryYE : PhoneNumbers.Territory
+countryYE : Territory
 countryYE =
     { id = "YE"
     , countryCode = Just 967
@@ -29793,7 +30044,7 @@ countryYE =
 
 
 {-| -}
-countryYT : PhoneNumbers.Territory
+countryYT : Territory
 countryYT =
     { id = "YT"
     , countryCode = Just 262
@@ -29859,7 +30110,7 @@ countryYT =
 
 
 {-| -}
-countryZA : PhoneNumbers.Territory
+countryZA : Territory
 countryZA =
     { id = "ZA"
     , countryCode = Just 27
@@ -30030,7 +30281,7 @@ countryZA =
 
 
 {-| -}
-countryZM : PhoneNumbers.Territory
+countryZM : Territory
 countryZM =
     { id = "ZM"
     , countryCode = Just 260
@@ -30131,7 +30382,7 @@ countryZM =
 
 
 {-| -}
-countryZW : PhoneNumbers.Territory
+countryZW : Territory
 countryZW =
     { id = "ZW"
     , countryCode = Just 263
