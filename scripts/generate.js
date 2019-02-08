@@ -124,17 +124,30 @@ function elmifyNumberDescription(data) {
   return `{
     descriptionType = ${data.descriptionType}
     , exampleNumber = "${data.exampleNumber || ''}"
+    , possibleLengths = ${elmifyPossibleLengths(data.possibleLengths)}
     , pattern = ${elmRegex(data.pattern)}
 }`;
 }
 
-function elmMaybe(maybeVal, isString) {
-  if (maybeVal) {
-    if (isString) {
-      return `Just "${elmCleanString(maybeVal)}"`;
-    }
+function elmifyPossibleLengths(maybeData) {
+  return elmMaybe2(maybeData, (data) => `{
+national = ${elmRegex(data[0].$.national)}
+, localOnly = ${elmMaybe2(data[0].$.localOnly, (l) => elmRegex(l))}
+}
+`);
+}
 
-    return `Just ${maybeVal}`;
+function elmMaybe(maybeVal, isString) {
+  if (isString) {
+    return elmMaybe2(maybeVal, (v) => `"${elmCleanString(maybeVal)}"`);
+  }
+
+  return elmMaybe2(maybeVal, (v) => v);
+}
+
+function elmMaybe2(maybeVal, onValue) {
+  if (maybeVal) {
+    return `Just ${onValue(maybeVal)}`;
   }
 
   return 'Nothing';
@@ -145,13 +158,12 @@ function elmCleanString(str) {
 }
 
 function elmList(arr) {
-  return `[${arr.join(', ')}]`;
+  return `[${arr.join(',\n')}]`;
 }
 
 function elmRegex(str) {
-  return `
-"${elmCleanString(str)}"
+  return `("${elmCleanString(str)}"
 |>Regex.fromString
 |>Maybe.withDefault Regex.never
-`;
+)`;
 }

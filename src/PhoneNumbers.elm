@@ -47,8 +47,8 @@ type alias NumberDescription =
 
 
 type alias PossibleLengths =
-    { national : String
-    , localOnly : Maybe String
+    { national : Regex
+    , localOnly : Maybe Regex
     }
 
 
