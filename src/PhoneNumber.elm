@@ -1,10 +1,9 @@
-module PhoneNumbers exposing
-    ( DescriptionType(..)
-    , NumberDescription
-    , NumberFormat
-    , Territory
-    , matchingTerritories
-    , matchingTerritoriesOfType
+module PhoneNumber exposing
+    ( Country
+    , NumberType(..)
+    , NumberTypeData
+    , matchingCountries
+    , matchingCountriesOfType
     , valid
     , validType
     )
@@ -12,18 +11,17 @@ module PhoneNumbers exposing
 import Regex exposing (Regex)
 
 
-type alias Territory =
+type alias Country =
     { id : String
     , countryCode : String
     , internationalPrefix : Maybe String
     , nationalPrefix : Maybe String
-    , availableFormats : List NumberFormat
     , generalNumberPattern : Regex
-    , numberDescriptions : List NumberDescription
+    , numberTypes : List NumberTypeData
     }
 
 
-type DescriptionType
+type NumberType
     = FixedLine
     | Mobile
     | TollFree
@@ -42,24 +40,10 @@ type DescriptionType
     | NoInternationalDialling
 
 
-type alias NumberDescription =
-    { descriptionType : DescriptionType
+type alias NumberTypeData =
+    { numberType : NumberType
     , exampleNumber : String
-    , possibleLengths : Maybe PossibleLengths
     , pattern : Regex
-    }
-
-
-type alias PossibleLengths =
-    { national : Regex
-    , localOnly : Maybe Regex
-    }
-
-
-type alias NumberFormat =
-    { pattern : Regex
-    , format : String
-    , leadingDigits : List Regex
     }
 
 
@@ -67,27 +51,27 @@ type alias NumberFormat =
 -- Validators
 
 
-valid : List Territory -> String -> Bool
-valid territories number =
-    matchingTerritories territories number
+valid : List Country -> String -> Bool
+valid countries number =
+    matchingCountries countries number
         |> List.isEmpty
         |> not
 
 
-matchingTerritories : List Territory -> String -> List Territory
-matchingTerritories territories number =
+matchingCountries : List Country -> String -> List Country
+matchingCountries countries number =
     let
         sanitizedNumber =
             stripWhitespace number
     in
-    List.filter (matchingTerritory sanitizedNumber) territories
+    List.filter (matchingCountry sanitizedNumber) countries
 
 
-matchingTerritory : String -> Territory -> Bool
-matchingTerritory number territory =
+matchingCountry : String -> Country -> Bool
+matchingCountry number country =
     let
         maybeLocalNumber =
-            case territory.internationalPrefix of
+            case country.internationalPrefix of
                 Nothing ->
                     Just number
 
@@ -97,14 +81,14 @@ matchingTerritory number territory =
                             String.length prefix
 
                         countryCodeLength =
-                            String.length territory.countryCode
+                            String.length country.countryCode
                     in
                     if String.startsWith "+" number then
                         if
                             number
                                 |> String.dropLeft 1
                                 |> String.left countryCodeLength
-                                |> (==) territory.countryCode
+                                |> (==) country.countryCode
                         then
                             Just <| String.dropLeft (countryCodeLength + 1) number
 
@@ -116,7 +100,7 @@ matchingTerritory number territory =
                             number
                                 |> String.dropLeft prefixLength
                                 |> String.left countryCodeLength
-                                |> (==) territory.countryCode
+                                |> (==) country.countryCode
                         then
                             Just <| String.dropLeft (prefixLength + countryCodeLength) number
 
@@ -134,18 +118,18 @@ matchingTerritory number territory =
             False
 
         Just localNumber ->
-            List.any (matchesSpec localNumber) territory.numberDescriptions
+            List.any (matchesSpec localNumber) country.numberTypes
 
 
-validType : List Territory -> List DescriptionType -> String -> Bool
-validType territories numberTypes number =
-    matchingTerritoriesOfType territories numberTypes number
+validType : List Country -> List NumberType -> String -> Bool
+validType countries numberTypes number =
+    matchingCountriesOfType countries numberTypes number
         |> List.isEmpty
         |> not
 
 
-matchingTerritoriesOfType : List Territory -> List DescriptionType -> String -> List Territory
-matchingTerritoriesOfType territories numberTypes number =
+matchingCountriesOfType : List Country -> List NumberType -> String -> List Country
+matchingCountriesOfType countries numberTypes number =
     []
 
 

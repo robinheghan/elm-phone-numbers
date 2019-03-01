@@ -1,7 +1,7 @@
 module PhoneDBTest exposing (suite)
 
 import Expect exposing (Expectation)
-import PhoneNumbers.Countries as Countries
+import PhoneNumber.Countries as Countries
 import Regex
 import Test exposing (..)
 
@@ -14,7 +14,7 @@ suite =
                 let
                     descriptions =
                         Countries.all
-                            |> List.concatMap .numberDescriptions
+                            |> List.concatMap .numberTypes
                             |> List.filter (\desc -> not <| String.isEmpty desc.exampleNumber)
 
                     passesValidation =
