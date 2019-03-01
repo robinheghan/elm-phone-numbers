@@ -2,10 +2,10 @@ module PhoneNumber exposing
     ( Country
     , NumberType(..)
     , NumberTypeData
-    , matchingCountries
-    , matchingCountriesOfType
+    , ValidationConfig
+    , anyType
+    , matches
     , valid
-    , validType
     )
 
 import Regex exposing (Regex)
@@ -47,57 +47,94 @@ type alias NumberTypeData =
     }
 
 
-
--- Validators
-
-
-valid : List Country -> String -> Bool
-valid countries number =
-    matchingCountries countries number
-        |> List.isEmpty
-        |> not
+type alias ValidationConfig =
+    { countries : List Country
+    , types : List NumberType
+    , defaultCountry : Maybe Country
+    }
 
 
-matchingCountries : List Country -> String -> List Country
-matchingCountries countries number =
+
+-- API
+
+
+valid : ValidationConfig -> String -> Bool
+valid config number =
+    case matches config number of
+        [] ->
+            False
+
+        _ ->
+            True
+
+
+matches : ValidationConfig -> String -> List ( Country, List NumberType )
+matches config number =
     let
         sanitizedNumber =
             sanitizeNumber number
+
+        countriesToCheck =
+            if config.types == anyType then
+                config.countries
+
+            else
+                List.map withConfiguredTypes config.countries
+
+        withConfiguredTypes country =
+            { country
+                | numberTypes =
+                    List.filter (\opt -> List.member opt.numberType config.types) country.numberTypes
+            }
     in
-    List.filter (matchingCountry sanitizedNumber) countries
+    List.filterMap (matchingCountry sanitizedNumber) countriesToCheck
 
 
-matchingCountry : String -> Country -> Bool
+anyType : List NumberType
+anyType =
+    [ FixedLine
+    , Mobile
+    , TollFree
+    , PremiumRate
+    , SharedCost
+    , PersonalNumber
+    , Voip
+    , Pager
+    , Uan
+    , Emergency
+    , Voicemail
+    , ShortCode
+    , StandardRate
+    , CarrierSpecific
+    , SmsServices
+    , NoInternationalDialling
+    ]
+
+
+
+-- HELPERS
+
+
+matchingCountry : String -> Country -> Maybe ( Country, List NumberType )
 matchingCountry number country =
     let
         maybeLocalNumber =
             localizeNumber country number
 
         matchesSpec localNumber desc =
-            regexMatch desc.pattern localNumber
+            regexExactMatch desc.pattern localNumber
     in
     case maybeLocalNumber of
         Nothing ->
-            False
+            Nothing
 
         Just localNumber ->
-            List.any (matchesSpec localNumber) country.numberTypes
-
-
-validType : List Country -> List NumberType -> String -> Bool
-validType countries numberTypes number =
-    matchingCountriesOfType countries numberTypes number
-        |> List.isEmpty
-        |> not
-
-
-matchingCountriesOfType : List Country -> List NumberType -> String -> List Country
-matchingCountriesOfType countries numberTypes number =
-    []
-
-
-
--- HELPERS
+            Just
+                ( country
+                , country.numberTypes
+                    |> List.filter (matchesSpec localNumber)
+                    |> List.map .numberType
+                )
 
 
 localizeNumber : Country -> String -> Maybe String
@@ -147,8 +184,8 @@ sanitizeNumber str =
     String.filter (\c -> c /= ' ') str
 
 
-regexMatch : Regex -> String -> Bool
-regexMatch regex str =
+regexExactMatch : Regex -> String -> Bool
+regexExactMatch regex str =
     case Regex.find regex str of
         [ match ] ->
             match.match == str
