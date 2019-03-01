@@ -1,4 +1,4 @@
-module PhoneDB exposing (suite)
+module PhoneDBTest exposing (suite)
 
 import Expect exposing (Expectation)
 import PhoneNumbers.Countries as Countries
