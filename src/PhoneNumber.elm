@@ -62,7 +62,7 @@ matchingCountries : List Country -> String -> List Country
 matchingCountries countries number =
     let
         sanitizedNumber =
-            stripWhitespace number
+            sanitizeNumber number
     in
     List.filter (matchingCountry sanitizedNumber) countries
 
@@ -71,44 +71,7 @@ matchingCountry : String -> Country -> Bool
 matchingCountry number country =
     let
         maybeLocalNumber =
-            case country.internationalPrefix of
-                Nothing ->
-                    Just number
-
-                Just prefix ->
-                    let
-                        prefixLength =
-                            String.length prefix
-
-                        countryCodeLength =
-                            String.length country.countryCode
-                    in
-                    if String.startsWith "+" number then
-                        if
-                            number
-                                |> String.dropLeft 1
-                                |> String.left countryCodeLength
-                                |> (==) country.countryCode
-                        then
-                            Just <| String.dropLeft (countryCodeLength + 1) number
-
-                        else
-                            Nothing
-
-                    else if String.startsWith prefix number then
-                        if
-                            number
-                                |> String.dropLeft prefixLength
-                                |> String.left countryCodeLength
-                                |> (==) country.countryCode
-                        then
-                            Just <| String.dropLeft (prefixLength + countryCodeLength) number
-
-                        else
-                            Nothing
-
-                    else
-                        Just number
+            localizeNumber country number
 
         matchesSpec localNumber desc =
             regexMatch desc.pattern localNumber
@@ -133,8 +96,54 @@ matchingCountriesOfType countries numberTypes number =
     []
 
 
-stripWhitespace : String -> String
-stripWhitespace str =
+
+-- HELPERS
+
+
+localizeNumber : Country -> String -> Maybe String
+localizeNumber country number =
+    case country.internationalPrefix of
+        Nothing ->
+            Just number
+
+        Just prefix ->
+            let
+                prefixLength =
+                    String.length prefix
+
+                countryCodeLength =
+                    String.length country.countryCode
+            in
+            if String.startsWith "+" number then
+                if
+                    number
+                        |> String.dropLeft 1
+                        |> String.left countryCodeLength
+                        |> (==) country.countryCode
+                then
+                    Just <| String.dropLeft (countryCodeLength + 1) number
+
+                else
+                    Nothing
+
+            else if String.startsWith prefix number then
+                if
+                    number
+                        |> String.dropLeft prefixLength
+                        |> String.left countryCodeLength
+                        |> (==) country.countryCode
+                then
+                    Just <| String.dropLeft (prefixLength + countryCodeLength) number
+
+                else
+                    Nothing
+
+            else
+                Just number
+
+
+sanitizeNumber : String -> String
+sanitizeNumber str =
     String.filter (\c -> c /= ' ') str
 
 
