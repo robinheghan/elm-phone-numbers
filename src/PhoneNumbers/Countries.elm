@@ -262,7 +262,7 @@ all =
 countryAC : Territory
 countryAC =
     { id = "AC"
-    , countryCode = Just 247
+    , countryCode = "247"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
@@ -324,7 +324,7 @@ countryAC =
 countryAD : Territory
 countryAD =
     { id = "AD"
-    , countryCode = Just 376
+    , countryCode = "376"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -450,7 +450,7 @@ countryAD =
 countryAE : Territory
 countryAE =
     { id = "AE"
-    , countryCode = Just 971
+    , countryCode = "971"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -607,7 +607,7 @@ countryAE =
 countryAF : Territory
 countryAF =
     { id = "AF"
-    , countryCode = Just 93
+    , countryCode = "93"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -682,7 +682,7 @@ countryAF =
 countryAG : Territory
 countryAG =
     { id = "AG"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -824,7 +824,7 @@ countryAG =
 countryAI : Territory
 countryAI =
     { id = "AI"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -926,7 +926,7 @@ countryAI =
 countryAL : Territory
 countryAL =
     { id = "AL"
-    , countryCode = Just 355
+    , countryCode = "355"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -1094,7 +1094,7 @@ countryAL =
 countryAM : Territory
 countryAM =
     { id = "AM"
-    , countryCode = Just 374
+    , countryCode = "374"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -1251,7 +1251,7 @@ countryAM =
 countryAO : Territory
 countryAO =
     { id = "AO"
-    , countryCode = Just 244
+    , countryCode = "244"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -1310,7 +1310,7 @@ countryAO =
 countryAR : Territory
 countryAR =
     { id = "AR"
-    , countryCode = Just 54
+    , countryCode = "54"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -1570,7 +1570,7 @@ countryAR =
 countryAS : Territory
 countryAS =
     { id = "AS"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -1672,7 +1672,7 @@ countryAS =
 countryAT : Territory
 countryAT =
     { id = "AT"
-    , countryCode = Just 43
+    , countryCode = "43"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -1873,7 +1873,7 @@ countryAT =
 countryAU : Territory
 countryAU =
     { id = "AU"
-    , countryCode = Just 61
+    , countryCode = "61"
     , internationalPrefix = Just "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -2118,7 +2118,7 @@ countryAU =
 countryAW : Territory
 countryAW =
     { id = "AW"
-    , countryCode = Just 297
+    , countryCode = "297"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -2222,7 +2222,7 @@ countryAW =
 countryAX : Territory
 countryAX =
     { id = "AX"
-    , countryCode = Just 358
+    , countryCode = "358"
     , internationalPrefix = Just "00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))"
     , nationalPrefix = Just "0"
     , availableFormats = []
@@ -2314,7 +2314,7 @@ countryAX =
 countryAZ : Territory
 countryAZ =
     { id = "AZ"
-    , countryCode = Just 994
+    , countryCode = "994"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -2447,7 +2447,7 @@ countryAZ =
 countryBA : Territory
 countryBA =
     { id = "BA"
-    , countryCode = Just 387
+    , countryCode = "387"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -2604,7 +2604,7 @@ countryBA =
 countryBB : Territory
 countryBB =
     { id = "BB"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -2751,7 +2751,7 @@ countryBB =
 countryBD : Territory
 countryBD =
     { id = "BD"
-    , countryCode = Just 880
+    , countryCode = "880"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -2873,7 +2873,7 @@ countryBD =
 countryBE : Territory
 countryBE =
     { id = "BE"
-    , countryCode = Just 32
+    , countryCode = "32"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -3025,7 +3025,7 @@ countryBE =
 countryBF : Territory
 countryBF =
     { id = "BF"
-    , countryCode = Just 226
+    , countryCode = "226"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -3084,7 +3084,7 @@ countryBF =
 countryBG : Territory
 countryBG =
     { id = "BG"
-    , countryCode = Just 359
+    , countryCode = "359"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -3281,7 +3281,7 @@ countryBG =
 countryBH : Territory
 countryBH =
     { id = "BH"
-    , countryCode = Just 973
+    , countryCode = "973"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -3385,7 +3385,7 @@ countryBH =
 countryBI : Territory
 countryBI =
     { id = "BI"
-    , countryCode = Just 257
+    , countryCode = "257"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -3444,7 +3444,7 @@ countryBI =
 countryBJ : Territory
 countryBJ =
     { id = "BJ"
-    , countryCode = Just 229
+    , countryCode = "229"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -3533,7 +3533,7 @@ countryBJ =
 countryBL : Territory
 countryBL =
     { id = "BL"
-    , countryCode = Just 590
+    , countryCode = "590"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
@@ -3580,7 +3580,7 @@ countryBL =
 countryBM : Territory
 countryBM =
     { id = "BM"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -3682,7 +3682,7 @@ countryBM =
 countryBN : Territory
 countryBN =
     { id = "BN"
-    , countryCode = Just 673
+    , countryCode = "673"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -3741,7 +3741,7 @@ countryBN =
 countryBO : Territory
 countryBO =
     { id = "BO"
-    , countryCode = Just 591
+    , countryCode = "591"
     , internationalPrefix = Just "00(?:1\\d)?"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -3842,7 +3842,7 @@ countryBO =
 countryBQ : Territory
 countryBQ =
     { id = "BQ"
-    , countryCode = Just 599
+    , countryCode = "599"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
@@ -3889,7 +3889,7 @@ countryBQ =
 countryBR : Territory
 countryBR =
     { id = "BR"
-    , countryCode = Just 55
+    , countryCode = "55"
     , internationalPrefix = Just "00(?:1[245]|2[1-35]|31|4[13]|[56]5|99)"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -4090,7 +4090,7 @@ countryBR =
 countryBS : Territory
 countryBS =
     { id = "BS"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -4212,7 +4212,7 @@ countryBS =
 countryBT : Territory
 countryBT =
     { id = "BT"
-    , countryCode = Just 975
+    , countryCode = "975"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -4298,7 +4298,7 @@ countryBT =
 countryBW : Territory
 countryBW =
     { id = "BW"
-    , countryCode = Just 267
+    , countryCode = "267"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -4409,7 +4409,7 @@ countryBW =
 countryBY : Territory
 countryBY =
     { id = "BY"
-    , countryCode = Just 375
+    , countryCode = "375"
     , internationalPrefix = Just "810"
     , nationalPrefix = Just "8"
     , availableFormats =
@@ -4591,7 +4591,7 @@ countryBY =
 countryBZ : Territory
 countryBZ =
     { id = "BZ"
-    , countryCode = Just 501
+    , countryCode = "501"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -4676,7 +4676,7 @@ countryBZ =
 countryCA : Territory
 countryCA =
     { id = "CA"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -4793,7 +4793,7 @@ countryCA =
 countryCC : Territory
 countryCC =
     { id = "CC"
-    , countryCode = Just 61
+    , countryCode = "61"
     , internationalPrefix = Just "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011"
     , nationalPrefix = Just "0"
     , availableFormats = []
@@ -4905,7 +4905,7 @@ countryCC =
 countryCD : Territory
 countryCD =
     { id = "CD"
-    , countryCode = Just 243
+    , countryCode = "243"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -4997,7 +4997,7 @@ countryCD =
 countryCF : Territory
 countryCF =
     { id = "CF"
-    , countryCode = Just 236
+    , countryCode = "236"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -5071,7 +5071,7 @@ countryCF =
 countryCG : Territory
 countryCG =
     { id = "CG"
-    , countryCode = Just 242
+    , countryCode = "242"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -5167,7 +5167,7 @@ countryCG =
 countryCH : Territory
 countryCH =
     { id = "CH"
-    , countryCode = Just 41
+    , countryCode = "41"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -5353,7 +5353,7 @@ countryCH =
 countryCI : Territory
 countryCI =
     { id = "CI"
-    , countryCode = Just 225
+    , countryCode = "225"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -5412,7 +5412,7 @@ countryCI =
 countryCK : Territory
 countryCK =
     { id = "CK"
-    , countryCode = Just 682
+    , countryCode = "682"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -5471,7 +5471,7 @@ countryCK =
 countryCL : Territory
 countryCL =
     { id = "CL"
-    , countryCode = Just 56
+    , countryCode = "56"
     , internationalPrefix = Just "(?:0|1(?:1[0-69]|2[0-57]|5[13-58]|69|7[0167]|8[018]))0"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -5678,7 +5678,7 @@ countryCL =
 countryCM : Territory
 countryCM =
     { id = "CM"
-    , countryCode = Just 237
+    , countryCode = "237"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -5763,7 +5763,7 @@ countryCM =
 countryCN : Territory
 countryCN =
     { id = "CN"
-    , countryCode = Just 86
+    , countryCode = "86"
     , internationalPrefix = Just "00|1(?:[12]\\d|79|9[0-7])\\d\\d00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -6094,7 +6094,7 @@ countryCN =
 countryCO : Territory
 countryCO =
     { id = "CO"
-    , countryCode = Just 57
+    , countryCode = "57"
     , internationalPrefix = Just "00(?:4(?:[14]4|56)|[579])"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -6213,7 +6213,7 @@ countryCO =
 countryCR : Territory
 countryCR =
     { id = "CR"
-    , countryCode = Just 506
+    , countryCode = "506"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -6328,7 +6328,7 @@ countryCR =
 countryCU : Territory
 countryCU =
     { id = "CU"
-    , countryCode = Just 53
+    , countryCode = "53"
     , internationalPrefix = Just "119"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -6414,7 +6414,7 @@ countryCU =
 countryCV : Territory
 countryCV =
     { id = "CV"
-    , countryCode = Just 238
+    , countryCode = "238"
     , internationalPrefix = Just "0"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -6473,7 +6473,7 @@ countryCV =
 countryCW : Territory
 countryCW =
     { id = "CW"
-    , countryCode = Just 599
+    , countryCode = "599"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -6573,7 +6573,7 @@ countryCW =
 countryCX : Territory
 countryCX =
     { id = "CX"
-    , countryCode = Just 61
+    , countryCode = "61"
     , internationalPrefix = Just "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011"
     , nationalPrefix = Just "0"
     , availableFormats = []
@@ -6685,7 +6685,7 @@ countryCX =
 countryCY : Territory
 countryCY =
     { id = "CY"
-    , countryCode = Just 357
+    , countryCode = "357"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -6819,7 +6819,7 @@ countryCY =
 countryCZ : Territory
 countryCZ =
     { id = "CZ"
-    , countryCode = Just 420
+    , countryCode = "420"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -7005,7 +7005,7 @@ countryCZ =
 countryDE : Territory
 countryDE =
     { id = "DE"
-    , countryCode = Just 49
+    , countryCode = "49"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -7373,7 +7373,7 @@ countryDE =
 countryDJ : Territory
 countryDJ =
     { id = "DJ"
-    , countryCode = Just 253
+    , countryCode = "253"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -7432,7 +7432,7 @@ countryDJ =
 countryDK : Territory
 countryDK =
     { id = "DK"
-    , countryCode = Just 45
+    , countryCode = "45"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -7521,7 +7521,7 @@ countryDK =
 countryDM : Territory
 countryDM =
     { id = "DM"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -7623,7 +7623,7 @@ countryDM =
 countryDO : Territory
 countryDO =
     { id = "DO"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -7725,7 +7725,7 @@ countryDO =
 countryDZ : Territory
 countryDZ =
     { id = "DZ"
-    , countryCode = Just 213
+    , countryCode = "213"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -7866,7 +7866,7 @@ countryDZ =
 countryEC : Territory
 countryEC =
     { id = "EC"
-    , countryCode = Just 593
+    , countryCode = "593"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -7993,7 +7993,7 @@ countryEC =
 countryEE : Territory
 countryEE =
     { id = "EE"
-    , countryCode = Just 372
+    , countryCode = "372"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -8151,7 +8151,7 @@ countryEE =
 countryEG : Territory
 countryEG =
     { id = "EG"
-    , countryCode = Just 20
+    , countryCode = "20"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -8267,7 +8267,7 @@ countryEG =
 countryEH : Territory
 countryEH =
     { id = "EH"
-    , countryCode = Just 212
+    , countryCode = "212"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
@@ -8359,7 +8359,7 @@ countryEH =
 countryER : Territory
 countryER =
     { id = "ER"
-    , countryCode = Just 291
+    , countryCode = "291"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -8423,7 +8423,7 @@ countryER =
 countryES : Territory
 countryES =
     { id = "ES"
-    , countryCode = Just 34
+    , countryCode = "34"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -8590,7 +8590,7 @@ countryES =
 countryET : Territory
 countryET =
     { id = "ET"
-    , countryCode = Just 251
+    , countryCode = "251"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -8654,7 +8654,7 @@ countryET =
 countryFI : Territory
 countryFI =
     { id = "FI"
-    , countryCode = Just 358
+    , countryCode = "358"
     , internationalPrefix = Just "00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -8817,7 +8817,7 @@ countryFI =
 countryFJ : Territory
 countryFJ =
     { id = "FJ"
-    , countryCode = Just 679
+    , countryCode = "679"
     , internationalPrefix = Just "0(?:0|52)"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -8902,7 +8902,7 @@ countryFJ =
 countryFK : Territory
 countryFK =
     { id = "FK"
-    , countryCode = Just 500
+    , countryCode = "500"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
@@ -8949,7 +8949,7 @@ countryFK =
 countryFM : Territory
 countryFM =
     { id = "FM"
-    , countryCode = Just 691
+    , countryCode = "691"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -9008,7 +9008,7 @@ countryFM =
 countryFO : Territory
 countryFO =
     { id = "FO"
-    , countryCode = Just 298
+    , countryCode = "298"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -9112,7 +9112,7 @@ countryFO =
 countryFR : Territory
 countryFR =
     { id = "FR"
-    , countryCode = Just 33
+    , countryCode = "33"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -9279,7 +9279,7 @@ countryFR =
 countryGA : Territory
 countryGA =
     { id = "GA"
-    , countryCode = Just 241
+    , countryCode = "241"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -9349,7 +9349,7 @@ countryGA =
 countryGB : Territory
 countryGB =
     { id = "GB"
-    , countryCode = Just 44
+    , countryCode = "44"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -9610,7 +9610,7 @@ countryGB =
 countryGD : Territory
 countryGD =
     { id = "GD"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -9712,7 +9712,7 @@ countryGD =
 countryGE : Territory
 countryGE =
     { id = "GE"
-    , countryCode = Just 995
+    , countryCode = "995"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -9843,7 +9843,7 @@ countryGE =
 countryGF : Territory
 countryGF =
     { id = "GF"
-    , countryCode = Just 594
+    , countryCode = "594"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -9902,7 +9902,7 @@ countryGF =
 countryGG : Territory
 countryGG =
     { id = "GG"
-    , countryCode = Just 44
+    , countryCode = "44"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
@@ -10044,7 +10044,7 @@ countryGG =
 countryGH : Territory
 countryGH =
     { id = "GH"
-    , countryCode = Just 233
+    , countryCode = "233"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -10160,7 +10160,7 @@ countryGH =
 countryGI : Territory
 countryGI =
     { id = "GI"
-    , countryCode = Just 350
+    , countryCode = "350"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -10219,7 +10219,7 @@ countryGI =
 countryGL : Territory
 countryGL =
     { id = "GL"
-    , countryCode = Just 299
+    , countryCode = "299"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -10308,7 +10308,7 @@ countryGL =
 countryGM : Territory
 countryGM =
     { id = "GM"
-    , countryCode = Just 220
+    , countryCode = "220"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -10367,7 +10367,7 @@ countryGM =
 countryGN : Territory
 countryGN =
     { id = "GN"
-    , countryCode = Just 224
+    , countryCode = "224"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -10452,7 +10452,7 @@ countryGN =
 countryGP : Territory
 countryGP =
     { id = "GP"
-    , countryCode = Just 590
+    , countryCode = "590"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -10511,7 +10511,7 @@ countryGP =
 countryGQ : Territory
 countryGQ =
     { id = "GQ"
-    , countryCode = Just 240
+    , countryCode = "240"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -10611,7 +10611,7 @@ countryGQ =
 countryGR : Territory
 countryGR =
     { id = "GR"
-    , countryCode = Just 30
+    , countryCode = "30"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -10752,7 +10752,7 @@ countryGR =
 countryGT : Territory
 countryGT =
     { id = "GT"
-    , countryCode = Just 502
+    , countryCode = "502"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -10852,7 +10852,7 @@ countryGT =
 countryGU : Territory
 countryGU =
     { id = "GU"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -10954,7 +10954,7 @@ countryGU =
 countryGW : Territory
 countryGW =
     { id = "GW"
-    , countryCode = Just 245
+    , countryCode = "245"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -11039,7 +11039,7 @@ countryGW =
 countryGY : Territory
 countryGY =
     { id = "GY"
-    , countryCode = Just 592
+    , countryCode = "592"
     , internationalPrefix = Just "001"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -11128,7 +11128,7 @@ countryGY =
 countryHK : Territory
 countryHK =
     { id = "HK"
-    , countryCode = Just 852
+    , countryCode = "852"
     , internationalPrefix = Just "00(?:30|5[09]|[126-9]?)"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -11298,7 +11298,7 @@ countryHK =
 countryHN : Territory
 countryHN =
     { id = "HN"
-    , countryCode = Just 504
+    , countryCode = "504"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -11357,7 +11357,7 @@ countryHN =
 countryHR : Territory
 countryHR =
     { id = "HR"
-    , countryCode = Just 385
+    , countryCode = "385"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -11547,7 +11547,7 @@ countryHR =
 countryHT : Territory
 countryHT =
     { id = "HT"
-    , countryCode = Just 509
+    , countryCode = "509"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -11636,7 +11636,7 @@ countryHT =
 countryHU : Territory
 countryHU =
     { id = "HU"
-    , countryCode = Just 36
+    , countryCode = "36"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "06"
     , availableFormats =
@@ -11786,7 +11786,7 @@ countryHU =
 countryID : Territory
 countryID =
     { id = "ID"
-    , countryCode = Just 62
+    , countryCode = "62"
     , internationalPrefix = Just "0(?:0[17-9]|10(?:00|1[67]))"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -12013,7 +12013,7 @@ countryID =
 countryIE : Territory
 countryIE =
     { id = "IE"
-    , countryCode = Just 353
+    , countryCode = "353"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -12296,7 +12296,7 @@ countryIE =
 countryIL : Territory
 countryIL =
     { id = "IL"
-    , countryCode = Just 972
+    , countryCode = "972"
     , internationalPrefix = Just "0(?:0|1[2-9])"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -12542,7 +12542,7 @@ countryIL =
 countryIM : Territory
 countryIM =
     { id = "IM"
-    , countryCode = Just 44
+    , countryCode = "44"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
@@ -12669,7 +12669,7 @@ countryIM =
 countryIN : Territory
 countryIN =
     { id = "IN"
-    , countryCode = Just 91
+    , countryCode = "91"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -12948,7 +12948,7 @@ countryIN =
 countryIO : Territory
 countryIO =
     { id = "IO"
-    , countryCode = Just 246
+    , countryCode = "246"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -13007,7 +13007,7 @@ countryIO =
 countryIQ : Territory
 countryIQ =
     { id = "IQ"
-    , countryCode = Just 964
+    , countryCode = "964"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -13093,7 +13093,7 @@ countryIQ =
 countryIR : Territory
 countryIR =
     { id = "IR"
-    , countryCode = Just 98
+    , countryCode = "98"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -13235,7 +13235,7 @@ countryIR =
 countryIS : Territory
 countryIS =
     { id = "IS"
-    , countryCode = Just 354
+    , countryCode = "354"
     , internationalPrefix = Just "00|1(?:0(?:01|[12]0)|100)"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -13380,7 +13380,7 @@ countryIS =
 countryIT : Territory
 countryIT =
     { id = "IT"
-    , countryCode = Just 39
+    , countryCode = "39"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -13656,7 +13656,7 @@ countryIT =
 countryJE : Territory
 countryJE =
     { id = "JE"
-    , countryCode = Just 44
+    , countryCode = "44"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
@@ -13798,7 +13798,7 @@ countryJE =
 countryJM : Territory
 countryJM =
     { id = "JM"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -13900,7 +13900,7 @@ countryJM =
 countryJO : Territory
 countryJO =
     { id = "JO"
-    , countryCode = Just 962
+    , countryCode = "962"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -14082,7 +14082,7 @@ countryJO =
 countryJP : Territory
 countryJP =
     { id = "JP"
-    , countryCode = Just 81
+    , countryCode = "81"
     , internationalPrefix = Just "010"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -14450,7 +14450,7 @@ countryJP =
 countryKE : Territory
 countryKE =
     { id = "KE"
-    , countryCode = Just 254
+    , countryCode = "254"
     , internationalPrefix = Just "000"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -14561,7 +14561,7 @@ countryKE =
 countryKG : Territory
 countryKG =
     { id = "KG"
-    , countryCode = Just 996
+    , countryCode = "996"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -14662,7 +14662,7 @@ countryKG =
 countryKH : Territory
 countryKH =
     { id = "KH"
-    , countryCode = Just 855
+    , countryCode = "855"
     , internationalPrefix = Just "00[14-9]"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -14767,7 +14767,7 @@ countryKH =
 countryKI : Territory
 countryKI =
     { id = "KI"
-    , countryCode = Just 686
+    , countryCode = "686"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
@@ -14829,7 +14829,7 @@ countryKI =
 countryKM : Territory
 countryKM =
     { id = "KM"
-    , countryCode = Just 269
+    , countryCode = "269"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -14903,7 +14903,7 @@ countryKM =
 countryKN : Territory
 countryKN =
     { id = "KN"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -15005,7 +15005,7 @@ countryKN =
 countryKP : Territory
 countryKP =
     { id = "KP"
-    , countryCode = Just 850
+    , countryCode = "850"
     , internationalPrefix = Just "00|99"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -15106,7 +15106,7 @@ countryKP =
 countryKR : Territory
 countryKR =
     { id = "KR"
-    , countryCode = Just 82
+    , countryCode = "82"
     , internationalPrefix = Just "00(?:[125689]|3(?:[46]5|91)|7(?:00|27|3|55|6[126]))"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -15394,7 +15394,7 @@ countryKR =
 countryKW : Territory
 countryKW =
     { id = "KW"
-    , countryCode = Just 965
+    , countryCode = "965"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -15479,7 +15479,7 @@ countryKW =
 countryKY : Territory
 countryKY =
     { id = "KY"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -15596,7 +15596,7 @@ countryKY =
 countryKZ : Territory
 countryKZ =
     { id = "KZ"
-    , countryCode = Just 7
+    , countryCode = "7"
     , internationalPrefix = Just "810"
     , nationalPrefix = Just "8"
     , availableFormats = []
@@ -15723,7 +15723,7 @@ countryKZ =
 countryLA : Territory
 countryLA =
     { id = "LA"
-    , countryCode = Just 856
+    , countryCode = "856"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -15824,7 +15824,7 @@ countryLA =
 countryLB : Territory
 countryLB =
     { id = "LB"
-    , countryCode = Just 961
+    , countryCode = "961"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -15924,7 +15924,7 @@ countryLB =
 countryLC : Territory
 countryLC =
     { id = "LC"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -16026,7 +16026,7 @@ countryLC =
 countryLI : Territory
 countryLI =
     { id = "LI"
-    , countryCode = Just 423
+    , countryCode = "423"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -16167,7 +16167,7 @@ countryLI =
 countryLK : Territory
 countryLK =
     { id = "LK"
-    , countryCode = Just 94
+    , countryCode = "94"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -16257,7 +16257,7 @@ countryLK =
 countryLR : Territory
 countryLR =
     { id = "LR"
-    , countryCode = Just 231
+    , countryCode = "231"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -16353,7 +16353,7 @@ countryLR =
 countryLS : Territory
 countryLS =
     { id = "LS"
-    , countryCode = Just 266
+    , countryCode = "266"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -16427,7 +16427,7 @@ countryLS =
 countryLT : Territory
 countryLT =
     { id = "LT"
-    , countryCode = Just 370
+    , countryCode = "370"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "8"
     , availableFormats =
@@ -16594,7 +16594,7 @@ countryLT =
 countryLU : Territory
 countryLU =
     { id = "LU"
-    , countryCode = Just 352
+    , countryCode = "352"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -16801,7 +16801,7 @@ countryLU =
 countryLV : Territory
 countryLV =
     { id = "LV"
-    , countryCode = Just 371
+    , countryCode = "371"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -16905,7 +16905,7 @@ countryLV =
 countryLY : Territory
 countryLY =
     { id = "LY"
-    , countryCode = Just 218
+    , countryCode = "218"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -16969,7 +16969,7 @@ countryLY =
 countryMA : Territory
 countryMA =
     { id = "MA"
-    , countryCode = Just 212
+    , countryCode = "212"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -17120,7 +17120,7 @@ countryMA =
 countryMC : Territory
 countryMC =
     { id = "MC"
-    , countryCode = Just 377
+    , countryCode = "377"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -17242,7 +17242,7 @@ countryMC =
 countryMD : Territory
 countryMD =
     { id = "MD"
-    , countryCode = Just 373
+    , countryCode = "373"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -17398,7 +17398,7 @@ countryMD =
 countryME : Territory
 countryME =
     { id = "ME"
-    , countryCode = Just 382
+    , countryCode = "382"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -17522,7 +17522,7 @@ countryME =
 countryMF : Territory
 countryMF =
     { id = "MF"
-    , countryCode = Just 590
+    , countryCode = "590"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
@@ -17569,7 +17569,7 @@ countryMF =
 countryMG : Territory
 countryMG =
     { id = "MG"
-    , countryCode = Just 261
+    , countryCode = "261"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -17648,7 +17648,7 @@ countryMG =
 countryMH : Territory
 countryMH =
     { id = "MH"
-    , countryCode = Just 692
+    , countryCode = "692"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats =
@@ -17722,7 +17722,7 @@ countryMH =
 countryMK : Territory
 countryMK =
     { id = "MK"
-    , countryCode = Just 389
+    , countryCode = "389"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -17853,7 +17853,7 @@ countryMK =
 countryML : Territory
 countryML =
     { id = "ML"
-    , countryCode = Just 223
+    , countryCode = "223"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -17956,7 +17956,7 @@ countryML =
 countryMM : Territory
 countryMM =
     { id = "MM"
-    , countryCode = Just 95
+    , countryCode = "95"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -18138,7 +18138,7 @@ countryMM =
 countryMN : Territory
 countryMN =
     { id = "MN"
-    , countryCode = Just 976
+    , countryCode = "976"
     , internationalPrefix = Just "001"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -18264,7 +18264,7 @@ countryMN =
 countryMO : Territory
 countryMO =
     { id = "MO"
-    , countryCode = Just 853
+    , countryCode = "853"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -18323,7 +18323,7 @@ countryMO =
 countryMP : Territory
 countryMP =
     { id = "MP"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -18425,7 +18425,7 @@ countryMP =
 countryMQ : Territory
 countryMQ =
     { id = "MQ"
-    , countryCode = Just 596
+    , countryCode = "596"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -18484,7 +18484,7 @@ countryMQ =
 countryMR : Territory
 countryMR =
     { id = "MR"
-    , countryCode = Just 222
+    , countryCode = "222"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -18558,7 +18558,7 @@ countryMR =
 countryMS : Territory
 countryMS =
     { id = "MS"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -18660,7 +18660,7 @@ countryMS =
 countryMT : Territory
 countryMT =
     { id = "MT"
-    , countryCode = Just 356
+    , countryCode = "356"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -18794,7 +18794,7 @@ countryMT =
 countryMU : Territory
 countryMU =
     { id = "MU"
-    , countryCode = Just 230
+    , countryCode = "230"
     , internationalPrefix = Just "0(?:0|[24-7]0|3[03])"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -18909,7 +18909,7 @@ countryMU =
 countryMV : Territory
 countryMV =
     { id = "MV"
-    , countryCode = Just 960
+    , countryCode = "960"
     , internationalPrefix = Just "0(?:0|19)"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -19024,7 +19024,7 @@ countryMV =
 countryMW : Territory
 countryMW =
     { id = "MW"
-    , countryCode = Just 265
+    , countryCode = "265"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -19131,7 +19131,7 @@ countryMW =
 countryMX : Territory
 countryMX =
     { id = "MX"
-    , countryCode = Just 52
+    , countryCode = "52"
     , internationalPrefix = Just "0[09]"
     , nationalPrefix = Just "01"
     , availableFormats =
@@ -19299,7 +19299,7 @@ countryMX =
 countryMY : Territory
 countryMY =
     { id = "MY"
-    , countryCode = Just 60
+    , countryCode = "60"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -19463,7 +19463,7 @@ countryMY =
 countryMZ : Territory
 countryMZ =
     { id = "MZ"
-    , countryCode = Just 258
+    , countryCode = "258"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -19548,7 +19548,7 @@ countryMZ =
 countryNA : Territory
 countryNA =
     { id = "NA"
-    , countryCode = Just 264
+    , countryCode = "264"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -19685,7 +19685,7 @@ countryNA =
 countryNC : Territory
 countryNC =
     { id = "NC"
-    , countryCode = Just 687
+    , countryCode = "687"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -19770,7 +19770,7 @@ countryNC =
 countryNE : Territory
 countryNE =
     { id = "NE"
-    , countryCode = Just 227
+    , countryCode = "227"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -19870,7 +19870,7 @@ countryNE =
 countryNF : Territory
 countryNF =
     { id = "NF"
-    , countryCode = Just 672
+    , countryCode = "672"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -19950,7 +19950,7 @@ countryNF =
 countryNG : Territory
 countryNG =
     { id = "NG"
-    , countryCode = Just 234
+    , countryCode = "234"
     , internationalPrefix = Just "009"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -20099,7 +20099,7 @@ countryNG =
 countryNI : Territory
 countryNI =
     { id = "NI"
-    , countryCode = Just 505
+    , countryCode = "505"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -20173,7 +20173,7 @@ countryNI =
 countryNL : Territory
 countryNL =
     { id = "NL"
-    , countryCode = Just 31
+    , countryCode = "31"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -20399,7 +20399,7 @@ countryNL =
 countryNO : Territory
 countryNO =
     { id = "NO"
-    , countryCode = Just 47
+    , countryCode = "47"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -20574,7 +20574,7 @@ countryNO =
 countryNP : Territory
 countryNP =
     { id = "NP"
-    , countryCode = Just 977
+    , countryCode = "977"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -20660,7 +20660,7 @@ countryNP =
 countryNR : Territory
 countryNR =
     { id = "NR"
-    , countryCode = Just 674
+    , countryCode = "674"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -20719,7 +20719,7 @@ countryNR =
 countryNU : Territory
 countryNU =
     { id = "NU"
-    , countryCode = Just 683
+    , countryCode = "683"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -20778,7 +20778,7 @@ countryNU =
 countryNZ : Territory
 countryNZ =
     { id = "NZ"
-    , countryCode = Just 64
+    , countryCode = "64"
     , internationalPrefix = Just "0(?:0|161)"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -20946,7 +20946,7 @@ countryNZ =
 countryOM : Territory
 countryOM =
     { id = "OM"
-    , countryCode = Just 968
+    , countryCode = "968"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -21057,7 +21057,7 @@ countryOM =
 countryPA : Territory
 countryPA =
     { id = "PA"
-    , countryCode = Just 507
+    , countryCode = "507"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -21157,7 +21157,7 @@ countryPA =
 countryPE : Territory
 countryPE =
     { id = "PE"
-    , countryCode = Just 51
+    , countryCode = "51"
     , internationalPrefix = Just "19(?:1[124]|77|90)00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -21314,7 +21314,7 @@ countryPE =
 countryPF : Territory
 countryPF =
     { id = "PF"
-    , countryCode = Just 689
+    , countryCode = "689"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -21399,7 +21399,7 @@ countryPF =
 countryPG : Territory
 countryPG =
     { id = "PG"
-    , countryCode = Just 675
+    , countryCode = "675"
     , internationalPrefix = Just "00|140[1-3]"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -21499,7 +21499,7 @@ countryPG =
 countryPH : Territory
 countryPH =
     { id = "PH"
-    , countryCode = Just 63
+    , countryCode = "63"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -21661,7 +21661,7 @@ countryPH =
 countryPK : Territory
 countryPK =
     { id = "PK"
-    , countryCode = Just 92
+    , countryCode = "92"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -21865,7 +21865,7 @@ countryPK =
 countryPL : Territory
 countryPL =
     { id = "PL"
-    , countryCode = Just 48
+    , countryCode = "48"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -22072,7 +22072,7 @@ countryPL =
 countryPM : Territory
 countryPM =
     { id = "PM"
-    , countryCode = Just 508
+    , countryCode = "508"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -22131,7 +22131,7 @@ countryPM =
 countryPR : Territory
 countryPR =
     { id = "PR"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -22233,7 +22233,7 @@ countryPR =
 countryPS : Territory
 countryPS =
     { id = "PS"
-    , countryCode = Just 970
+    , countryCode = "970"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -22349,7 +22349,7 @@ countryPS =
 countryPT : Territory
 countryPT =
     { id = "PT"
-    , countryCode = Just 351
+    , countryCode = "351"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -22524,7 +22524,7 @@ countryPT =
 countryPW : Territory
 countryPW =
     { id = "PW"
-    , countryCode = Just 680
+    , countryCode = "680"
     , internationalPrefix = Just "01[12]"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -22583,7 +22583,7 @@ countryPW =
 countryPY : Territory
 countryPY =
     { id = "PY"
-    , countryCode = Just 595
+    , countryCode = "595"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -22743,7 +22743,7 @@ countryPY =
 countryQA : Territory
 countryQA =
     { id = "QA"
-    , countryCode = Just 974
+    , countryCode = "974"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -22843,7 +22843,7 @@ countryQA =
 countryRE : Territory
 countryRE =
     { id = "RE"
-    , countryCode = Just 262
+    , countryCode = "262"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -22947,7 +22947,7 @@ countryRE =
 countryRO : Territory
 countryRO =
     { id = "RO"
-    , countryCode = Just 40
+    , countryCode = "40"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -23102,7 +23102,7 @@ countryRO =
 countryRS : Territory
 countryRS =
     { id = "RS"
-    , countryCode = Just 381
+    , countryCode = "381"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -23222,7 +23222,7 @@ countryRS =
 countryRU : Territory
 countryRU =
     { id = "RU"
-    , countryCode = Just 7
+    , countryCode = "7"
     , internationalPrefix = Just "810"
     , nationalPrefix = Just "8"
     , availableFormats =
@@ -23387,7 +23387,7 @@ countryRU =
 countryRW : Territory
 countryRW =
     { id = "RW"
-    , countryCode = Just 250
+    , countryCode = "250"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -23498,7 +23498,7 @@ countryRW =
 countrySA : Territory
 countrySA =
     { id = "SA"
-    , countryCode = Just 966
+    , countryCode = "966"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -23666,7 +23666,7 @@ countrySA =
 countrySB : Territory
 countrySB =
     { id = "SB"
-    , countryCode = Just 677
+    , countryCode = "677"
     , internationalPrefix = Just "0[01]"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -23755,7 +23755,7 @@ countrySB =
 countrySC : Territory
 countrySC =
     { id = "SC"
-    , countryCode = Just 248
+    , countryCode = "248"
     , internationalPrefix = Just "010|0[0-2]"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -23844,7 +23844,7 @@ countrySC =
 countrySD : Territory
 countrySD =
     { id = "SD"
-    , countryCode = Just 249
+    , countryCode = "249"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -23903,7 +23903,7 @@ countrySD =
 countrySE : Territory
 countrySE =
     { id = "SE"
-    , countryCode = Just 46
+    , countryCode = "46"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -24173,7 +24173,7 @@ countrySE =
 countrySG : Territory
 countrySG =
     { id = "SG"
-    , countryCode = Just 65
+    , countryCode = "65"
     , internationalPrefix = Just "0[0-3]\\d"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -24336,7 +24336,7 @@ countrySG =
 countrySH : Territory
 countrySH =
     { id = "SH"
-    , countryCode = Just 290
+    , countryCode = "290"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
@@ -24398,7 +24398,7 @@ countrySH =
 countrySI : Territory
 countrySI =
     { id = "SI"
-    , countryCode = Just 386
+    , countryCode = "386"
     , internationalPrefix = Just "00|10(?:22|66|88|99)"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -24540,7 +24540,7 @@ countrySI =
 countrySJ : Territory
 countrySJ =
     { id = "SJ"
-    , countryCode = Just 47
+    , countryCode = "47"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
@@ -24692,7 +24692,7 @@ countrySJ =
 countrySK : Territory
 countrySK =
     { id = "SK"
-    , countryCode = Just 421
+    , countryCode = "421"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -24917,7 +24917,7 @@ countrySK =
 countrySL : Territory
 countrySL =
     { id = "SL"
-    , countryCode = Just 232
+    , countryCode = "232"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -24981,7 +24981,7 @@ countrySL =
 countrySM : Territory
 countrySM =
     { id = "SM"
-    , countryCode = Just 378
+    , countryCode = "378"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -25097,7 +25097,7 @@ countrySM =
 countrySN : Territory
 countrySN =
     { id = "SN"
-    , countryCode = Just 221
+    , countryCode = "221"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -25227,7 +25227,7 @@ countrySN =
 countrySO : Territory
 countrySO =
     { id = "SO"
-    , countryCode = Just 252
+    , countryCode = "252"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -25341,7 +25341,7 @@ countrySO =
 countrySR : Territory
 countrySR =
     { id = "SR"
-    , countryCode = Just 597
+    , countryCode = "597"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -25437,7 +25437,7 @@ countrySR =
 countrySS : Territory
 countrySS =
     { id = "SS"
-    , countryCode = Just 211
+    , countryCode = "211"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -25496,7 +25496,7 @@ countrySS =
 countryST : Territory
 countryST =
     { id = "ST"
-    , countryCode = Just 239
+    , countryCode = "239"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -25555,7 +25555,7 @@ countryST =
 countrySV : Territory
 countrySV =
     { id = "SV"
-    , countryCode = Just 503
+    , countryCode = "503"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -25666,7 +25666,7 @@ countrySV =
 countrySX : Territory
 countrySX =
     { id = "SX"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -25768,7 +25768,7 @@ countrySX =
 countrySY : Territory
 countrySY =
     { id = "SY"
-    , countryCode = Just 963
+    , countryCode = "963"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -25843,7 +25843,7 @@ countrySY =
 countrySZ : Territory
 countrySZ =
     { id = "SZ"
-    , countryCode = Just 268
+    , countryCode = "268"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -25973,7 +25973,7 @@ countrySZ =
 countryTA : Territory
 countryTA =
     { id = "TA"
-    , countryCode = Just 290
+    , countryCode = "290"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
@@ -26005,7 +26005,7 @@ countryTA =
 countryTC : Territory
 countryTC =
     { id = "TC"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -26127,7 +26127,7 @@ countryTC =
 countryTD : Territory
 countryTD =
     { id = "TD"
-    , countryCode = Just 235
+    , countryCode = "235"
     , internationalPrefix = Just "00|16"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -26186,7 +26186,7 @@ countryTD =
 countryTG : Territory
 countryTG =
     { id = "TG"
-    , countryCode = Just 228
+    , countryCode = "228"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -26245,7 +26245,7 @@ countryTG =
 countryTH : Territory
 countryTH =
     { id = "TH"
-    , countryCode = Just 66
+    , countryCode = "66"
     , internationalPrefix = Just "00[1-9]"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -26371,7 +26371,7 @@ countryTH =
 countryTJ : Territory
 countryTJ =
     { id = "TJ"
-    , countryCode = Just 992
+    , countryCode = "992"
     , internationalPrefix = Just "810"
     , nationalPrefix = Just "8"
     , availableFormats =
@@ -26471,7 +26471,7 @@ countryTJ =
 countryTK : Territory
 countryTK =
     { id = "TK"
-    , countryCode = Just 690
+    , countryCode = "690"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
@@ -26518,7 +26518,7 @@ countryTK =
 countryTL : Territory
 countryTL =
     { id = "TL"
-    , countryCode = Just 670
+    , countryCode = "670"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -26633,7 +26633,7 @@ countryTL =
 countryTM : Territory
 countryTM =
     { id = "TM"
-    , countryCode = Just 993
+    , countryCode = "993"
     , internationalPrefix = Just "810"
     , nationalPrefix = Just "8"
     , availableFormats =
@@ -26714,7 +26714,7 @@ countryTM =
 countryTN : Territory
 countryTN =
     { id = "TN"
-    , countryCode = Just 216
+    , countryCode = "216"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -26818,7 +26818,7 @@ countryTN =
 countryTO : Territory
 countryTO =
     { id = "TO"
-    , countryCode = Just 676
+    , countryCode = "676"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -26914,7 +26914,7 @@ countryTO =
 countryTR : Territory
 countryTR =
     { id = "TR"
-    , countryCode = Just 90
+    , countryCode = "90"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -27102,7 +27102,7 @@ countryTR =
 countryTT : Territory
 countryTT =
     { id = "TT"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -27224,7 +27224,7 @@ countryTT =
 countryTV : Territory
 countryTV =
     { id = "TV"
-    , countryCode = Just 688
+    , countryCode = "688"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
@@ -27271,7 +27271,7 @@ countryTV =
 countryTW : Territory
 countryTW =
     { id = "TW"
-    , countryCode = Just 886
+    , countryCode = "886"
     , internationalPrefix = Just "0(?:0[25-79]|19)"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -27449,7 +27449,7 @@ countryTW =
 countryTZ : Territory
 countryTZ =
     { id = "TZ"
-    , countryCode = Just 255
+    , countryCode = "255"
     , internationalPrefix = Just "00[056]"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -27605,7 +27605,7 @@ countryTZ =
 countryUA : Territory
 countryUA =
     { id = "UA"
-    , countryCode = Just 380
+    , countryCode = "380"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -27742,7 +27742,7 @@ countryUA =
 countryUG : Territory
 countryUG =
     { id = "UG"
-    , countryCode = Just 256
+    , countryCode = "256"
     , internationalPrefix = Just "00[057]"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -27861,7 +27861,7 @@ countryUG =
 countryUS : Territory
 countryUS =
     { id = "US"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats =
@@ -28001,7 +28001,7 @@ countryUS =
 countryUY : Territory
 countryUY =
     { id = "UY"
-    , countryCode = Just 598
+    , countryCode = "598"
     , internationalPrefix = Just "0(?:0|1[3-9]\\d)"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -28117,7 +28117,7 @@ countryUY =
 countryUZ : Territory
 countryUZ =
     { id = "UZ"
-    , countryCode = Just 998
+    , countryCode = "998"
     , internationalPrefix = Just "810"
     , nationalPrefix = Just "8"
     , availableFormats =
@@ -28176,7 +28176,7 @@ countryUZ =
 countryVA : Territory
 countryVA =
     { id = "VA"
-    , countryCode = Just 39
+    , countryCode = "39"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats = []
@@ -28298,7 +28298,7 @@ countryVA =
 countryVC : Territory
 countryVC =
     { id = "VC"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -28400,7 +28400,7 @@ countryVC =
 countryVE : Territory
 countryVE =
     { id = "VE"
-    , countryCode = Just 58
+    , countryCode = "58"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -28494,7 +28494,7 @@ countryVE =
 countryVG : Territory
 countryVG =
     { id = "VG"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -28596,7 +28596,7 @@ countryVG =
 countryVI : Territory
 countryVI =
     { id = "VI"
-    , countryCode = Just 1
+    , countryCode = "1"
     , internationalPrefix = Just "011"
     , nationalPrefix = Just "1"
     , availableFormats = []
@@ -28698,7 +28698,7 @@ countryVI =
 countryVN : Territory
 countryVN =
     { id = "VN"
-    , countryCode = Just 84
+    , countryCode = "84"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -28909,7 +28909,7 @@ countryVN =
 countryVU : Territory
 countryVU =
     { id = "VU"
-    , countryCode = Just 678
+    , countryCode = "678"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -28998,7 +28998,7 @@ countryVU =
 countryWF : Territory
 countryWF =
     { id = "WF"
-    , countryCode = Just 681
+    , countryCode = "681"
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -29072,7 +29072,7 @@ countryWF =
 countryWS : Territory
 countryWS =
     { id = "WS"
-    , countryCode = Just 685
+    , countryCode = "685"
     , internationalPrefix = Just "0"
     , nationalPrefix = Nothing
     , availableFormats =
@@ -29168,7 +29168,7 @@ countryWS =
 countryXK : Territory
 countryXK =
     { id = "XK"
-    , countryCode = Just 383
+    , countryCode = "383"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -29279,7 +29279,7 @@ countryXK =
 countryYE : Territory
 countryYE =
     { id = "YE"
-    , countryCode = Just 967
+    , countryCode = "967"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -29354,7 +29354,7 @@ countryYE =
 countryYT : Territory
 countryYT =
     { id = "YT"
-    , countryCode = Just 262
+    , countryCode = "262"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats = []
@@ -29416,7 +29416,7 @@ countryYT =
 countryZA : Territory
 countryZA =
     { id = "ZA"
-    , countryCode = Just 27
+    , countryCode = "27"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -29583,7 +29583,7 @@ countryZA =
 countryZM : Territory
 countryZM =
     { id = "ZM"
-    , countryCode = Just 260
+    , countryCode = "260"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =
@@ -29684,7 +29684,7 @@ countryZM =
 countryZW : Territory
 countryZW =
     { id = "ZW"
-    , countryCode = Just 263
+    , countryCode = "263"
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , availableFormats =

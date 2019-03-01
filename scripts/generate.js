@@ -137,7 +137,7 @@ function elmify(territory) {
 country${territory.id} : Territory
 country${territory.id} =
     { id = "${territory.id}"
-    , countryCode = ${elmMaybe(territory.countryCode, false)}
+    , countryCode = "${elmCleanString(territory.countryCode)}"
     , internationalPrefix = ${elmMaybe(territory.internationalPrefix, true)}
     , nationalPrefix = ${elmMaybe(territory.nationalPrefix, true)}
     , availableFormats = ${elmList(availableFormats)}

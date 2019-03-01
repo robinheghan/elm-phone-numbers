@@ -14,7 +14,7 @@ import Regex exposing (Regex)
 
 type alias Territory =
     { id : String
-    , countryCode : Maybe Int
+    , countryCode : String
     , internationalPrefix : Maybe String
     , nationalPrefix : Maybe String
     , availableFormats : List NumberFormat
@@ -96,20 +96,15 @@ matchingTerritory number territory =
                         prefixLength =
                             String.length prefix
 
-                        countryCode =
-                            territory.countryCode
-                                |> Maybe.map String.fromInt
-                                |> Maybe.withDefault ""
-
                         countryCodeLength =
-                            String.length countryCode
+                            String.length territory.countryCode
                     in
                     if String.startsWith "+" number then
                         if
                             number
                                 |> String.dropLeft 1
                                 |> String.left countryCodeLength
-                                |> (==) countryCode
+                                |> (==) territory.countryCode
                         then
                             Just <| String.dropLeft (countryCodeLength + 1) number
 
@@ -121,7 +116,7 @@ matchingTerritory number territory =
                             number
                                 |> String.dropLeft prefixLength
                                 |> String.left countryCodeLength
-                                |> (==) countryCode
+                                |> (==) territory.countryCode
                         then
                             Just <| String.dropLeft (prefixLength + countryCodeLength) number
 
