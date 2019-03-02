@@ -1,16 +1,35 @@
 module PhoneNumber exposing
-    ( Country
-    , NumberType(..)
-    , NumberTypeData
-    , ValidationConfig
-    , anyType
+    ( Country, NumberType(..), NumberTypeData
+    , ValidationConfig, anyType, valid
     , matches
-    , valid
     )
+
+{-| Functions for validating phone numbers
+
+
+# Metadata
+
+You don't need to define any of these records yourself, please see the `PhoneNumber.Countries` module.
+
+@docs Country, NumberType, NumberTypeData
+
+
+# Validation
+
+@docs ValidationConfig, anyType, valid
+
+
+# Query
+
+@docs matches
+
+-}
 
 import Regex exposing (Regex)
 
 
+{-| Contains phone related metadata for a country
+-}
 type alias Country =
     { id : String
     , countryCode : String
@@ -21,6 +40,8 @@ type alias Country =
     }
 
 
+{-| What kind of a number are we talking about? Fixed line? Mobile number? Pager number? etc.
+-}
 type NumberType
     = FixedLine
     | Mobile
@@ -40,6 +61,9 @@ type NumberType
     | NoInternationalDialling
 
 
+{-| Describes a NumberType with an example number, as well as a regex to validate if a given number is of
+the set numberType
+-}
 type alias NumberTypeData =
     { numberType : NumberType
     , exampleNumber : String
@@ -47,6 +71,18 @@ type alias NumberTypeData =
     }
 
 
+{-| Pass this record to `valid` or `matches` to define how validation should occur.
+Validation will only occur against the list of countries provided in this config record,
+and validation will only occur against the list of number types.
+
+An empty list of countries means that no validation is performed. However, an empty list
+of types might not, as every country has a general number pattern that will be checked.
+
+If a defaultCountry is provided, any number without an international prefix or '+' sign is
+validated as if it is a number of that country. If a default is not specified, it will be
+tested against every country and type provided.
+
+-}
 type alias ValidationConfig =
     { countries : List Country
     , types : List NumberType
@@ -58,6 +94,8 @@ type alias ValidationConfig =
 -- API
 
 
+{-| A simple test to see if the provided number matches anything provided by the validation config.
+-}
 valid : ValidationConfig -> String -> Bool
 valid config number =
     case matches config number of
@@ -68,6 +106,11 @@ valid config number =
             True
 
 
+{-| Returns a list of tuples where the first element is a country that the number can belong to,
+and the second list contains the different types the number can be. It's possible the the second
+element is an empty list, as every country has a general number pattern that will be checked if the
+number type cannot be determined.
+-}
 matches : ValidationConfig -> String -> List ( Country, List NumberType )
 matches config number =
     let
@@ -77,6 +120,9 @@ matches config number =
     List.filterMap (matchingCountry sanitizedNumber config.defaultCountry config.types) config.countries
 
 
+{-| A list of all number types. Use this if you don't care what kind of number something is,
+but want to know if the number can belong to a certain country.
+-}
 anyType : List NumberType
 anyType =
     [ FixedLine
