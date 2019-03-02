@@ -74,7 +74,7 @@ matches config number =
         sanitizedNumber =
             sanitizeNumber number
     in
-    List.filterMap (matchingCountry sanitizedNumber config.types) config.countries
+    List.filterMap (matchingCountry sanitizedNumber config.defaultCountry config.types) config.countries
 
 
 anyType : List NumberType
@@ -102,40 +102,50 @@ anyType =
 -- HELPERS
 
 
-matchingCountry : String -> List NumberType -> Country -> Maybe ( Country, List NumberType )
-matchingCountry number relevantTypes country =
+matchingCountry : String -> Maybe Country -> List NumberType -> Country -> Maybe ( Country, List NumberType )
+matchingCountry number maybeDefaultCountry relevantTypes country =
     let
         maybeLocalNumber =
             localizeNumber country number
 
         matchesSpec localNumber desc =
             regexExactMatch desc.pattern localNumber
+
+        isDefaultCountry =
+            maybeDefaultCountry
+                |> Maybe.map .id
+                |> Maybe.map ((==) country.id)
+                |> Maybe.withDefault True
     in
     case maybeLocalNumber of
         Nothing ->
             Nothing
 
         Just localNumber ->
-            let
-                matchingTypes =
-                    country.numberTypes
-                        |> List.filter (\nt -> List.member nt.numberType relevantTypes)
-                        |> List.filter (matchesSpec localNumber)
-                        |> List.map .numberType
-            in
-            case matchingTypes of
-                [] ->
-                    if regexExactMatch country.generalNumberPattern localNumber then
-                        Just ( country, [] )
+            if localNumber == number && not isDefaultCountry then
+                Nothing
 
-                    else
-                        Nothing
+            else
+                let
+                    matchingTypes =
+                        country.numberTypes
+                            |> List.filter (\nt -> List.member nt.numberType relevantTypes)
+                            |> List.filter (matchesSpec localNumber)
+                            |> List.map .numberType
+                in
+                case matchingTypes of
+                    [] ->
+                        if regexExactMatch country.generalNumberPattern localNumber then
+                            Just ( country, [] )
 
-                _ ->
-                    Just
-                        ( country
-                        , matchingTypes
-                        )
+                        else
+                            Nothing
+
+                    _ ->
+                        Just
+                            ( country
+                            , matchingTypes
+                            )
 
 
 localizeNumber : Country -> String -> Maybe String
