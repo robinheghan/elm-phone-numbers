@@ -73,21 +73,8 @@ matches config number =
     let
         sanitizedNumber =
             sanitizeNumber number
-
-        countriesToCheck =
-            if config.types == anyType then
-                config.countries
-
-            else
-                List.map withConfiguredTypes config.countries
-
-        withConfiguredTypes country =
-            { country
-                | numberTypes =
-                    List.filter (\opt -> List.member opt.numberType config.types) country.numberTypes
-            }
     in
-    List.filterMap (matchingCountry sanitizedNumber) countriesToCheck
+    List.filterMap (matchingCountry sanitizedNumber config.types) config.countries
 
 
 anyType : List NumberType
@@ -115,8 +102,8 @@ anyType =
 -- HELPERS
 
 
-matchingCountry : String -> Country -> Maybe ( Country, List NumberType )
-matchingCountry number country =
+matchingCountry : String -> List NumberType -> Country -> Maybe ( Country, List NumberType )
+matchingCountry number relevantTypes country =
     let
         maybeLocalNumber =
             localizeNumber country number
@@ -129,12 +116,26 @@ matchingCountry number country =
             Nothing
 
         Just localNumber ->
-            Just
-                ( country
-                , country.numberTypes
-                    |> List.filter (matchesSpec localNumber)
-                    |> List.map .numberType
-                )
+            let
+                matchingTypes =
+                    country.numberTypes
+                        |> List.filter (\nt -> List.member nt.numberType relevantTypes)
+                        |> List.filter (matchesSpec localNumber)
+                        |> List.map .numberType
+            in
+            case matchingTypes of
+                [] ->
+                    if regexExactMatch country.generalNumberPattern localNumber then
+                        Just ( country, [] )
+
+                    else
+                        Nothing
+
+                _ ->
+                    Just
+                        ( country
+                        , matchingTypes
+                        )
 
 
 localizeNumber : Country -> String -> Maybe String
