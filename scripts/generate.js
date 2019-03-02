@@ -10,15 +10,7 @@ for (const country of countriesJSON) {
 const dbString = fs.readFileSync('phone_db.xml', 'utf-8');
 const targetPath = 'src/PhoneNumber/Countries.elm';
 
-const header = `
-module PhoneNumber.Countries exposing (..)
 
-{-| Metadata for most (all?) countries in the world.
--}
-
-import Regex
-import PhoneNumber exposing (Country, NumberType(..))
-`;
 
 const parseOptions = {
   trim: true,
@@ -34,6 +26,17 @@ xml2js.parseString(dbString, parseOptions, (err, result) => {
   const territories = result.territories[0].territory
         .filter(filterTerritory)
         .map(territoryToJSON);
+
+  const header = `
+module PhoneNumber.Countries exposing (..)
+
+{-| Metadata for most (all?) countries in the world.
+@docs ${territories.map(t => "country" + t.id).join(',')}
+-}
+
+import Regex
+import PhoneNumber exposing (Country, NumberType(..))
+`;
 
   const elmAllTerritories = `
 {-| A list containing the metadata of all countries. You can use this as an easy way to create
