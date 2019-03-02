@@ -31,7 +31,7 @@ xml2js.parseString(dbString, parseOptions, (err, result) => {
 module PhoneNumber.Countries exposing (..)
 
 {-| Metadata for most (all?) countries in the world.
-@docs ${territories.map(t => "country" + t.id).join(',')}
+@docs all, ${territories.map(t => "country" + t.id).join(',')}
 -}
 
 import Regex
