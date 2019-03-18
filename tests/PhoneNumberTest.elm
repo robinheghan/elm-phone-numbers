@@ -7,9 +7,9 @@ import Test exposing (..)
 
 
 norwegianConfig =
-    { countries = [ countryNO ]
+    { defaultCountry = countryNO
+    , otherCountries = []
     , types = PhoneNumber.anyType
-    , defaultCountry = Nothing
     }
 
 
@@ -45,20 +45,10 @@ suite =
                         |> Expect.equalLists []
             ]
         , describe "default country"
-            [ test "When it isnt set, it tries every config it can" <|
-                \_ ->
-                    PhoneNumber.matches { norwegianConfig | countries = [ countryNO, countrySE ] } "40612354"
-                        |> Expect.equalLists
-                            [ ( countryNO, [ PhoneNumber.Mobile ] )
-                            , ( countrySE, [ PhoneNumber.FixedLine ] )
-                            ]
-            , test "When set, every localized number is treated as if it belongs to the default country" <|
+            [ test "Every localized number is treated as if it belongs to the default country" <|
                 \_ ->
                     PhoneNumber.matches
-                        { norwegianConfig
-                            | countries = [ countryNO, countrySE ]
-                            , defaultCountry = Just countryNO
-                        }
+                        { norwegianConfig | otherCountries = [ countrySE ] }
                         "40612354"
                         |> Expect.equalLists [ ( countryNO, [ PhoneNumber.Mobile ] ) ]
             ]

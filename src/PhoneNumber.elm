@@ -72,21 +72,19 @@ type alias NumberTypeData =
 
 
 {-| Pass this record to `valid` or `matches` to define how validation should occur.
-Validation will only occur against the list of countries provided in this config record,
-and validation will only occur against the list of number types.
 
-An empty list of countries means that no validation is performed. However, an empty list
-of types might not, as every country has a general number pattern that will be checked.
+Validation will occur against the default country as well as the list of other countries,
+and validation will only occur against the list of number types. Providing a empty list of
+number types might still succeed, as every country has a general number pattern that will be checked.
 
-If a defaultCountry is provided, any number without an international prefix or '+' sign is
-validated as if it is a number of that country. If a default is not specified, it will be
-tested against every country and type provided.
+Any number that doesn't have an international prefix will be treated as if it belongs to the
+default country.
 
 -}
 type alias ValidationConfig =
-    { countries : List Country
+    { defaultCountry : Country
+    , otherCountries : List Country
     , types : List NumberType
-    , defaultCountry : Maybe Country
     }
 
 
@@ -117,7 +115,9 @@ matches config number =
         sanitizedNumber =
             sanitizeNumber number
     in
-    List.filterMap (matchingCountry sanitizedNumber config.defaultCountry config.types) config.countries
+    List.filterMap
+        (matchingCountry sanitizedNumber config.defaultCountry config.types)
+        (config.defaultCountry :: config.otherCountries)
 
 
 {-| A list of all number types. Use this if you don't care what kind of number something is,
@@ -148,8 +148,8 @@ anyType =
 -- HELPERS
 
 
-matchingCountry : String -> Maybe Country -> List NumberType -> Country -> Maybe ( Country, List NumberType )
-matchingCountry number maybeDefaultCountry relevantTypes country =
+matchingCountry : String -> Country -> List NumberType -> Country -> Maybe ( Country, List NumberType )
+matchingCountry number defaultCountry relevantTypes country =
     let
         maybeLocalNumber =
             localizeNumber country number
@@ -158,10 +158,7 @@ matchingCountry number maybeDefaultCountry relevantTypes country =
             regexExactMatch desc.pattern localNumber
 
         isDefaultCountry =
-            maybeDefaultCountry
-                |> Maybe.map .id
-                |> Maybe.map ((==) country.id)
-                |> Maybe.withDefault True
+            defaultCountry.id == country.id
     in
     case maybeLocalNumber of
         Nothing ->
