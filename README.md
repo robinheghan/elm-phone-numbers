@@ -8,11 +8,9 @@ The metadata is up to date with libphonenumber v8.10.8.
 
 The first thing you need, is a `ValidationConfig`. The config consists of three things:
 
-(1) the countries you wish to validate the phone number against.
-(2) the country you wish to validate the phone number against if it does not contain an international prefix.
+(1) the country you wish to validate the phone number against, even if it does not contain an international prefix.
+(2) any additional countries you wish to validate the number against if it has a international prefix.
 (3) the types of phone numbers you are interested in validating against (fixed line, mobile, emergency...)
-
-If you do not specify a default country (2), then it will try to validate the number against all countries you have provided metadata for.
 
 Also note that for reasons of performance and asset size, you should try to keep the list of country metadata and number types as small as possible.
 
@@ -24,8 +22,8 @@ Also note that for reasons of performance and asset size, you should try to keep
     validNorwegianNumber : String -> Bool
     validNorwegianNumber number =
         PhoneNumber.valid
-            { countries = [ countryNO ]
-            , defaultCountry = Nothing -- This doesnt really matter when the list of countries == 1
+            { defaultCountry = countryNO
+            , otherCountries = []
             , types = PhoneNumber.anyType
             }
             number
@@ -33,8 +31,8 @@ Also note that for reasons of performance and asset size, you should try to keep
     validNorwegianCellNumber : String -> Bool
     validNorwegianCellNumber number =
         PhoneNumber.valid
-            { countries = [ countryNO ]
-            , defaultCountry = Nothing
+            { defaultCountry = countryNO
+            , otherCountries = []
             , types = [ PhoneNumber.Mobile ]
             }
             number
