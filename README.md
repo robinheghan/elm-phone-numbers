@@ -2,7 +2,7 @@
 
 This package uses metadata from Google's [libphonenumber](https://github.com/googlei18n/libphonenumber) (which again is used in the Android OS) to validate international phone numbers. You can find phone-related metadata for most countries in the `PhoneNumber.Countries` module.
 
-The metadata is up to date with libphonenumber v8.10.10.
+The metadata is up to date with libphonenumber v8.10.11.
 
 ## How to use
 
