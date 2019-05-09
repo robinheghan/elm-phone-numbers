@@ -2655,7 +2655,7 @@ countryCU =
         [ { numberType = FixedLine
           , exampleNumber = "71234567"
           , pattern =
-                "(?:3[23]|4[78])\\d{4,6}|(?:31|4[36])\\d{6}|(?:2[1-4]|4[125]|7\\d)\\d{5,6}"
+                "(?:3[23]|48)\\d{4,6}|(?:31|4[36])\\d{6}|(?:2[1-4]|4[1257]|7\\d)\\d{5,6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -3442,7 +3442,7 @@ countryEH =
         , { numberType = Mobile
           , exampleNumber = "650123456"
           , pattern =
-                "(?:6(?:[0-79]\\d|8[0-247-9])|7(?:0[06-8]|6[1267]|7[017]))\\d{6}"
+                "(?:6(?:[0-79]\\d|8[0-247-9])|7(?:0[06-8]|6[1267]|7[0-27]))\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -6932,7 +6932,7 @@ countryMA =
         , { numberType = Mobile
           , exampleNumber = "650123456"
           , pattern =
-                "(?:6(?:[0-79]\\d|8[0-247-9])|7(?:0[06-8]|6[1267]|7[017]))\\d{6}"
+                "(?:6(?:[0-79]\\d|8[0-247-9])|7(?:0[06-8]|6[1267]|7[0-27]))\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
