@@ -646,7 +646,7 @@ countryAM =
         , { numberType = Mobile
           , exampleNumber = "77123456"
           , pattern =
-                "(?:4[1349]|55|77|88|9[13-9])\\d{6}"
+                "(?:33|4[1349]|55|77|88|9[13-9])\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -7365,7 +7365,7 @@ countryMM =
         , { numberType = Mobile
           , exampleNumber = "92123456"
           , pattern =
-                "(?:17[01]|9(?:2(?:[0-4]|[56]\\d\\d)|(?:3(?:[0-36]|4\\d)|(?:6[7-9]|89)\\d|7(?:3|5[0-2]|[6-9]\\d))\\d|4(?:(?:[0245]\\d|[1379])\\d|88)|5[0-6]|9(?:[089]|[5-7]\\d\\d))\\d)\\d{4}|9[69]1\\d{6}|9[68]\\d{6}"
+                "(?:17[01]|9(?:2(?:[0-4]|[56]\\d\\d)|(?:3(?:[0-36]|4\\d)|6[7-9]\\d|7(?:3|5[0-2]|[6-9]\\d)|8(?:8[7-9]|9\\d))\\d|4(?:(?:[0245]\\d|[1379])\\d|88)|5[0-6]|9(?:[089]|[5-7]\\d\\d))\\d)\\d{4}|9[69]1\\d{6}|9[68]\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -7846,7 +7846,7 @@ countryMX =
     , internationalPrefix = Just "0[09]"
     , nationalPrefix = Just "01"
     , generalNumberPattern =
-        "(?:1\\d|[2-9])\\d{9}"
+        "(?:1(?:[01467]\\d|[2359][1-9]|8[1-79])|[2-9]\\d)\\d{8}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
