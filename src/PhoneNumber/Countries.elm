@@ -1,4 +1,4 @@
-module PhoneNumber.Countries exposing (all, countryAC, countryAD, countryAE, countryAF, countryAG, countryAI, countryAL, countryAM, countryAO, countryAR, countryAS, countryAT, countryAU, countryAW, countryAX, countryAZ, countryBA, countryBB, countryBD, countryBE, countryBF, countryBG, countryBH, countryBI, countryBJ, countryBL, countryBM, countryBN, countryBO, countryBQ, countryBR, countryBS, countryBT, countryBW, countryBY, countryBZ, countryCA, countryCC, countryCD, countryCF, countryCG, countryCH, countryCI, countryCK, countryCL, countryCM, countryCN, countryCO, countryCR, countryCU, countryCV, countryCW, countryCX, countryCY, countryCZ, countryDE, countryDJ, countryDK, countryDM, countryDO, countryDZ, countryEC, countryEE, countryEG, countryEH, countryER, countryES, countryET, countryFI, countryFJ, countryFK, countryFM, countryFO, countryFR, countryGA, countryGB, countryGD, countryGE, countryGF, countryGG, countryGH, countryGI, countryGL, countryGM, countryGN, countryGP, countryGQ, countryGR, countryGT, countryGU, countryGW, countryGY, countryHK, countryHN, countryHR, countryHT, countryHU, countryID, countryIE, countryIL, countryIM, countryIN, countryIO, countryIQ, countryIR, countryIS, countryIT, countryJE, countryJM, countryJO, countryJP, countryKE, countryKG, countryKH, countryKI, countryKM, countryKN, countryKP, countryKR, countryKW, countryKY, countryKZ, countryLA, countryLB, countryLC, countryLI, countryLK, countryLR, countryLS, countryLT, countryLU, countryLV, countryLY, countryMA, countryMC, countryMD, countryME, countryMF, countryMG, countryMH, countryMK, countryML, countryMM, countryMN, countryMO, countryMP, countryMQ, countryMR, countryMS, countryMT, countryMU, countryMV, countryMW, countryMX, countryMY, countryMZ, countryNA, countryNC, countryNE, countryNF, countryNG, countryNI, countryNL, countryNO, countryNP, countryNR, countryNU, countryNZ, countryOM, countryPA, countryPE, countryPF, countryPG, countryPH, countryPK, countryPL, countryPM, countryPR, countryPS, countryPT, countryPW, countryPY, countryQA, countryRE, countryRO, countryRS, countryRU, countryRW, countrySA, countrySB, countrySC, countrySD, countrySE, countrySG, countrySH, countrySI, countrySJ, countrySK, countrySL, countrySM, countrySN, countrySO, countrySR, countrySS, countryST, countrySV, countrySX, countrySY, countrySZ, countryTA, countryTC, countryTD, countryTG, countryTH, countryTJ, countryTK, countryTL, countryTM, countryTN, countryTO, countryTR, countryTT, countryTV, countryTW, countryTZ, countryUA, countryUG, countryUS, countryUY, countryUZ, countryVA, countryVC, countryVE, countryVG, countryVI, countryVN, countryVU, countryWF, countryWS, countryXK, countryYE, countryYT, countryZA, countryZM, countryZW)
+module PhoneNumber.Countries exposing (..)
 
 {-| Metadata for most (all?) countries in the world.
 
@@ -5917,7 +5917,7 @@ countryKG =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , generalNumberPattern =
-        "(?:[235-7]\\d|99)\\d{7}|800\\d{6,7}"
+        "8\\d{9}|(?:[235-8]\\d|99)\\d{7}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
@@ -5931,7 +5931,7 @@ countryKG =
         , { numberType = Mobile
           , exampleNumber = "700123456"
           , pattern =
-                "(?:2(?:0[0-35]|2\\d)|5(?:0[0-57-9]|[124-7]\\d)|7(?:[07]\\d|55)|99[69])\\d{6}"
+                "8801\\d{5}|(?:2(?:0[0-35]|2\\d)|5(?:0[0-57-9]|[124-7]\\d)|7(?:[07]\\d|55)|99[05-9])\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -6185,9 +6185,9 @@ countryKR =
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = Mobile
-          , exampleNumber = "1000000000"
+          , exampleNumber = "1020000000"
           , pattern =
-                "1[0-26-9]\\d{7,8}"
+                "10[01]\\d{6}|1(?:0[2-9]|[126-9]\\d)\\d{6,7}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -7770,7 +7770,7 @@ countryMV =
         , { numberType = Mobile
           , exampleNumber = "7712345"
           , pattern =
-                "46[46]\\d{4}|(?:7[2-9]|9[14-9])\\d{5}"
+                "46[46]\\d{4}|(?:7[2-9]|9[13-9])\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -9807,7 +9807,7 @@ countrySG =
         , { numberType = Mobile
           , exampleNumber = "81234567"
           , pattern =
-                "(?:8[1-8]|9[0-8])\\d{6}"
+                "89[01]\\d{5}|(?:8[1-8]|9[0-8])\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -11809,7 +11809,7 @@ countryVN =
         , { numberType = FixedLine
           , exampleNumber = "2101234567"
           , pattern =
-                "2(?:0[3-9]|1[0-689]|2[0-25-9]|3[2-9]|4[2-8]|5[124-9]|6[0-39]|7[0-7]|8[2-7]|9[0-4679])\\d{7}"
+                "2(?:0[3-9]|1[0-689]|2[0-25-9]|3[2-9]|4[2-8]|5[124-9]|6[0-39]|7[0-7]|8[2-79]|9[0-4679])\\d{7}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
