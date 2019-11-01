@@ -3127,14 +3127,7 @@ countryDM =
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
-        [ { numberType = NoInternationalDialling
-          , exampleNumber = ""
-          , pattern =
-                "80014\\d{5}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { numberType = FixedLine
+        [ { numberType = FixedLine
           , exampleNumber = "7674201234"
           , pattern =
                 "767(?:2(?:55|66)|4(?:2[01]|4[0-25-9])|50[0-4]|70[1-3])\\d{4}"
@@ -3151,7 +3144,7 @@ countryDM =
         , { numberType = TollFree
           , exampleNumber = "8002123456"
           , pattern =
-                "8(?:00(?:14|[2-9]\\d)|(?:33|44|55|66|77|88)[2-9]\\d)\\d{5}"
+                "8(?:00|33|44|55|66|77|88)[2-9]\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -3186,7 +3179,14 @@ countryDO =
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
-        [ { numberType = FixedLine
+        [ { numberType = NoInternationalDialling
+          , exampleNumber = ""
+          , pattern =
+                "80014\\d{5}"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          }
+        , { numberType = FixedLine
           , exampleNumber = "8092345678"
           , pattern =
                 "8(?:[04]9[2-9]\\d\\d|29(?:2(?:[0-59]\\d|6[04-9]|7[0-27]|8[0237-9])|3(?:[0-35-9]\\d|4[7-9])|[45]\\d\\d|6(?:[0-27-9]\\d|[3-5][1-9]|6[0135-8])|7(?:0[013-9]|[1-37]\\d|4[1-35689]|5[1-4689]|6[1-57-9]|8[1-79]|9[1-8])|8(?:0[146-9]|1[0-48]|[248]\\d|3[1-79]|5[01589]|6[013-68]|7[124-8]|9[0-8])|9(?:[0-24]\\d|3[02-46-9]|5[0-79]|60|7[0169]|8[57-9]|9[02-9])))\\d{4}"
@@ -3203,7 +3203,7 @@ countryDO =
         , { numberType = TollFree
           , exampleNumber = "8002123456"
           , pattern =
-                "8(?:00|33|44|55|66|77|88)[2-9]\\d{6}"
+                "8(?:00(?:14|[2-9]\\d)|(?:33|44|55|66|77|88)[2-9]\\d)\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -7393,7 +7393,7 @@ countryMM =
         , { numberType = Mobile
           , exampleNumber = "92123456"
           , pattern =
-                "(?:17[01]|9(?:2(?:[0-4]|[56]\\d\\d)|(?:3(?:[0-36]|4\\d)|6[7-9]\\d|7(?:3|[5-9]\\d)|8(?:8[7-9]|9\\d))\\d|4(?:(?:[0245]\\d|[1379])\\d|88)|5[0-6]|9(?:[089]|[5-7]\\d\\d))\\d)\\d{4}|9[69]1\\d{6}|9[68]\\d{6}"
+                "(?:17[01]|9(?:2(?:[0-4]|[56]\\d\\d)|(?:3(?:[0-36]|4\\d)|6[7-9]\\d|7(?:3|[5-9]\\d)|8(?:8[4-9]|9\\d))\\d|4(?:(?:[0245]\\d|[1379])\\d|88)|5[0-6]|9(?:[089]|[5-7]\\d\\d))\\d)\\d{4}|9[69]1\\d{6}|9[68]\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -8591,7 +8591,7 @@ countryOM =
         , { numberType = Mobile
           , exampleNumber = "92123456"
           , pattern =
-                "90[1-9]\\d{5}|(?:7[129]|9[1-9])\\d{6}"
+                "90[1-9]\\d{5}|(?:7[1289]|9[1-9])\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -11851,7 +11851,7 @@ countryVN =
         , { numberType = TollFree
           , exampleNumber = "1800123456"
           , pattern =
-                "1(?:228\\d{4}|800\\d{4,6})"
+                "1800\\d{4,6}|12(?:03|28)\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -12190,7 +12190,7 @@ countryZM =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , generalNumberPattern =
-        "800\\d{6}|(?:21|76|9\\d)\\d{7}"
+        "800\\d{6}|(?:21|[79]\\d)\\d{7}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
@@ -12204,7 +12204,7 @@ countryZM =
         , { numberType = Mobile
           , exampleNumber = "955123456"
           , pattern =
-                "(?:76|9[5-8])\\d{7}"
+                "(?:7[67]|9[5-8])\\d{7}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
