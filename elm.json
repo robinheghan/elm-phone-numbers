@@ -3,7 +3,7 @@
     "name": "Skinney/elm-phone-numbers",
     "summary": "A package for validating phone numbers. Based on google's libphonenumber.",
     "license": "BSD-3-Clause",
-    "version": "2.0.16",
+    "version": "2.0.17",
     "exposed-modules": [
         "PhoneNumber",
         "PhoneNumber.Countries"
