@@ -313,7 +313,7 @@ countryAD =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , generalNumberPattern =
-        "(?:1|6\\d)\\d{7}|[136-9]\\d{5}"
+        "(?:1|6\\d)\\d{7}|[135-9]\\d{5}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
@@ -334,7 +334,7 @@ countryAD =
         , { numberType = Mobile
           , exampleNumber = "312345"
           , pattern =
-                "690\\d{6}|[36]\\d{5}"
+                "690\\d{6}|[356]\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -1326,7 +1326,7 @@ countryBE =
         , { numberType = Uan
           , exampleNumber = "78102345"
           , pattern =
-                "78(?:0[57]|1[0458]|2[25]|3[5-8]|48|[56]0|7[078])\\d{4}"
+                "78(?:0[57]|1[0458]|2[25]|3[15-8]|48|[56]0|7[078])\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -1734,7 +1734,7 @@ countryBQ =
         [ { numberType = FixedLine
           , exampleNumber = "7151234"
           , pattern =
-                "(?:318[023]|41(?:6[023]|70)|7(?:1[578]|50)\\d)\\d{3}"
+                "(?:318[023]|41(?:6[023]|70)|7(?:1[578]|2[05]|50)\\d)\\d{3}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -1921,7 +1921,7 @@ countryBW =
         , { numberType = Mobile
           , exampleNumber = "71123456"
           , pattern =
-                "77200\\d{3}|7(?:[1-6]\\d|7[014-8])\\d{5}"
+                "77200\\d{3}|7(?:[1-6]\\d|7[014-9])\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -2056,14 +2056,14 @@ countryCA =
         [ { numberType = FixedLine
           , exampleNumber = "5062345678"
           , pattern =
-                "(?:2(?:04|[23]6|[48]9|50)|3(?:06|43|65)|4(?:03|1[68]|3[178]|50)|5(?:06|1[49]|48|79|8[17])|6(?:04|13|39|47|72)|7(?:0[59]|78|8[02])|8(?:[06]7|19|25|73)|90[25])[2-9]\\d{6}"
+                "(?:2(?:04|[23]6|[48]9|50)|3(?:06|43|6[57])|4(?:03|1[68]|3[178]|50)|5(?:06|1[49]|48|79|8[17])|6(?:04|13|39|47|72)|7(?:0[59]|78|8[02])|8(?:[06]7|19|25|73)|90[25])[2-9]\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = Mobile
           , exampleNumber = "5062345678"
           , pattern =
-                "(?:2(?:04|[23]6|[48]9|50)|3(?:06|43|65)|4(?:03|1[68]|3[178]|50)|5(?:06|1[49]|48|79|8[17])|6(?:04|13|39|47|72)|7(?:0[59]|78|8[02])|8(?:[06]7|19|25|73)|90[25])[2-9]\\d{6}"
+                "(?:2(?:04|[23]6|[48]9|50)|3(?:06|43|6[57])|4(?:03|1[68]|3[178]|50)|5(?:06|1[49]|48|79|8[17])|6(?:04|13|39|47|72)|7(?:0[59]|78|8[02])|8(?:[06]7|19|25|73)|90[25])[2-9]\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -2368,7 +2368,7 @@ countryCI =
         , { numberType = Mobile
           , exampleNumber = "01234567"
           , pattern =
-                "97[0-3]\\d{5}|(?:0[1-9]|[457]\\d|6[014-9]|8[4-9]|95)\\d{6}"
+                "(?:2[0-3]80|97[0-3]\\d)\\d{4}|(?:0[1-9]|[457]\\d|6[014-9]|8[4-9]|95)\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -2482,14 +2482,14 @@ countryCM =
         [ { numberType = FixedLine
           , exampleNumber = "222123456"
           , pattern =
-                "2(?:22|33|4[23])\\d{6}"
+                "2(?:22|33)\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = Mobile
           , exampleNumber = "671234567"
           , pattern =
-                "6[5-9]\\d{7}"
+                "(?:24[23]|6[5-9]\\d)\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -2617,7 +2617,7 @@ countryCR =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , generalNumberPattern =
-        "(?:8\\d|90)\\d{8}|[24-8]\\d{7}"
+        "(?:8\\d|90)\\d{8}|(?:[24-8]\\d{3}|3005)\\d{4}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
@@ -2631,7 +2631,7 @@ countryCR =
         , { numberType = Mobile
           , exampleNumber = "83123456"
           , pattern =
-                "6500[01]\\d{3}|5(?:0[01]|7[0-3])\\d{5}|(?:6[0-4]|7[0-3]|8[3-9])\\d{6}"
+                "(?:3005\\d|6500[01])\\d{3}|(?:5[07]|6[0-4]|7[0-3]|8[3-9])\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -3321,7 +3321,7 @@ countryEC =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , generalNumberPattern =
-        "1800\\d{6,7}|(?:[2-7]|9\\d)\\d{7}"
+        "1\\d{9,10}|(?:[2-7]|9\\d)\\d{7}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
@@ -3335,14 +3335,14 @@ countryEC =
         , { numberType = Mobile
           , exampleNumber = "991234567"
           , pattern =
-                "964[0-2]\\d{5}|9(?:39|[57][89]|6[0-37-9]|[89]\\d)\\d{6}"
+                "964[0-2]\\d{5}|9(?:39|[57][89]|6[0-36-9]|[89]\\d)\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = TollFree
           , exampleNumber = "18001234567"
           , pattern =
-                "1800\\d{6,7}"
+                "1800\\d{7}|1[78]00\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -3366,7 +3366,7 @@ countryEE =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , generalNumberPattern =
-        "8\\d{9}|[4578]\\d{7}|(?:[3-8]\\d\\d|900)\\d{4}"
+        "8\\d{9}|[4578]\\d{7}|(?:[3-8]\\d|90)\\d{5}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
@@ -3387,7 +3387,7 @@ countryEE =
         , { numberType = Mobile
           , exampleNumber = "51234567"
           , pattern =
-                "(?:5\\d|8[1-4])\\d{6}|5(?:(?:[02]\\d|5[0-478])\\d|1(?:[0-8]\\d|95)|6(?:4[0-4]|5[1-589]))\\d{3}"
+                "5(?:[0-35-9]\\d{6}|4(?:[0-57-9]\\d{5}|6(?:[0-24-9]\\d{4}|3(?:[0-35-9]\\d{3}|4000))))|8(?:1(?:0(?:000|[3-9]\\d\\d)|(?:1(?:0[236]|1\\d)|(?:23|[3-79]\\d)\\d)\\d)|2(?:0(?:000|(?:19|[24-7]\\d)\\d)|(?:(?:[124-6]\\d|3[5-9]|8[2-4])\\d|7(?:[679]\\d|8[13-9]))\\d)|[349]\\d{4})\\d\\d|5(?:(?:[02]\\d|5[0-478])\\d|1(?:[0-8]\\d|95)|6(?:4[0-4]|5[1-589]))\\d{3}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -3432,7 +3432,7 @@ countryEG =
         [ { numberType = FixedLine
           , exampleNumber = "234567890"
           , pattern =
-                "(?:15\\d|57[23])\\d{5,6}|(?:13[23]|(?:2[2-4]|3)\\d|4(?:0[2-5]|[578][23]|64)|5(?:0[2-7]|5\\d)|6[24-689]3|8(?:2[2-57]|4[26]|6[237]|8[2-4])|9(?:2[27]|3[24]|52|6[2356]|7[2-4]))\\d{6}"
+                "13[23]\\d{6}|(?:15|57)\\d{6,7}|(?:2[2-4]|3|4[05-8]|5[05]|6[24-689]|8[2468]|9[235-7])\\d{7}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -3778,21 +3778,21 @@ countryFM =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , generalNumberPattern =
-        "[39]\\d{6}"
+        "(?:[39]\\d\\d|820)\\d{4}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
         [ { numberType = FixedLine
           , exampleNumber = "3201234"
           , pattern =
-                "(?:3[2357]0[1-9]|9[2-6]\\d\\d)\\d{3}"
+                "31(?:00[67]|208|309)\\d\\d|(?:3(?:[2357]0[1-9]|602|804|905)|(?:820|9[2-6]\\d)\\d)\\d{3}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = Mobile
           , exampleNumber = "3501234"
           , pattern =
-                "(?:3[2357]0[1-9]|9[2-7]\\d\\d)\\d{3}"
+                "31(?:00[67]|208|309)\\d\\d|(?:3(?:[2357]0[1-9]|602|804|905)|(?:820|9[2-7]\\d)\\d)\\d{3}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -3837,7 +3837,7 @@ countryFO =
         , { numberType = PremiumRate
           , exampleNumber = "901123"
           , pattern =
-                "90(?:[13-5][15-7]|2[125-7]|99)\\d\\d"
+                "90(?:[13-5][15-7]|2[125-7]|9\\d)\\d\\d"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -4336,7 +4336,7 @@ countryGL =
         , { numberType = Mobile
           , exampleNumber = "221234"
           , pattern =
-                "(?:[25][1-9]|4[2-9])\\d{4}"
+                "[245]\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -4398,14 +4398,14 @@ countryGN =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , generalNumberPattern =
-        "(?:30|6\\d\\d|722)\\d{6}"
+        "722\\d{6}|(?:3|6\\d)\\d{7}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
         [ { numberType = FixedLine
           , exampleNumber = "30241234"
           , pattern =
-                "30(?:24|3[12]|4[1-35-7]|5[13]|6[189]|[78]1|9[1478])\\d{4}"
+                "3(?:0(?:24|3[12]|4[1-35-7]|5[13]|6[189]|[78]1|9[1478])|1\\d\\d)\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -5213,14 +5213,14 @@ countryIL =
         , { numberType = FixedLine
           , exampleNumber = "21234567"
           , pattern =
-                "153\\d{8,9}|[2-489]\\d{7}"
+                "153\\d{8,9}|29[1-9]\\d{5}|(?:2[0-8]|[3489]\\d)\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = Mobile
           , exampleNumber = "502345678"
           , pattern =
-                "5(?:(?:[0-389][2-9]|4[1-9]|6\\d)\\d|5(?:01|2[2-7]|3[23]|4[45]|5[05689]|6[6-8]|7[0-267]|8[7-9]|9[1-9]))\\d{5}"
+                "5(?:(?:[02368]\\d|[19][2-9]|4[1-9])\\d|5(?:01|1[79]|2[2-7]|3[23]|44|5[05689]|6[6-8]|7[0-267]|8[7-9]|9[1-9]))\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -6091,7 +6091,7 @@ countryKI =
         , { numberType = Mobile
           , exampleNumber = "72001234"
           , pattern =
-                "73140\\d{3}|(?:630[01]|730[0-5])\\d{4}|[67]200[01]\\d{3}"
+                "(?:63\\d{3}|73(?:0[0-5]\\d|140))\\d{3}|[67]200[01]\\d{3}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -6680,14 +6680,14 @@ countryLK =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , generalNumberPattern =
-        "(?:[1-7]\\d|[89]1)\\d{7}"
+        "[1-9]\\d{8}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
         [ { numberType = FixedLine
           , exampleNumber = "112345678"
           , pattern =
-                "(?:[189]1|2[13-7]|3[1-8]|4[157]|5[12457]|6[35-7])[2-57]\\d{6}"
+                "(?:12[2-9]|602|8[12]\\d|9(?:1\\d|22|9[245]))\\d{6}|(?:11|2[13-7]|3[1-8]|4[157]|5[12457]|6[35-7])[2-57]\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -6815,7 +6815,7 @@ countryLT =
         , { numberType = TollFree
           , exampleNumber = "80012345"
           , pattern =
-                "800\\d{5}"
+                "80[02]\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -6836,7 +6836,14 @@ countryLT =
         , { numberType = PersonalNumber
           , exampleNumber = "70012345"
           , pattern =
-                "700\\d{5}"
+                "70[05]\\d{5}"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          }
+        , { numberType = Voip
+          , exampleNumber = "80123456"
+          , pattern =
+                "[89]01\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -7172,14 +7179,14 @@ countryME =
         [ { numberType = FixedLine
           , exampleNumber = "30234567"
           , pattern =
-                "(?:20[2-8]|3(?:[0-2][2-7]|3[24-7])|4(?:0[2-467]|1[2467])|5(?:[01][2467]|2[2-467]))\\d{5}"
+                "(?:20[2-8]|3(?:[0-2][2-7]|3[24-7])|4(?:0[2-467]|1[2467])|5(?:0[2467]|1[24-7]|2[2-467]))\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = Mobile
           , exampleNumber = "67622901"
           , pattern =
-                "6(?:00|3[024]|6[0-25]|[7-9]\\d)\\d{5}"
+                "6(?:[07-9]\\d|3[024]|6[0-25])\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -7525,14 +7532,14 @@ countryMO =
         [ { numberType = FixedLine
           , exampleNumber = "28212345"
           , pattern =
-                "(?:28[2-57-9]|8(?:11|[2-57-9]\\d))\\d{5}"
+                "(?:28[2-9]|8(?:11|[2-57-9]\\d))\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = Mobile
           , exampleNumber = "66123456"
           , pattern =
-                "6(?:[2356]\\d\\d|8(?:[02][5-9]|[1478]\\d|[356][0-4]))\\d{4}"
+                "6(?:[235]\\d\\d|6(?:0[0-5]|[1-9]\\d)|8(?:[02][5-9]|[146-8]\\d|[35][0-4]))\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -7743,7 +7750,7 @@ countryMT =
         , { numberType = Mobile
           , exampleNumber = "96961234"
           , pattern =
-                "(?:7(?:210|[79]\\d\\d)|9(?:2(?:1[01]|31)|69[67]|8(?:1[1-3]|89|97)|9\\d\\d))\\d{4}"
+                "(?:7(?:210|[79]\\d\\d)|9(?:[29]\\d\\d|69[67]|8(?:1[1-3]|89|97)))\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -7913,14 +7920,7 @@ countryMW =
         , { numberType = Mobile
           , exampleNumber = "991234567"
           , pattern =
-                "111\\d{6}|(?:77|88|99)\\d{7}"
-                    |> Regex.fromString
-                    |> Maybe.withDefault Regex.never
-          }
-        , { numberType = Voip
-          , exampleNumber = "310123456"
-          , pattern =
-                "31\\d{7}"
+                "111\\d{6}|(?:31|77|88|99)\\d{7}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -8190,7 +8190,7 @@ countryNE =
         , { numberType = Mobile
           , exampleNumber = "93123456"
           , pattern =
-                "(?:8[014589]|9\\d)\\d{6}"
+                "(?:23|8[014589]|9\\d)\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -8235,7 +8235,7 @@ countryNF =
         , { numberType = Mobile
           , exampleNumber = "381234"
           , pattern =
-                "3[58]\\d{4}"
+                "(?:14|3[58])\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -8519,21 +8519,21 @@ countryNR =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , generalNumberPattern =
-        "(?:444|55\\d|888)\\d{4}"
+        "(?:444|(?:55|8\\d)\\d|666)\\d{4}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
         [ { numberType = FixedLine
           , exampleNumber = "4441234"
           , pattern =
-                "(?:444|888)\\d{4}"
+                "444\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = Mobile
           , exampleNumber = "5551234"
           , pattern =
-                "55[4-9]\\d{4}"
+                "(?:55[3-9]|666|8\\d\\d)\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -8647,7 +8647,7 @@ countryOM =
     , internationalPrefix = Just "00"
     , nationalPrefix = Nothing
     , generalNumberPattern =
-        "(?:[279]\\d{3}|500)\\d{4}|8007\\d{4,5}"
+        "(?:1505|[279]\\d{3}|500)\\d{4}|8007\\d{4,5}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
@@ -8661,7 +8661,7 @@ countryOM =
         , { numberType = Mobile
           , exampleNumber = "92123456"
           , pattern =
-                "90[1-9]\\d{5}|(?:7[1289]|9[1-9])\\d{6}"
+                "(?:1505|90[1-9]\\d)\\d{4}|(?:7[1289]|9[1-9])\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -8699,7 +8699,7 @@ countryPA =
         [ { numberType = FixedLine
           , exampleNumber = "2001234"
           , pattern =
-                "(?:1(?:0\\d|1[479]|2[37]|3[0137]|4[17]|5[05]|[68][58]|7[0167]|9[39])|2(?:[0235-79]\\d|1[0-7]|4[013-9]|8[026-9])|3(?:[089]\\d|1[014-7]|2[0-35]|33|4[0-579]|55|6[068]|7[06-8])|4(?:00|3[0-579]|4\\d|7[0-57-9])|5(?:[01]\\d|2[0-7]|[56]0|79)|7(?:0[09]|2[0-26-8]|3[03]|4[04]|5[05-9]|6[05]|7[0-24-9]|8[7-9]|90)|8(?:09|2[89]|3\\d|4[0-24-689]|5[014]|8[02])|9(?:0[5-9]|1[0135-8]|2[036-9]|3[35-79]|40|5[0457-9]|6[05-9]|7[04-9]|8[35-8]|9\\d))\\d{4}"
+                "(?:1(?:0\\d|1[479]|2[37]|3[0137]|4[17]|5[05]|6[58]|7[0167]|8[258]|9[139])|2(?:[0235-79]\\d|1[0-7]|4[013-9]|8[026-9])|3(?:[089]\\d|1[014-7]|2[0-5]|33|4[0-79]|55|6[068]|7[03-8])|4(?:00|3[0-579]|4\\d|7[0-57-9])|5(?:[01]\\d|2[0-7]|[56]0|79)|7(?:0[09]|2[0-26-8]|3[03]|4[04]|5[05-9]|6[056]|7[0-24-9]|8[6-9]|90)|8(?:09|2[89]|3\\d|4[0-24-689]|5[014]|8[02])|9(?:0[5-9]|1[0135-8]|2[036-9]|3[35-79]|40|5[0457-9]|6[05-9]|7[04-9]|8[35-8]|9\\d))\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -8810,7 +8810,7 @@ countryPF =
         , { numberType = FixedLine
           , exampleNumber = "40412345"
           , pattern =
-                "4(?:[09][4-689]\\d|4)\\d{4}"
+                "4(?:0[4-689]|9[4-68])\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -8818,6 +8818,20 @@ countryPF =
           , exampleNumber = "87123456"
           , pattern =
                 "8[7-9]\\d{6}"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          }
+        , { numberType = Voip
+          , exampleNumber = "49901234"
+          , pattern =
+                "499\\d{5}"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          }
+        , { numberType = Uan
+          , exampleNumber = "440123"
+          , pattern =
+                "44\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -8848,7 +8862,14 @@ countryPG =
         , { numberType = Mobile
           , exampleNumber = "70123456"
           , pattern =
-                "775\\d{5}|(?:7[0-689]|81)\\d{6}"
+                "77(?:3[1-9]|[5-9]\\d)\\d{4}|(?:7[0-689]|81)\\d{6}"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          }
+        , { numberType = Pager
+          , exampleNumber = "2700123"
+          , pattern =
+                "27[01]\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -8917,14 +8938,14 @@ countryPK =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , generalNumberPattern =
-        "122\\d{6}|[24-8]\\d{10,11}|9(?:[013-9]\\d{8,10}|2(?:[01]\\d\\d|2(?:[025-8]\\d|1[01]))\\d{7})|(?:[2-8]\\d{3}|92(?:[0-7]\\d|8[1-9]))\\d{6}|[24-9]\\d{8}|[89]\\d{7}"
+        "122\\d{6}|[24-8]\\d{10,11}|9(?:[013-9]\\d{8,10}|2(?:[01]\\d\\d|2(?:[06-8]\\d|1[01]))\\d{7})|(?:[2-8]\\d{3}|92(?:[0-7]\\d|8[1-9]))\\d{6}|[24-9]\\d{8}|[89]\\d{7}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
         [ { numberType = FixedLine
           , exampleNumber = "2123456789"
           , pattern =
-                "(?:(?:21|42)[2-9]|58[126])\\d{7}|(?:2[25]|4[0146-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91)[2-9]\\d{6}|(?:2(?:3[2358]|4[2-4]|9[2-8])|45[3479]|54[2-467]|60[468]|72[236]|8(?:2[2-689]|3[23578]|4[3478]|5[2356])|9(?:2[2-8]|3[27-9]|4[2-6]|6[3569]|9[25-8]))[2-9]\\d{5,6}"
+                "(?:(?:21|42)[2-9]|58[126])\\d{7}|(?:2[25]|4[0146-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91)[2-9]\\d{6,7}|(?:2(?:3[2358]|4[2-4]|9[2-8])|45[3479]|54[2-467]|60[468]|72[236]|8(?:2[2-689]|3[23578]|4[3478]|5[2356])|9(?:2[2-8]|3[27-9]|4[2-6]|6[3569]|9[25-8]))[2-9]\\d{5,6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -9295,7 +9316,7 @@ countryPY =
         [ { numberType = FixedLine
           , exampleNumber = "212345678"
           , pattern =
-                "(?:[26]1|3[289]|4[1246-8]|7[1-3]|8[1-36])\\d{5,7}|(?:2(?:2[4-68]|7[15]|9[1-5])|3(?:18|3[167]|4[2357]|51)|4(?:3[12]|5[13]|9[1-47])|5(?:[1-4]\\d|5[02-4])|6(?:3[1-3]|44|7[1-46-8])|7(?:4[0-4]|6[1-578]|75|8[0-8])|858)\\d{5,6}"
+                "(?:[26]1|3[289]|4[1246-8]|7[1-3]|8[1-36])\\d{5,7}|(?:2(?:2[4-68]|[4-68]\\d|7[15]|9[1-5])|3(?:18|3[167]|4[2357]|51|[67]\\d)|4(?:3[12]|5[13]|9[1-47])|5(?:[1-4]\\d|5[02-4])|6(?:3[1-3]|44|7[1-8])|7(?:4[0-4]|5\\d|6[1-578]|75|8[0-8])|858)\\d{5,6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -9444,7 +9465,7 @@ countryRO =
         , { numberType = Mobile
           , exampleNumber = "712034567"
           , pattern =
-                "7120\\d{5}|7(?:[02-7]\\d|1[01]|8[03-8]|9[09])\\d{6}"
+                "7[01]20\\d{5}|7(?:0[013-9]|1[01]|[2-7]\\d|8[03-8]|9[09])\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -9458,7 +9479,7 @@ countryRO =
         , { numberType = PremiumRate
           , exampleNumber = "900123456"
           , pattern =
-                "90[036]\\d{6}"
+                "90[0136]\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -9472,7 +9493,7 @@ countryRO =
         , { numberType = Uan
           , exampleNumber = "372123456"
           , pattern =
-                "37\\d{7}"
+                "(?:37\\d|80[578])\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -9600,7 +9621,7 @@ countryRW =
         [ { numberType = FixedLine
           , exampleNumber = "250123456"
           , pattern =
-                "(?:06|2[258]\\d)\\d{6}"
+                "(?:06|2[23568]\\d)\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -9794,7 +9815,7 @@ countrySD =
         [ { numberType = FixedLine
           , exampleNumber = "153123456"
           , pattern =
-                "1(?:5[3-7]|8[35-7])\\d{6}"
+                "1(?:5\\d|8[35-7])\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -9912,7 +9933,7 @@ countrySG =
         , { numberType = Mobile
           , exampleNumber = "81234567"
           , pattern =
-                "(?:8(?:[1-8]\\d\\d|9(?:[01]\\d|2[1-8]|3[0-4]))|9[0-8]\\d\\d)\\d{4}"
+                "(?:8(?:[1-8]\\d\\d|9(?:[014]\\d|2[1-9]|3[0-489]))|9[0-8]\\d\\d)\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -10141,14 +10162,14 @@ countrySK =
         , { numberType = FixedLine
           , exampleNumber = "221234567"
           , pattern =
-                "(?:2(?:16|[2-9]\\d{3})|[3-5][1-8]\\d{3})\\d{4}|(?:2|[3-5][1-8])1[67]\\d{3}|[3-5][1-8]16\\d\\d"
+                "(?:2(?:16|[2-9]\\d{3})|(?:(?:[3-5][1-8]\\d|819)\\d|601[1-5])\\d)\\d{4}|(?:2|[3-5][1-8])1[67]\\d{3}|[3-5][1-8]16\\d\\d"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = Mobile
           , exampleNumber = "912123456"
           , pattern =
-                "909[1-9]\\d{5}|9(?:0[1-8]|1[0-24-9]|[45]\\d)\\d{6}"
+                "909[1-9]\\d{5}|9(?:0[1-8]|1[0-24-9]|4[03-57-9]|5\\d)\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -10207,21 +10228,21 @@ countrySL =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , generalNumberPattern =
-        "(?:[2378]\\d|99)\\d{6}"
+        "(?:[2378]\\d|66|99)\\d{6}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
         [ { numberType = FixedLine
           , exampleNumber = "22221234"
           , pattern =
-                "22\\d{6}"
+                "22[2-4][2-9]\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = Mobile
           , exampleNumber = "25123456"
           , pattern =
-                "(?:25|3[0134]|7[5-9]|8[08]|99)\\d{6}"
+                "(?:25|3[013-5]|66|7[5-9]|8[08]|99)\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -10342,21 +10363,21 @@ countrySO =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , generalNumberPattern =
-        "[346-9]\\d{8}|[12679]\\d{7}|(?:[1-4]\\d|59)\\d{5}|[1348]\\d{5}"
+        "[346-9]\\d{8}|[12679]\\d{7}|[1-5]\\d{6}|[1348]\\d{5}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
         [ { numberType = FixedLine
           , exampleNumber = "4012345"
           , pattern =
-                "(?:1\\d|2[0-79]|3[0-46-8]|4[0-7]|59)\\d{5}|(?:[134]\\d|8[125])\\d{4}"
+                "(?:1\\d|2[0-79]|3[0-46-8]|4[0-7]|5[57-9])\\d{5}|(?:[134]\\d|8[125])\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = Mobile
           , exampleNumber = "71123456"
           , pattern =
-                "28\\d{5}|(?:6[1-9]|79)\\d{6,7}|(?:15|24|(?:3[59]|4[89]|8[08])\\d|60|7[1-8]|9(?:0[67]|[2-9]))\\d{6}"
+                "28\\d{5}|(?:6[1-9]|79)\\d{6,7}|(?:15|24|(?:3[59]|4[89]|8[08])\\d|60|7[1-8]|9(?:0\\d|[2-9]))\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -10933,7 +10954,7 @@ countryTL =
         , { numberType = Mobile
           , exampleNumber = "77212345"
           , pattern =
-                "7[3-8]\\d{6}"
+                "7[2-8]\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -10985,7 +11006,7 @@ countryTM =
         , { numberType = Mobile
           , exampleNumber = "66123456"
           , pattern =
-                "6[1-9]\\d{6}"
+                "6\\d{7}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -11068,7 +11089,7 @@ countryTO =
         , { numberType = Mobile
           , exampleNumber = "7715123"
           , pattern =
-                "(?:6(?:3[02]|85|90)|7(?:[2-46]0|[578]\\d)|8[46-9]\\d)\\d{4}"
+                "6(?:3[02]|8[5-9])\\d{4}|(?:6[09]|7\\d|8[46-9])\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -11453,14 +11474,14 @@ countryUG =
         [ { numberType = FixedLine
           , exampleNumber = "312345678"
           , pattern =
-                "(?:20(?:(?:(?:[0147]\\d|5[0-4])\\d|2(?:40|[5-9]\\d)|3(?:0[67]|2[0-4])|810)\\d|6(?:00[0-2]|[15-9]\\d\\d|30[0-4]))|[34]\\d{5})\\d{3}"
+                "20(?:(?:(?:24|81)0|30[67])\\d|6(?:00[0-2]|30[0-4]))\\d{3}|(?:20(?:[0147]\\d|2[5-9]|32|5[0-4]|6[15-9])|[34]\\d{3})\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = Mobile
           , exampleNumber = "712345678"
           , pattern =
-                "7260\\d{5}|7(?:[0157-9]\\d|20|4[0-4])\\d{6}"
+                "7260\\d{5}|7(?:[0157-9]\\d|20|36|4[0-4])\\d{6}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -11751,14 +11772,14 @@ countryVE =
     , internationalPrefix = Just "00"
     , nationalPrefix = Just "0"
     , generalNumberPattern =
-        "[89]00\\d{7}|(?:[24]\\d|50)\\d{8}"
+        "[68]00\\d{7}|(?:[24]\\d|[59]0)\\d{8}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
         [ { numberType = FixedLine
           , exampleNumber = "2121234567"
           , pattern =
-                "(?:2(?:12|3[457-9]|[467]\\d|[58][1-9]|9[1-6])|50[01])\\d{7}"
+                "(?:2(?:12|3[457-9]|[467]\\d|[58][1-9]|9[1-6])|[4-6]00)\\d{7}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -11779,7 +11800,14 @@ countryVE =
         , { numberType = PremiumRate
           , exampleNumber = "9001234567"
           , pattern =
-                "900\\d{7}"
+                "90[01]\\d{7}"
+                    |> Regex.fromString
+                    |> Maybe.withDefault Regex.never
+          }
+        , { numberType = Uan
+          , exampleNumber = "5010123456"
+          , pattern =
+                "501\\d{7}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -11980,7 +12008,7 @@ countryVU =
         , { numberType = Mobile
           , exampleNumber = "5912345"
           , pattern =
-                "57[2-5]\\d{4}|(?:5[0-689]|7[013-7])\\d{5}"
+                "(?:5\\d|7[013-7])\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -12049,21 +12077,21 @@ countryWS =
     , internationalPrefix = Just "0"
     , nationalPrefix = Nothing
     , generalNumberPattern =
-        "[2-6]\\d{4}|8\\d{5}(?:\\d{4})?|[78]\\d{6}"
+        "(?:[2-6]|8\\d{5})\\d{4}|[78]\\d{6}|[68]\\d{5}"
             |> Regex.fromString
             |> Maybe.withDefault Regex.never
     , numberTypes =
         [ { numberType = FixedLine
           , exampleNumber = "22123"
           , pattern =
-                "(?:[2-5]\\d|6[1-9])\\d{3}"
+                "6[1-9]\\d{3}|(?:[2-5]|60)\\d{4}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
         , { numberType = Mobile
           , exampleNumber = "7212345"
           , pattern =
-                "(?:7[25-7]|8(?:[3-7]|9\\d{3}))\\d{5}"
+                "(?:7[235-7]|8(?:[3-7]|9\\d{3}))\\d{5}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
@@ -12281,7 +12309,7 @@ countryZM =
         , { numberType = Mobile
           , exampleNumber = "955123456"
           , pattern =
-                "(?:7[67]|9[5-8])\\d{7}"
+                "(?:7[679]|9[5-8])\\d{7}"
                     |> Regex.fromString
                     |> Maybe.withDefault Regex.never
           }
