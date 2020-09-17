@@ -1,9 +1,9 @@
 {
     "type": "package",
-    "name": "Skinney/elm-phone-numbers",
+    "name": "robinheghan/elm-phone-numbers",
     "summary": "A package for validating phone numbers. Based on google's libphonenumber.",
     "license": "BSD-3-Clause",
-    "version": "2.0.29",
+    "version": "1.0.0",
     "exposed-modules": [
         "PhoneNumber",
         "PhoneNumber.Countries"
